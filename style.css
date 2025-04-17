@@ -186,7 +186,7 @@ p {
 
 .nav-links > li > a {
     color: #fff;
-    font-weight: 600;
+    font-weight: 200;
     font-size: 16px;
     position: relative;
     transition: all 0.3s ease;
@@ -1874,6 +1874,106 @@ p {
     background-color: var(--primary-color, #ff6b00);
     color: white;
     box-shadow: 0 5px 12px rgba(255, 107, 0, 0.2);
+}
+/*FAQ */
+.faq-container {
+    padding-top: 50px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    background-color: white;
+    border-radius: 10px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.faq-image {
+    flex: 0 0 40%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 20px;
+}
+
+.faq-image img {
+    max-width: 100%;
+    height: auto;
+}
+
+.faq-content {
+    flex: 0 0 60%;
+    padding: 30px;
+}
+
+.faq-title {
+    color: #ff6b35;
+    font-size: 36px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.accordion {
+    list-style: none;
+}
+
+.accordion-item {
+    margin-bottom: 15px;
+}
+
+.accordion-button {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    padding: 15px 20px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffffff;
+    color: rgb(0, 0, 0);
+    font-size: 16px;
+    text-align: left;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    position: relative;
+    font-weight: 500;
+}
+
+.accordion-button:hover {
+    background-color: #222222;
+    color: white;
+}
+
+.accordion-button span {
+    margin-right: 10px;
+    font-size: 20px;
+}
+
+.accordion-content {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s ease;
+    background-color: #fff;
+    color: #0f0f0f;
+    border-radius: 0 0 5px 5px;
+    padding: 0 15px;
+    font-weight: 500;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.accordion-content.active {
+    max-height: 500px;
+    padding: 15px;
+    border: 1px solid #ddd;
+    border-top: none;
+    margin-top: -5px;
+}
+
+@media (max-width: 768px) {
+    .faq-container {
+        flex-direction: column;
+    }
+    .faq-image, .faq-content {
+        flex: 0 0 100%;
+    }
 }
 
 
