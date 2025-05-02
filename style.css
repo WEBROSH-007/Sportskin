@@ -127,57 +127,56 @@ p {
 }
 
 /* Navbar */
+/* Navbar base styling */
 .navbar {
     position: fixed;
     top: 0;
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 1.5rem 5%;
+    padding: 1rem 5%;
     display: flex;
     justify-content: space-between;
     align-items: center;
     transition: all 0.4s ease;
+    background-color: transparent /* Dark background for navbar */
 }
 
 .navbar.scrolled {
     background-color: rgba(17, 17, 17, 0.95);
     padding: 1rem 5%;
     backdrop-filter: blur(8px);
-
 }
 
-.navbar.scrolled .nav-links > li > a {
-    color: white;
-}
-
-.navbar.scrolled .logo {
-    color: var(--primary-color);
-}
-.logos{
+/* Logo styling */
+.logos {
     font-size: 2rem;
     font-weight: 700;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
     letter-spacing: 2px;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
 }
+
 .logo {
     font-size: 2rem;
     font-weight: 700;
-    color: var(--primary-color);
+    color: #ff6600; /* Your primary color */
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
     transition: all 0.3s ease;
 }
 
-.logo:hover {
-    transform: scale(1.05);
-}
-
+/* Navigation links */
 .nav-links {
     display: flex;
     gap: 2rem;
     align-items: center;
+    list-style: none;
+    margin: 0;
+    padding: 0;
 }
 
 .nav-links > li {
@@ -186,22 +185,25 @@ p {
 
 .nav-links > li > a {
     color: #fff;
-    font-weight: 200;
+    font-weight: 400;
     font-size: 16px;
     position: relative;
     transition: all 0.3s ease;
     padding: 0.5rem 0;
-    display: inline-block;
+    display: block;
+    text-decoration: none;
+    font-family: 'Montserrat', sans-serif;
 }
 
+/* White line indicator on hover */
 .nav-links > li > a:after {
     content: '';
     position: absolute;
-    bottom: -2px;
+    bottom: -5px;
     left: 0;
     width: 0;
     height: 2px;
-    background-color: var(--primary-color);
+    background-color: #ff6600;
     transition: width 0.3s ease;
 }
 
@@ -209,58 +211,139 @@ p {
     width: 100%;
 }
 
-/* Dropdown Menu */
-.dropdown-menu {
-    position: absolute;
-    top: 100%;
-    left: 0;
-    width: 220px;
-    background-color: white;
-    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
-    border-radius: 4px;
-    opacity: 0;
-    visibility: hidden;
-    transform: translateY(10px);
-    transition: all 0.3s ease;
-    z-index: 100;
-    padding: 1rem 0;
+/* Dropdown styling */
+.dropdown-parent {
+    position: static; /* Important for full-width dropdown */
 }
 
-.nav-links > li:hover .dropdown-menu {
+/* Full-width mega dropdown */
+.mega-dropdown {
+    position: absolute;
+    top: 100%; /* Position right at the bottom of navbar */
+    right: -610px;
+    width: 1600px;
+    background-color: rgb(206, 206, 206);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+    opacity: 0;
+    visibility: hidden;
+    transition: all 0.3s ease;
+    z-index: 999;
+    transform: translateY(-10px);
+    pointer-events: none;
+    margin-top: 5px
+}
+
+/* Show dropdown on hover */
+.dropdown-parent:hover .mega-dropdown {
     opacity: 1;
     visibility: visible;
     transform: translateY(0);
+    pointer-events: auto;
 }
 
-.dropdown-menu li {
-    padding: 0.5rem 1.5rem;
+/* Container for dropdown items */
+.dropdown-container {
+    width: 90%;
+    max-width: 1400px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: flex-start;
+    gap: 20px; /* Space between dropdown items */
+    padding: 25px 0;
 }
 
-.dropdown-menu a {
-    color: var(--text-color);
-    font-size: 15px;
+/* Dropdown links styling */
+.dropdown-container a {
+    color: #000000;
+    font-size: 16px;
+    font-weight: 400;
+    text-decoration: none;
+    padding: 8px 0;
     display: block;
-    transition: all 0.2s ease;
+    font-family: 'Montserrat', sans-serif;
+    transition: color 0.2s ease;
 }
 
-.dropdown-menu a:hover {
-    color: var(--primary-color);
-    padding-left: 5px;
+.dropdown-container a:hover {
+    
+    font-weight: 700;
 }
 
-.nav-links > li > a .dropdown-icon {
+/* Hamburger menu for mobile */
+.hamburger {
+    display: none;
+    cursor: pointer;
+}
+
+.hamburger div {
+    width: 25px;
+    height: 3px;
+    background-color: white;
+    margin: 5px;
+    transition: all 0.3s ease;
+}
+.arrow {
     display: inline-block;
+    transform: rotate(90deg); /* Rotates > downward */
     margin-left: 5px;
     transition: transform 0.3s ease;
 }
 
-.nav-links > li:hover > a .dropdown-icon {
-    transform: rotate(180deg);
+/* Optional: rotate back to > (right) on hover or toggle */
+.dropdown-parent:hover .arrow {
+    transform: rotate(270deg); /* Arrow points up on hover */
 }
 
-.hamburger {
-    display: none;
-    cursor: pointer;
+
+/* Media query for responsiveness */
+@media screen and (max-width: 768px) {
+    .nav-links {
+        position: absolute;
+        right: 0;
+        height: 92vh;
+        top: 8vh;
+        background-color: rgba(17, 17, 17, 0.95);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        width: 100%;
+        transform: translateX(100%);
+        transition: transform 0.5s ease-in;
+        padding: 2rem 0;
+    }
+    
+    .nav-links.active {
+        transform: translateX(0%);
+    }
+    
+    .hamburger {
+        display: block;
+    }
+    
+    .mega-dropdown {
+        position: static;
+        width: 100%;
+        background-color: transparent;
+        box-shadow: none;
+        opacity: 1;
+        visibility: visible;
+        transform: none;
+        display: none;
+    }
+    
+    .dropdown-parent:hover .mega-dropdown {
+        display: block;
+    }
+    
+    .dropdown-container {
+        flex-direction: column;
+        gap: 10px;
+        padding: 10px 0;
+    }
+    
+    .dropdown-container a {
+        color: white;
+    }
 }
 
 /* Hero Section */
@@ -569,8 +652,9 @@ p {
 }
 
 .main-heading {
-    font-size: 60px;
-    font-weight: bold;
+    font-size: 50px;
+    font-family: 'Lato', sans-serif;
+    font-weight: 700;
     line-height: 1.1;
     margin-bottom: 20px;
     color: #222;
@@ -654,7 +738,7 @@ p {
 
 .main-image {
     width: 100%;
-    height: 100%;
+    height: 550px;
     object-fit: cover;
     object-position: center;
 }
@@ -696,6 +780,7 @@ p {
     position: relative;
     transition: color 0.3s ease;
     width: 20%;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .nav-tab.active {
@@ -1291,6 +1376,7 @@ p {
     margin-bottom: 1.5rem;
     position: relative;
     padding-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .service-title:after {
@@ -1410,6 +1496,7 @@ p {
     position: relative;
     display: inline-block;
     padding-bottom: 10px;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .value-title:after {
@@ -1599,6 +1686,7 @@ p {
     margin-bottom: 0.8rem;
     position: relative;
     display: inline-block;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .section-header h2:after {
@@ -1641,6 +1729,7 @@ p {
     box-shadow: 0 12px 30px rgba(0, 0, 0, 0.12);
 }
 
+
 .form-row {
     display: flex;
     gap: 15px;
@@ -1658,6 +1747,7 @@ p {
     font-weight: 600;
     color: #444;
     font-size: 1.1rem;
+    
 }
 
 .form-label i {
@@ -1673,6 +1763,12 @@ p {
     font-size: 0.95rem;
     transition: all 0.3s ease;
     background-color: #f9f9f9;
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+.form-input option {
+    font-family: 'Montserrat', sans-serif;
 }
 
 .datetime-row {
@@ -1717,7 +1813,7 @@ p {
 
 .form-input::placeholder {
     color: #aaa;
-    font-style: italic;
+    
 }
 
 .btn1 {
@@ -1730,6 +1826,7 @@ p {
     border: none;
     border-radius: 6px;
     font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
     font-weight: 600;
     cursor: pointer;
     transition: all 0.3s ease;
@@ -1740,6 +1837,7 @@ p {
 .btn1 i {
     margin-right: 8px;
     font-size: 0.9rem;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .btn1:hover {
@@ -1791,12 +1889,14 @@ p {
     font-size: 1.5rem;
     color: #333;
     margin: 0;
+    letter-spacing: 2px;
 }
 
 .contact-info > p {
     margin-bottom: 1.5rem;
     color: #666;
     font-size: 0.95rem;
+    
 }
 
 .contact-items-grid {
@@ -1818,6 +1918,7 @@ p {
 .contact-icon {
     margin-right: 0.8rem;
     font-size: 1rem;
+    font-family: 'Montserrat', sans-serif;
     color: white;
     background-color: #535252;
     width: 36px;
@@ -1839,6 +1940,7 @@ p {
 .contact-text {
     font-size: 0.95rem;
     color: #666;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .contact-text strong {
@@ -1847,6 +1949,33 @@ p {
     color: #333;
     font-size: 1rem;
 }
+.consultation-cta {
+    margin-top: 2rem;
+    text-align: center;
+}
+
+.consultation-text {
+    font-size: 1.1rem;
+    margin-bottom: 1rem;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.consultation-button {
+    background-color: #000000;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border: none;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background-color 0.3s ease;
+}
+
+.consultation-button:hover {
+    background-color: #daa658;
+    color: black;
+}
+
 
 .social-links {
     display: flex;
@@ -1934,7 +2063,8 @@ p {
     cursor: pointer;
     transition: background-color 0.3s;
     position: relative;
-    font-weight: 500;
+    font-weight: 800;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .accordion-button:hover {
@@ -2010,6 +2140,7 @@ p {
     position: relative;
     padding-bottom: 10px;
     color: #e47b35;
+
 }
 
 .footer-col h3:after {
@@ -2025,12 +2156,15 @@ p {
 .footer-links li {
     margin-bottom: 0.8rem;
     position: relative;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .footer-links a {
     color: #aaa;
     transition: all 0.3s ease;
     display: inline-block;
+    font-family: 'Montserrat', sans-serif;
+    
 }
 
 .footer-links a:before {
@@ -2040,6 +2174,8 @@ p {
     opacity: 0;
     transition: all 0.3s ease;
     color: var(--primary-color);
+    
+
 }
 
 .footer-links a:hover {
