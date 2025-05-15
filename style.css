@@ -38,6 +38,7 @@ a {
 
 ul {
     list-style: none;
+    padding-left: 0px !important;
 }
 
 /* Typography */
@@ -66,8 +67,9 @@ h3 {
 
 p {
 
-    font-size: 18px;
-    letter-spacing: 1px;
+    font-size: 16px;
+    line-height: 2;
+    font-family: 'Montserrat', sans-serif;
 }
 
 .text-center {
@@ -659,7 +661,9 @@ p {
 .about-text p {
     position: relative;
     display: inline-block;
-    font-size: 18px;
+    font-size: 16px;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 2;
     font-weight: 500;
     margin-top: 10px;
 }
@@ -852,7 +856,7 @@ p {
     width: 50%;
     position: relative;
     overflow: hidden;
-    background-color: #f0f7f0;
+    /* background-color: #f0f7f0; */
     padding-top: 50px;
 }
 
@@ -861,6 +865,7 @@ p {
     height: 550px;
     object-fit: cover;
     object-position: center;
+    padding: 100px;
 }
 
 .strength-badge {
@@ -885,11 +890,12 @@ p {
 
 /* Removed the scrolling nav-progress line */
 
+
 .nav-tabs {
     display: flex;
     width: 100%;
     justify-content: space-around;
-
+    border-bottom: 2px solid #f60;
 }
 
 .nav-tab {
@@ -905,9 +911,14 @@ p {
 }
 
 .nav-tab.active {
+    color: white;
+    background-color: #f60;
+}
+
+/* .nav-tab.active {
     color: #333;
     border-top: 3px solid #333;
-}
+} */
 
 .tab-content {
     display: none;
@@ -1227,8 +1238,8 @@ p {
 }
 
 .our-service-description p {
-    font-size: 1.1rem;
-    line-height: 1.7;
+    font-size: 16px;
+    line-height: 2;
     color: #555;
     margin-bottom: 1.5rem;
 }
@@ -1552,9 +1563,9 @@ p {
 .service-description {
     color: #404040;
     transition: all 0.3s ease;
-    font-size: 1rem;
+    font-size: 16PX;
     /* Larger description text */
-    line-height: 1.7;
+    line-height: 2;
 }
 
 .service-card:hover .service-description {
@@ -1676,9 +1687,9 @@ p {
 .value-desc {
     font-size: 1rem;
     font-family: 'Montserrat', sans-serif;
-    letter-spacing: 1px;
+
     color: #b9b9b9;
-    line-height: 1.6;
+    line-height: 2;
 }
 
 .value-desc:hover {
@@ -1710,7 +1721,7 @@ p {
     }
 
     .value-desc {
-        font-size: 0.95rem;
+        font-size: 1rem;
     }
 }
 
@@ -1846,7 +1857,7 @@ p {
 }
 
 .testimonial-text {
-    font-size: 1.1rem;
+    font-size: 1rem;
     font-style: italic;
     margin-bottom: 2rem;
     color: #555;
@@ -1855,6 +1866,7 @@ p {
     flex-grow: 1;
     display: flex;
     align-items: center;
+    line-height: 2;
 }
 
 .testimonial-author-info {
@@ -2220,9 +2232,10 @@ p {
 }
 
 .contact-text {
-    font-size: 0.95rem;
+    font-size: 1rem;
     color: #666;
     font-family: 'Montserrat', sans-serif;
+    line-height: 2;
 }
 
 .contact-text strong {
@@ -2510,37 +2523,54 @@ p {
     height: 40px;
     border-radius: 50%;
     background-color: rgba(255, 255, 255, 0.1);
-    color: #fff;
     transition: all 0.3s ease;
     position: relative;
     overflow: hidden;
 }
 
-.social-icon:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: var(--primary-color);
-    transform: scale(0);
-    transition: all 0.3s ease;
-    border-radius: 50%;
-    z-index: 0;
-}
-
-.social-icon span {
+.social-icon i {
+    font-size: 1.2rem;
     position: relative;
     z-index: 1;
+    transition: all 0.3s ease;
+}
+
+/* Brand Colors */
+.social-icon.facebook i {
+    color: #ffffff;
+}
+
+.social-icon.linkedin i {
+    color: #ffffff;
+}
+
+.social-icon.instagram i {
+    color: #ffffff;
+}
+
+.social-icon.twitter i {
+    color: #ffffff;
 }
 
 .social-icon:hover {
     transform: translateY(-5px);
+    background-color: #2f2f2f;
 }
 
-.social-icon:hover:before {
-    transform: scale(1);
+.social-icon:hover.facebook {
+    box-shadow: 0 5px 15px rgba(24, 119, 242, 0.4);
+}
+
+.social-icon:hover.linkedin {
+    box-shadow: 0 5px 15px rgba(0, 119, 181, 0.4);
+}
+
+.social-icon:hover.instagram {
+    box-shadow: 0 5px 15px rgba(228, 64, 95, 0.4);
+}
+
+.social-icon:hover.twitter {
+    box-shadow: 0 5px 15px rgba(29, 161, 242, 0.4);
 }
 
 .footer-bottom {
