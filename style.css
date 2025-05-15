@@ -741,11 +741,13 @@ p {
 
 /* Services Section - Enhanced with left sidebar navigation and animations */
 .fitness-section {
+
     display: flex;
     max-width: 1300px;
-    margin: auto;
+    margin: 80px auto;
     min-height: 600px;
     position: relative;
+
 }
 
 .content-container {
@@ -932,8 +934,12 @@ p {
 
 
 /* Services Section - Enhanced for desktop */
+.clients {
+    background-color: var(--gray-bg);
+}
+
 .services {
-    background-color: #fff;
+
     position: relative;
     overflow: hidden;
     padding: 6rem 0;
@@ -2366,12 +2372,12 @@ p {
 }
 
 .accordion-button:hover {
-    background-color: #222222 !important;
+    background-color: #5a5656 !important;
     color: white !important;
 }
 
 .accordion-button::after {
-    content: '\f078' !important;
+    content: '\f077' !important;
     font-family: 'Font Awesome 5 Free' !important;
     font-weight: 900 !important;
     font-size: 14px !important;
@@ -2386,7 +2392,7 @@ p {
 }
 
 .accordion-button.active {
-    background-color: #222222 !important;
+    background-color: #5a5656 !important;
     color: white !important;
 }
 
