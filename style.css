@@ -1898,7 +1898,7 @@ p {
 .testimonial-card:before {
     content: '"';
     position: absolute;
-    top: 20px;
+    top: 0px;
     left: 30px;
     font-size: 5rem;
     font-family: Georgia, serif;
