@@ -2436,7 +2436,7 @@ p {
 
 /* Footer */
 .footer {
-    background-color: var(--dark-bg);
+    background-color: black;
     color: #fff;
     padding: 4rem 0 2rem;
     position: relative;
