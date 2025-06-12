@@ -398,14 +398,14 @@ body {
         }
 
         .hero-description {
-            font-size: 1.25rem;
+            font-size: 1rem;
             color: #374151;
             margin-bottom: 2rem;
             line-height: 1.6;
         }
 
         .hero-text {
-            font-size: 1.125rem;
+            font-size: 1rem;
             color: #4b5563;
             margin-bottom: 2rem;
         }
@@ -1007,7 +1007,7 @@ body {
 }
 
 .startup-description {
-    font-size: 1.125rem;
+    font-size: 1rem;
     color: #6b7280;
     margin-bottom: 2.5rem;
     line-height: 1.7;
@@ -1033,7 +1033,7 @@ body {
 
 .process-card h4 {
     font-weight: 600;
-    font-size: 1.125rem;
+    font-size: 1rem;
     margin-bottom: 0.75rem;
     color: #1f2937;
 }
