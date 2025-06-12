@@ -982,3 +982,136 @@ body {
 .feature {
     animation: fadeIn 0.6s ease-out forwards;
 }
+
+
+
+/* Startup Detail Section */
+.startup-services-section {
+    padding: 5rem 0;
+    background: #fafafa;
+}
+
+.startup-services-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 4rem;
+    align-items: center;
+}
+
+.startup-services-text .section-title {
+    font-size: 2.5rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+    line-height: 1.2;
+}
+
+.startup-description {
+    font-size: 1.125rem;
+    color: #6b7280;
+    margin-bottom: 2.5rem;
+    line-height: 1.7;
+}
+
+.process-cards {
+    display: grid;
+    gap: 1rem;
+}
+
+.process-card {
+    background: white;
+    border: 1px solid #e5e7eb;
+    border-radius: 0.75rem;
+    padding: 0.7rem;
+    transition: all 0.3s ease;
+}
+
+.process-card:hover {
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.1);
+    transform: translateY(-2px);
+}
+
+.process-card h4 {
+    font-weight: 600;
+    font-size: 1.125rem;
+    margin-bottom: 0.75rem;
+    color: #1f2937;
+}
+
+.process-card p {
+    font-size: 0.95rem;
+    color: #6b7280;
+    line-height: 1.6;
+}
+
+.startup-services-visual {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.startup-image {
+    width: 100%;
+    max-width: 500px;
+    height: auto;
+    border-radius: 1rem;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.1);
+}
+
+.approach-highlight {
+    background: linear-gradient(135deg, rgba(59, 130, 246, 0.08), rgba(99, 102, 241, 0.12));
+    padding: 2rem;
+    border-radius: 1rem;
+    margin-top: 2rem;
+}
+
+.approach-highlight h3 {
+    font-size: 1.375rem;
+    font-weight: 700;
+    margin-bottom: 1.5rem;
+    color: #1f2937;
+}
+
+.approach-list {
+    list-style: none;
+}
+
+.approach-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 1rem;
+    font-size: 0.95rem;
+    color: #4b5563;
+}
+
+.approach-list li::before {
+    content: '';
+    width: 0.5rem;
+    height: 0.5rem;
+    background: #2563eb;
+    border-radius: 50%;
+    margin-top: 0.5rem;
+    flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .startup-services-content {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .startup-services-text .section-title {
+        font-size: 2rem;
+        text-align: center;
+    }
+    
+    .startup-description {
+        text-align: center;
+    }
+    
+    .startup-services-visual {
+        order: -1;
+    }
+}

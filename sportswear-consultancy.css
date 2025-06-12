@@ -276,6 +276,44 @@ body {
 }
 
 
+/* Hero section */
+.hero-top {
+    background: linear-gradient(rgba(0, 0, 0, 0.7), rgba(0, 0, 0, 0.7)), url('https://images.unsplash.com/photo-1515886657613-9f3515b0c78f?ixlib=rb-1.2.1&auto=format&fit=crop&w=1920&q=80');
+    background-size: cover;
+    background-position: center;
+    height: 60vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    color: white;
+    margin-top: 60px;
+}
+
+.hero-top-content {
+    max-width: 800px;
+    padding: 0 20px;
+}
+
+.hero-top h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.hero-top h2 {
+    font-size: 1.8rem;
+    font-weight: 400;
+    opacity: 0.9;
+}
+
+
+
+
+
+
+
+
 /*hero section */
 
         /* Hero Section */
