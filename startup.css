@@ -1,0 +1,66 @@
+.why-us-section .thumb .thumb-1 {
+    position: relative;
+    margin-bottom: 250px;
+    text-align: end;
+    z-index: 1;
+}
+.why-us-section .thumb .thumb-1 > img {
+    border-radius: 10px;
+}
+img {
+    max-width: 100%;
+    -webkit-transition: all 0.3s linear 0s;
+    -o-transition: all 0.3s linear 0s;
+    transition: all 0.3s linear 0s;
+}
+img, svg {
+    vertical-align: middle;
+}
+*, ::after, ::before {
+    box-sizing: border-box;
+}
+user agent stylesheet
+img {
+    overflow-clip-margin: content-box;
+    overflow: clip;
+}
+.why-us-section .thumb .thumb-1 .s-shape-1 {
+    position: absolute;
+    top: 60px;
+    right: -16px;
+    z-index: -1;
+}
+.why-us-section .thumb .thumb-2 {
+    position: absolute;
+    top: 40%;
+    left: -16px;
+    z-index: 2;
+}
+.why-us-section .thumb .thumb-2 img {
+    border-radius: 10px;
+    border: 5px solid var(--white-color);
+}
+.why-us-section .thumb .thumb-3 {
+    position: absolute;
+    bottom: -225px;
+    right: 10px;
+    z-index: 2;
+}
+.why-us-section .thumb .thumb-3 .shape-wrapped-thumb {
+    position: relative;
+}
+.why-us-section .thumb .thumb-3 img {
+    border-radius: 10px;
+}
+.why-us-section .thumb .thumb-3 .shape-wrapped-thumb .s-shape-1 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+.why-us-section .thumb .thumb-3 .shape-wrapped-thumb .s-shape-2 {
+    position: absolute;
+    bottom: -25px;
+    left: -35px;
+    z-index: -1;
+}
+

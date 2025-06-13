@@ -98,7 +98,7 @@ p{font-size: 16px;
 /* Show dropdown on hover */
 .dropdown-parent:hover .mega-dropdown{opacity: 1;
     visibility: visible;
-    transform: translateY(0);
+    transform: translateY(-5px);
     pointer-events: auto;}
 
 /* Container for dropdown items */
