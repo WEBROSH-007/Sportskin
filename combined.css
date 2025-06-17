@@ -2,12 +2,13 @@ p{font-size: 16px;
     line-height: 2;
     font-family: 'Montserrat', sans-serif;}
 
-.main-heading{font-size: 50px;
+.main-heading{font-size: 42px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.1;
     margin-bottom: 20px;
-    color: #222;}
+    color: #222;
+text-transform: capitalize;}
 
 /* Navbar Styles */
 /* Navbar base styling */
@@ -2249,9 +2250,9 @@ h3{font-size: 1.75rem;}
     position: relative;
     display: inline-block;}
 
-.main-heading1{font-size: 50px;
+.main-heading1{font-size: 42px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.1;
     margin-bottom: 20px;
     color: #222;}
@@ -3378,7 +3379,7 @@ h3{font-size: 1.75rem;}
 .main-heading1 {
     font-size: 50px;
     font-family: 'Montserrat', sans-serif;
-    font-weight: 700;
+    font-weight: 500;
     line-height: 1.1;
     margin-bottom: 20px;
     color: #222;

@@ -8,6 +8,29 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="design.css">
+    <style>
+        .rotating-circle {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-image {
+            position: absolute;
+            width: 65px;  
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .circle-text {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
 </head>
 <body>
     <!-- Navbar -->
@@ -32,7 +55,7 @@
                 <a href="#">Verticals</a>
                 <div class="mega-dropdown">
                     <div class="dropdown-container">
-                        <a href="#">Startups</a>
+                        <a href="startups.html">Startups</a>
                         <a href="#">Manufacturers & Exporters</a>
                         <a href="#">B2B Brands</a>
                     </div>
@@ -71,7 +94,7 @@
                                         </text>
                                     </svg>
                                 </div>
-                                <div class="circle-center"></div>
+                                <img src="/images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
                             </div>
                             
                             <div class="text-row-2">Logos</div>
@@ -134,7 +157,7 @@
                     <div class="service-card">
                         <i class="fas fa-palette"></i>
                         <h3>Brand Discovery & Strategy</h3>
-                        <p>We begin with understanding your brand’s story — your vision, values, target audience, and positioning. This strategic foundation drives all creative decisions going forward.</p>
+                        <p>We begin with understanding your brand's story — your vision, values, target audience, and positioning. This strategic foundation drives all creative decisions going forward.</p>
                     </div>
                     <div class="service-card">
                         <i class="fas fa-ruler-combined"></i>
@@ -149,7 +172,7 @@
                     <div class="service-card">
                         <i class="fas fa-sync-alt"></i>
                         <h3>Brand Guidelines Document</h3>
-                        <p>You’ll receive a complete brand guide, including logo usage, color palettes, fonts, and tone of voice — ensuring consistency across teams and channels.</p>
+                        <p>You'll receive a complete brand guide, including logo usage, color palettes, fonts, and tone of voice — ensuring consistency across teams and channels.</p>
                     </div>
                     <div class="service-card">
                         <i class="fas fa-running"></i>

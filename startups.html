@@ -3,261 +3,527 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Branding Section</title>
+    <title>Design & Sampling | Sportskin</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="startup.css">
     <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
-        body {
-            font-family: 'Arial', sans-serif;
-            background: white;
-        }
-
-        .branding-hero {
-            position: relative;
-            padding: 80px 0;
-            background: white;
-            min-height: 60vh;
-            display: flex;
-            align-items: center;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            padding: 0 40px;
-            position: relative;
-        }
-
-        .hero-content {
-            display: grid;
-            grid-template-columns: 2fr 1fr;
-            gap: 80px;
-            align-items: flex-start;
-        }
-
-        .left-content {
-            display: flex;
-            flex-direction: column;
-        }
-
-        .text-row-1 {
-            font-size: 50px;
-            font-weight: 900;
-            color: #1a1a1a;
-            line-height: 0.9;
-            letter-spacing: -0.02em;
-            margin-bottom: 20px;
-        }
-
-        .middle-row {
-            display: flex;
-            align-items: center;
-            gap: 40px;
-            margin-bottom: 20px;
-        }
-
         .rotating-circle {
             position: relative;
-            width: 100px;
-            height: 100px;
-            flex-shrink: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
         }
 
-        .circle-text {
+        .logo-image {
             position: absolute;
-            width: 100%;
-            height: 100%;
-            animation: rotate 15s linear infinite;
-        }
-
-        .circle-text svg {
-            width: 100%;
-            height: 100%;
-        }
-
-        .circle-text text {
-            fill: #666;
-            font-size: 11px;
-            font-weight: 500;
-            letter-spacing: 2px;
-            text-transform: uppercase;
-        }
-
-        .circle-center {
-            position: absolute;
+            width: 65px;  
+            height: auto;
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
-            width: 60px;
-            height: 60px;
-            background: #FFD700;
-            border-radius: 50%;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            border: 2px solid #1a1a1a;
+            z-index: 2;
         }
 
-        .circle-center::before {
-            content: '✈';
-            font-size: 20px;
-            color: #1a1a1a;
-        }
-
-        .text-row-2 {
-            font-size: 50px;
-            font-weight: 900;
-            color: #1a1a1a;
-            line-height: 0.9;
-            letter-spacing: -0.02em;
-           
-        }
-
-        @keyframes rotate {
-            from {
-                transform: rotate(0deg);
-            }
-            to {
-                transform: rotate(360deg);
-            }
-        }
-
-        .description {
-            max-width: 300px;
-            color: #666;
-            font-size: 16px;
-            line-height: 1.6;
-            font-weight: 400;
-            margin-top: 40px;
-        }
-
-        /* Responsive Design */
-        @media (max-width: 1024px) {
-            .hero-content {
-                grid-template-columns: 1fr;
-                gap: 40px;
-            }
-
-            .left-content {
-                align-items: center;
-                text-align: center;
-            }
-
-            .middle-row {
-                flex-direction: column;
-                gap: 20px;
-            }
-
-            .text-row-1, .text-row-2 {
-                font-size: clamp(3rem, 8vw, 6rem);
-            }
-
-            .rotating-circle {
-                width: 150px;
-                height: 150px;
-            }
-
-            .circle-text text {
-                font-size: 10px;
-                letter-spacing: 1px;
-            }
-
-            .circle-center {
-                width: 50px;
-                height: 50px;
-            }
-
-            .circle-center::before {
-                font-size: 16px;
-            }
-
-            .description {
-                max-width: 400px;
-                margin: 20px auto 0;
-                text-align: center;
-            }
-        }
-
-        @media (max-width: 768px) {
-            .branding-hero {
-                padding: 60px 0;
-            }
-
-            .container {
-                padding: 0 20px;
-            }
-
-            .hero-content {
-                gap: 30px;
-            }
-
-            .text-row-1, .text-row-2 {
-                font-size: clamp(2.5rem, 7vw, 4rem);
-            }
-
-            .rotating-circle {
-                width: 120px;
-                height: 120px;
-            }
-
-            .circle-center {
-                width: 40px;
-                height: 40px;
-            }
-
-            .circle-center::before {
-                font-size: 14px;
-            }
-
-            .description {
-                font-size: 14px;
-            }
-
-            .middle-row {
-                gap: 15px;
-            }
+        .circle-text {
+            position: relative;
+            z-index: 1;
         }
     </style>
 </head>
 <body>
-    <section class="branding-hero">
-        <div class="container">
-            <div class="hero-content">
-                <div class="left-content">
-                    <div class="text-row-1">Branding & design</div>
-                    
-                    <div class="middle-row">
-                        <div class="rotating-circle">
-                            <div class="circle-text">
-                                <svg viewBox="0 0 180 180">
-                                    <defs>
-                                        <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
-                                    </defs>
-                                    <text>
-                                        <textPath href="#circle">
-                                            YEARS OF WORKING EXPERIENCE • 82 • 
-                                        </textPath>
-                                    </text>
-                                </svg>
-                            </div>
-                            <div class="circle-center"></div>
-                        </div>
+    <!-- Navbar -->
+    <nav class="navbar">
+        <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown-parent">
+                <a href="#">Services </a>
+                <div class="mega-dropdown">
+                    <div class="dropdown-container">
+                        <a href="design-and-sampling.html">Design & Sampling</a>
+                        <a href="buying-and-sourcing.html">Buying & Sourcing</a>
+                        <a href="manufacturing.html">Manufacturing</a>
+                        <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
+                        <a href="branding-logos.html">Branding & Logos</a>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-parent">
+                <a href="#">Verticals</a>
+                <div class="mega-dropdown">
+                    <div class="dropdown-container">
+                        <a href="startups.html">Startups</a>
+                        <a href="#">Manufacturers & Exporters</a>
+                        <a href="#">B2B Brands</a>
+                    </div>
+                </div>
+            </li>
+            <li><a href="#">Academy</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+        <div class="hamburger">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+    </nav>
+
+   
+    <main>
+        <section class="branding-hero">
+            <div class="container-top">
+                <div class="hero-content">
+                    <div class="left-content">
+                        <div class="text-row-1">Startups </div>
                         
-                        <div class="text-row-2">solutions</div>
+                        <div class="middle-row">
+                            <div class="rotating-circle">
+                                <div class="circle-text">
+                                    <svg viewBox="0 0 180 180">
+                                        <defs>
+                                            <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
+                                        </defs>
+                                        <text>
+                                            <textPath href="#circle">
+                                                SPORTSWEAR CONSULTANCY
+                                            </textPath>
+                                        </text>
+                                    </svg>
+                                </div>
+                                <img src="/images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
+                            </div>
+                            
+                            <div class="text-row-2">Logos</div>
+                        </div>
+                    </div>
+    
+                    <div class="description">
+                        <p>
+                            Creating products with a strong identity. We provide ideas and adding the world called success brand.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+   
+<section>
+    <div class="container">
+       
+
+        <div class="content-wrapper">
+            <div class="image-section">
+                <div class="header">
+                    <h3>• HOW WE WORK</h3>
+                    <h1 class="main-title">How We Help Startups Succeed</h1>
+                </div>
+                <img src="/images/demo-gym-and-fitness-home-06.jpg" class="main-image">
+            </div>
+
+            <div class="steps-section">
+                <div class="step">
+                    <div class="step-icon">
+                        <span class="step-number">1</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Discovery & Brand Vision Alignment</h4>
+                        <p>We start with a deep-dive into your goals, values, audience, and product ideas — shaping a foundation that's authentic and future-ready.</p>
                     </div>
                 </div>
 
-                <div class="description">
-                    <p>
-                        Creating products with a strong identity. We provide ideas and adding the world called success brand.
-                    </p>
+                <div class="step">
+                    <div class="step-icon">
+                        <span class="step-number">2</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Product & Market Strategy</h4>
+                        <p>We help you identify the right categories (athleisure, performance, kids, etc.), define your product range, and build a brand that stands out in a competitive landscape.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <span class="step-number">3</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Design & Development</h4>
+                        <p>Our team supports you in turning your ideas into real products — with expert-led design, tech packs, sustainable fabric options, and fit sampling.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <span class="step-number">4</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Sourcing & Vendor Matching</h4>
+                        <p>Tap into our ethical supplier network to source the right materials and manufacturers aligned with your MOQ, price, and performance needs.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <span class="step-number">5</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Go-to-Market Planning</h4>
+                        <p>From sales channels and pricing to launch calendars and marketing content — we help you create a smart, phased launch roadmap.</p>
+                    </div>
+                </div>
+
+                <div class="step">
+                    <div class="step-icon">
+                        <span class="step-number">6</span>
+                    </div>
+                    <div class="step-content">
+                        <h4>Ongoing Mentorship</h4>
+                        <p>Stay connected through on-demand strategy sessions or long-term advisory as your business grows and evolves.</p>
+                    </div>
+                </div>
+
+                
+            </div>
+        </div>
+    </div>
+
+</section>
+<!-- what makes sportskin diffrent  -->
+<section class="whatmakes">
+    <div class="what-makes-container">
+        <div class="left-section">
+            <div class="badge">What Makes Sportskin Different</div>
+            <h1 class="main-title"> What Makes Sportskin Different</h1>
+            <p class="main-description">We understand the resource, time, and decision pressures that startups face — and simplify them with our specialized approach to sportswear consulting.</p>
+            
+            <ul class="feature-list">
+                <li class="feature-item">Built specifically for performance and athleisure space — not generic fashion services.</li>
+                <li class="feature-item">One partner for strategy, design, sourcing, production, branding, and launch support.</li>
+            </ul>
+            
+         
+        </div>
+        
+        <div class="right-section">
+            <div class="service-card" data-service="consultancy">
+                <div class="service-card-content">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">India's First Sportswear-Focused Consultancy</h3>
+                    <p class="service-description">Built specifically for the performance and athleisure space — not generic fashion services.</p>
+                </div>
+            </div>
+            
+            <div class="service-card" data-service="approach">
+                <div class="service-card-content">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Founder-Centric Approach</h3>
+                    <p class="service-description">We understand the resource, time, and decision pressures that startups face — and simplify them.</p>
+                </div>
+            </div>
+            
+            <div class="service-card" data-service="support">
+                <div class="service-card-content">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 11H7V9H9V11ZM13 11H11V9H13V11ZM17 11H15V9H17V11ZM19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">One Partner, End-to-End Support</h3>
+                    <p class="service-description">Strategy, design, sourcing, production, branding, launch — we cover the full journey.</p>
+                </div>
+            </div>
+            
+            <div class="service-card" data-service="execution">
+                <div class="service-card-content">
+                    <div class="service-icon">
+                        <svg viewBox="0 0 24 24">
+                            <path d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"/>
+                        </svg>
+                    </div>
+                    <h3 class="service-title">Built for Execution, Not Just Advice</h3>
+                    <p class="service-description">Real timelines. Real deliverables. Real outcomes.</p>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+
+</section>
+
+<!-- TOOLKIT-->
+ <section>
+    <div class="container-toolkit">
+        
+
+        <div class="coaching-grid">
+            <div class="coaching-item">
+                <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face" alt="Communication Coach">
+                <span class="coaching-text">Brand & product discovery sessions</span>
+            </div>
+
+            <div class="coaching-item">
+                <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Personal Coach">
+                <span class="coaching-text">Range planning and pricing structure</span>
+            </div>
+
+            <div class="coaching-item">
+                <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face" alt="Strategy Coach">
+                <span class="coaching-text">Tech pack development & sampling oversight</span>
+            </div>
+
+            <div class="coaching-item">
+                <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=150&h=150&fit=crop&crop=face" alt="Productivity Coach">
+                <span class="coaching-text">Sustainable material sourcing</span>
+            </div>
+
+            <div class="coaching-item">
+                <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=150&h=150&fit=crop&crop=face" alt="Health Coach">
+                <span class="coaching-text">Manufacturing coordination</span>
+            </div>
+
+            <div class="coaching-item">
+                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Leadership Coach">
+                <span class="coaching-text">Brand identity & packaging</span>
+            </div>
+
+            <div class="coaching-item">
+                <img src="https://images.unsplash.com/photo-1559941197-d0c2d17c5b85?w=150&h=150&fit=crop&crop=face" alt="Marketing Coach">
+                <span class="coaching-text">Launch prep and advisory</span>
+            </div>
+
+            <div class="coaching-item">
+                <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face" alt="Career Transition Coach">
+                <span class="coaching-text">Career Transition Coaching</span>
+            </div>
+        </div>
+
+        <div class="content">
+            <div class="section-label"> OUR EXPERTISE</div>
+            <h1 class="heading">
+                Startup Launch Toolkit Includes<br>
+               
+            </h1>
+            <p class="description-toolkit">
+                Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential. We offer personalized strategies, proven methods.
+            </p>
+            <!-- <a href="#contact" class="cta-button">Contact Now</a> -->
+        </div>
+    </div>
+
+
+ </section>
+
+
+ <!-- Startup Services Detail -->
+ <section class="startup-services-section">
+    <div class="container">
+        <div class="startup-services-content">
+            <div class="startup-services-text">
+                <h2 class="section-title">Who Should Work With Us</h2>
+                <p class="startup-description">
+                    Sportskin empowers emerging sportswear and athleisure brands to launch with clarity, confidence, and competitive edge. 
+                    
+                </p>
+                
+                <div class="process-cards">
+                    <div class="process-card">
+                        <!-- <h4>Diagnostic & Strategy</h4> -->
+                        <p>First-time founders building a D2C or private label activewear brand</p>
+                    </div>
+                    <div class="process-card">
+                        <!-- <h4>Resource Planning</h4> -->
+                        <p>Small teams launching niche performance or lifestyle collections</p>
+                    </div>
+                    <div class="process-card">
+                        <!-- <h4>Product Development</h4> -->
+                        <p>Creators, athletes, and influencers turning ideas into product brands</p>
+                    </div>
+                    <div class="process-card">
+                        <!-- <h4>Launch Support</h4> -->
+                        <p>Founders seeking MVP (minimum viable product) to test and iterate</p>
+                    </div>
+                    <div class="process-card">
+                        <!-- <h4>Launch Support</h4> -->
+                        <p>Early-stage startups seeking product-market fit and funding support</p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="startup-services-visual">
+                <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
+                     alt="Startup team working on sportswear designs" 
+                     class="startup-image">
+            </div>
+        </div>
+    </div>
+</section>
+
+ <!-- Main Services Section -->
+ <section class="solutions-section">
+    <div class="container">
+        <div class="solutions-header">
+            <h2 class="solutions-title">Who We've Helped </h2>
+            <p class="solutions-description">
+                From startups to established manufacturers, we provide end-to-end guidance in the performance wear space
+            </p>
+        </div>
+        
+        <div class="solutions-grid">
+            <div class="solution-card blue">
+                <div class="solution-card-header">
+                    <div class="solution-icon blue">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <circle cx="12" cy="12" r="6"></circle>
+                            <circle cx="12" cy="12" r="2"></circle>
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Athlete-Led Label</h3>
+                   
+                </div>
+                <div class="solution-card-content">
+                    <p>Transformed a former national athlete’s idea into a niche high-performance training apparel line with export capability.</p>
+                </div>
+            </div>
+
+            <div class="solution-card green">
+                <div class="solution-card-header">
+                    <div class="solution-icon green">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                            <circle cx="9" cy="7" r="4"></circle>
+                            <path d="m22 21-3-3"></path>
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Sustainable D2C Brand</h3>
+                    <!-- <p class="solution-subtitle">From First Stitch to First Success</p> -->
+                </div>
+                <div class="solution-card-content">
+                    <p>Guided a founder from raw idea to Shopify launch using fully recycled fabrics sourced from ethical mills.</p>
+                </div>
+            </div>
+
+            <div class="solution-card purple">
+                <div class="solution-card-header">
+                    <div class="solution-icon purple">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                            <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                            <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                        </svg>
+                    </div>
+                    <h3 class="solution-title">Manufacturing Pivot</h3>
+                    <!-- <p class="solution-subtitle">Level Up Your Expertise</p> -->
+                </div>
+                <div class="solution-card-content">
+                    <p>Helped a legacy t-shirt exporter enter the sportswear market with a private label strategy, new range, and retail-ready identity</p>
+                </div>
+            </div>
+
+          
+        </div>
+    </div>
+</section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Sportskin</h3>
+                    <p>Shaping the future of sportswear through design, innovation, sustainability and performance.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                        <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                        <li><a href="manufacturing.html">Manufacturing</a></li>
+                        <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                        <li><a href="branding-logos.html">Branding & Logos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="#academy">Academy</a></li>
+                        <li><a href="#testimonials">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>Sportskin International Pvt Ltd. B2- 1404,
+                            The Plaza at 106 Spire Condominiums Dwarka Expressway, Sector 106 122006
+                        </li>
+                        <li>Gurgaon, Haryana</li>
+                        <li>+91 9910065827</li>
+                        <li>info@sportskin.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sportskin. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        let lastHoveredCard = null;
+        
+        document.querySelectorAll('.service-card').forEach(card => {
+            card.addEventListener('mouseenter', function() {
+                // Remove sticky green from all cards
+                document.querySelectorAll('.service-card').forEach(c => {
+                    c.classList.remove('sticky-green');
+                });
+                
+                // Add hover effect to current card
+                this.classList.add('hovering');
+            });
+            
+            card.addEventListener('mouseleave', function() {
+                // Remove hover effect
+                this.classList.remove('hovering');
+                
+                // Set this card as the last hovered (sticky green)
+                if (lastHoveredCard) {
+                    lastHoveredCard.classList.remove('sticky-green');
+                }
+                this.classList.add('sticky-green');
+                lastHoveredCard = this;
+            });
+        });
+        
+        // Set the first card as initially green
+        document.addEventListener('DOMContentLoaded', function() {
+            const firstCard = document.querySelector('.service-card');
+            firstCard.classList.add('sticky-green');
+            lastHoveredCard = firstCard;
+        });
+    </script>
+
 </body>
 </html>
