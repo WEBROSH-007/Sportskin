@@ -5,9 +5,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design & Sampling | Sportskin</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="design.css">
+    <link rel="stylesheet" href="final.css">
     <style>
         .rotating-circle {
             position: relative;
@@ -33,8 +34,8 @@
     </style>
 </head>
 <body>
-    <!-- Navbar -->
-    <nav class="navbar">
+     <!-- Navbar -->
+     <nav class="navbar">
         <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -61,26 +62,64 @@
                     </div>
                 </div>
             </li>
-            <li><a href="#">Academy</a></li>
+          <li><a href="academy.html">Academy</a></li>
             <li><a href="#">Resources</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+    </nav>
+    <div class="mobile-header">
+      <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+      <div class="hamburger" id="openMobileNavbar">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+    </div>
+
+    <!-- Mobile Sidebar Navbar -->
+    <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
+    <nav class="mobile-navbar" id="mobileNavbar">
+        <div class="mobile-navbar-header">
+            <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
+            <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
         </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown-parent">
+                <a href="#" class="mobile-dropdown-toggle">Services <span class="arrow">&#9654;</span></a>
+                <ul class="mobile-dropdown">
+                    <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                    <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                    <li><a href="manufacturing.html">Manufacturing</a></li>
+                    <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                    <li><a href="branding-logos.html">Branding & Logos</a></li>
+                </ul>
+            </li>
+            <li class="mobile-dropdown-parent">
+                <a href="#" class="mobile-dropdown-toggle">Verticals <span class="arrow">&#9654;</span></a>
+                <ul class="mobile-dropdown">
+                    <li><a href="startups.html">Startups</a></li>
+                    <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
+                    <li><a href="b2b-brands.html">B2B Brands</a></li>
+                </ul>
+            </li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
    
     <main>
-        <section class="branding-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="left-content">
-                        <div class="text-row-1">Branding & </div>
-                        
-                        <div class="middle-row">
+         <!-- Hero Section -->
+         <section class="relative pt-[100px] pb-[100px] md:pt-[180px] md:pb-[100px] bg-[rgba(243,244,246,0.8)] min-h-[60vh] flex items-center">
+            <div class="max-w-[1200px] mx-auto p-4">
+                <!-- Desktop Layout (md and up) -->
+                <div class="hidden md:grid grid-cols-2  gap-[300px] items-start">
+                    <div class="text-left">
+                        <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] mb-[20px] uppercase">Branding &</div>
+                        <div class="flex items-center gap-[40px] mb-[20px]">
                             <div class="rotating-circle">
                                 <div class="circle-text">
                                     <svg viewBox="0 0 180 180">
@@ -88,7 +127,7 @@
                                             <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
                                         </defs>
                                         <text>
-                                            <textPath href="#circle">
+                                            <textPath href="#circle" class="text-[18px] font-[500] uppercase tracking-[2px] text-[#666]">
                                                 SPORTSWEAR CONSULTANCY
                                             </textPath>
                                         </text>
@@ -96,12 +135,48 @@
                                 </div>
                                 <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
                             </div>
-                            
-                            <div class="text-row-2">Logos</div>
+                            <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">Logos</div>
                         </div>
                     </div>
-    
-                    <div class="description">
+                    
+                    <div class="max-w-[300px] text-[#666] text-[16px] leading-[1.6] font-[400] mt-[20px]">
+                        <p>
+                            Creating products with a strong identity. We provide ideas and adding the world called success brand.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Mobile Layout (below md) -->
+                <div class="md:hidden flex flex-col items-center text-center space-y-8">
+                    <!-- First row: "Design &" centered -->
+                    <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
+                        Branding &
+                    </div>
+                    
+                    <!-- Second row: "Sampling" text and logo in column -->
+                    <div class="flex flex-col items-center gap-[20px]">
+                        <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
+                            Logos
+                        </div>
+                        <div class="rotating-circle">
+                            <div class="circle-text">
+                                <svg viewBox="0 0 180 180">
+                                    <defs>
+                                        <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
+                                    </defs>
+                                    <text>
+                                        <textPath href="#circle" class="text-[16px] font-[500] uppercase tracking-[2px] text-[#666]">
+                                            SPORTSWEAR CONSULTANCY
+                                        </textPath>
+                                    </text>
+                                </svg>
+                            </div>
+                            <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
+                        </div>
+                    </div>
+                    
+                    <!-- Third row: Description text centered -->
+                    <div class="max-w-[300px] text-[#666] text-[16px] leading-[1.6] font-[400] text-center">
                         <p>
                             Creating products with a strong identity. We provide ideas and adding the world called success brand.
                         </p>
@@ -109,166 +184,199 @@
                 </div>
             </div>
         </section>
-        <section class="hero">
-            <div class="hero-grid">
-                <div>
-                    <div class="small-heading">Branding & Logos </div>
-                    <h1 class="hero-title">
-                        Identity That Moves With Purpose</span>
-                    </h1>
-                    <p class="hero-description">
-                        In the crowded world of sportswear and athleisure, your brand identity is your biggest differentiator. At Sportskin, we help you shape a brand that resonates — through visual identity, voice, and values. From naming and logo design to labels and packaging, our branding solutions are designed to connect, communicate, and convert.
-                    </p>
-                    <p class="hero-text">
-                        In the crowded world of sportswear and athleisure, your brand identity is your biggest differentiator. At Sportskin, we help you shape a brand that resonates — through visual identity, voice, and values. From naming and logo design to labels and packaging, our branding solutions are designed to connect, communicate, and convert.
-                    </p>
-                  
-                </div>
-                <div class="hero-visual">
-                    <div class="visual-container">
-                        <div class="visual-grid">
-                            <div class="visual-card color">
-                                <img src="images/sportswear.png" alt="Creative Design Icon" class="icon-large" style="width: 30px; height: 30px;">
-                                <h3>Creative Design</h3>
-                            </div>
-                            <div class="visual-card color">
-                                <i class="fas fa-file-alt icon-large" style="color: #f59e0b;"></i>
-                                <h3>Tech Packs</h3>
-                            </div>
-                            <div class="visual-card color">
-                                <i class="fas fa-layer-group icon-large" style="color: #dc2626;"></i>
-                                <h3>Materials</h3>
-                            </div>
-                            <div class="visual-card color">
-                                <i class="fas fa-bullseye icon-large" style="color: #eab308;"></i>
-                                <h3>Performance</h3>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </section>
-    
 
-        <section class="services">
-            <div class="container">
-                <h2>What's Included in Our Design & Sampling Services</h2>
-                <div class="services-grid">
-                    <div class="service-card">
-                        <i class="fas fa-palette"></i>
-                        <h3>Brand Discovery & Strategy</h3>
-                        <p>We begin with understanding your brand's story — your vision, values, target audience, and positioning. This strategic foundation drives all creative decisions going forward.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-ruler-combined"></i>
-                        <h3>Logo & Typography Design</h3>
-                        <p>We create multiple logo directions tailored to your brand personality — bold, technical, minimalist, or lifestyle. Each identity system is supported by modern typography and scalable use cases.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-tshirt"></i>
-                        <h3>Visual Assets & Packaging</h3>
-                        <p>From product labels and tags to packaging mockups, we design a consistent visual language that brings your collection to life — online and on shelf.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-sync-alt"></i>
-                        <h3>Brand Guidelines Document</h3>
-                        <p>You'll receive a complete brand guide, including logo usage, color palettes, fonts, and tone of voice — ensuring consistency across teams and channels.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-running"></i>
-                        <h3>Optional Launch Support</h3>
-                        <p>We also help you roll out your brand with social-ready assets, packaging mockups, and digital brand kits.</p>
-                    </div>
-                    <div class="service-card">
-                        <i class="fas fa-running"></i>
-                        <h3>Performance & Fit Alignment</h3>
-                        <p>Products that deliver function, comfort, and style — built for movement.</p>
-                    </div>
-                </div>
+    <!-- Main Content Section -->
+    <section class="relative overflow-hidden py-20 px-6">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
+            <div>
+                <div class="relative inline-block text-[24px] font-medium text-[#333333] mb-[20px] after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)]">Branding & Logos</div>
+                <h1 class="text-[32px] md:text-[42px] font-[500] text-[#222] mb-[1.5rem] leading-[1.1]">
+                    Identity That Moves With Purpose
+                </h1>
+                <p class="font-[1rem] text-[#374151] mb-[2rem] leading-[1.6]">
+                    In the crowded world of sportswear and athleisure, your brand identity is your biggest differentiator. At Sportskin, we help you shape a brand that resonates — through visual identity, voice, and values. From naming and logo design to labels and packaging, our branding solutions are designed to connect, communicate, and convert.
+                </p>
+                <p class="font-[1rem] text-[#374151] mb-[2rem] leading-[1.6]">
+                    In the crowded world of sportswear and athleisure, your brand identity is your biggest differentiator. At Sportskin, we help you shape a brand that resonates — through visual identity, voice, and values. From naming and logo design to labels and packaging, our branding solutions are designed to connect, communicate, and convert.
+                </p>
             </div>
-        </section>
-
-        <section class="why-choose">
-            <div class="container">
-                <h2>Why Choose Sportskin for Design & Sampling?</h2>
-                <div class="features-grid">
-                    <div class="feature">
-                        <i class="fas fa-medal"></i>
-                        <h3>Category-Specific Branding</h3>
-                        <p> We design for the sportswear and athleisure space — not generic templates</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-bolt"></i>
-                        <h3>Strategic Meets Creative</h3>
-                        <p>Every asset we build serves a clear function in your growth journey</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-chart-line"></i>
-                        <h3>Creator-First Approach</h3>
-                        <p>We align your branding with your product vision and market goals</p>
-                    </div>
-                    <div class="feature">
-                        <i class="fas fa-leaf"></i>
-                        <h3>End-to-End Delivery</h3>
-                        <p>From naming to digital rollout support, everything under one roof</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-
-      <!-- Startup Services Detail -->
-      <section class="startup-services-section">
-        <div class="container">
-            <div class="startup-services-content">
-                <div class="startup-services-text">
-                    <h2 class="section-title">Who It's For</h2>
-                    <p class="startup-description">
-                        Sportskin empowers emerging sportswear and athleisure brands to launch with clarity, confidence, and competitive edge. 
-                        We support early-stage startups with end-to-end guidance—from product concept to market launch.
-                    </p>
-                    
-                    <div class="process-cards">
-                        <div class="process-card">
-                            
-                            <p>Early-stage founders launching their first sportswear brand</p>
+            <div class="relative">
+                <div class="relative bg-white p-8 rounded-2xl h-[300px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] before:content-[''] before:absolute before:inset-0 before:bg-[#e1e1e1] before:rounded-2xl before:-z-10 before:rotate-[3deg]">
+                    <div class="grid grid-cols-2 gap-6">
+                        <div class="bg-orange-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
+                            <img src="images/sportswear.png" alt="Creative Design Icon" class="w-8 h-6 mb-2 mx-auto">
+                            <h3 class="text-lg font-semibold text-gray-800">Creative Design</h3>
                         </div>
-                        <div class="process-card">
-                          
-                            <p>Manufacturers starting private label or OEM journeys</p>
+                      
+                        <div class="bg-yellow-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
+                            <i class="fas fa-file-alt text-yellow-500 text-2xl mb-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-800">Tech Packs</h3>
                         </div>
-                        <div class="process-card">
-                            
-                            <p>Fashion entrepreneurs rebranding their product lines</p>
+                      
+                        <div class="bg-red-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
+                            <i class="fas fa-layer-group text-red-600 text-2xl mb-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-800">Materials</h3>
                         </div>
-                        <div class="process-card">
-                            
-                            <p>Exporters preparing for global buyers and marketplaces</p>
+                      
+                        <div class="bg-yellow-50 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
+                            <i class="fas fa-bullseye text-yellow-400 text-2xl mb-2"></i>
+                            <h3 class="text-lg font-semibold text-gray-800">Performance</h3>
                         </div>
                     </div>
-                </div>
-                
-                <div class="startup-services-visual">
-                    <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                         alt="Startup team working on sportswear designs" 
-                         class="startup-image">
                 </div>
             </div>
         </div>
     </section>
 
-
-        <section class="cta-section">
-            <div class="container">
-                <div class="cta-content">
-                    <h2>Ready to Transform Your Activewear Vision?</h2>
-                    <p>Let's create performance-driven designs that stand out in the market. Our team is ready to help you bring your ideas to life.</p>
-                    <div class="cta-buttons">
-                        <a href="contact.html" class="cta-button primary">Get Started</a>
-                        <a href="#" class="cta-button secondary">Learn More</a>
-                    </div>
+    <!-- Services Section -->
+    <section class="py-[80px] bg-[#f8f9fa]">
+        <div class="max-w-[1200px] mx-auto p-4">
+            <h2 class="text-center text-[42px] mb-[50px] text-[#222222] font-medium">What's Included in Our Branding & Logos Services</h2>
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
+                    <i class="fas fa-palette text-[2.5rem] text-[#d79744] mb-[20px]"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">Brand Discovery & Strategy</h3>
+                    <p>We begin with understanding your brand's story — your vision, values, target audience, and positioning. This strategic foundation drives all creative decisions going forward.</p>
+                </div>
+                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
+                    <i class="fas fa-ruler-combined text-[2.5rem] text-[#d79744] mb-[20px]"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">Logo & Typography Design</h3>
+                    <p>We create multiple logo directions tailored to your brand personality — bold, technical, minimalist, or lifestyle. Each identity system is supported by modern typography and scalable use cases.</p>
+                </div>
+                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
+                    <i class="fas fa-tshirt text-[2.5rem] text-[#d79744] mb-[20px]"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">Visual Assets & Packaging</h3>
+                    <p>From product labels and tags to packaging mockups, we design a consistent visual language that brings your collection to life — online and on shelf.</p>
+                </div>
+                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
+                    <i class="fas fa-sync-alt text-[2.5rem] text-[#d79744] mb-[20px]"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">Brand Guidelines Document</h3>
+                    <p>You'll receive a complete brand guide, including logo usage, color palettes, fonts, and tone of voice — ensuring consistency across teams and channels.</p>
+                </div>
+                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
+                    <i class="fas fa-running text-[2.5rem] text-[#d79744] mb-[20px]"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">Optional Launch Support</h3>
+                    <p>We also help you roll out your brand with social-ready assets, packaging mockups, and digital brand kits.</p>
+                </div>
+                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
+                    <i class="fas fa-running text-[2.5rem] text-[#d79744] mb-[20px]"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">Performance & Fit Alignment</h3>
+                    <p>Products that deliver function, comfort, and style — built for movement.</p>
                 </div>
             </div>
-        </section>
+        </div>
+    </section>
+
+    <!-- Why Choose Section -->
+    <section class="py-[80px] bg-[#fff]">
+        <div class="max-w-[1200px] mx-auto p-4">
+            <h2 class="text-center text-[42px] mb-[50px] text-[#222222] font-medium">Why Choose Sportskin for Branding & Logos?</h2>
+            <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
+                <div class="text-center p-[30px]">
+                    <i class="fas fa-medal text-[2.5rem] text-[var(--primary-color)] mb-[20px] inline-block"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">Category-Specific Branding</h3>
+                    <p>We design for the sportswear and athleisure space — not generic templates</p>
+                </div>
+                <div class="text-center p-[30px]">
+                    <i class="fas fa-bolt text-[2.5rem] text-[var(--primary-color)] mb-[20px] inline-block"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">Strategic Meets Creative</h3>
+                    <p>Every asset we build serves a clear function in your growth journey</p>
+                </div>
+                <div class="text-center p-[30px]">
+                    <i class="fas fa-chart-line text-[2.5rem] text-[var(--primary-color)] mb-[20px] inline-block"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">Creator-First Approach</h3>
+                    <p>We align your branding with your product vision and market goals</p>
+                </div>
+                <div class="text-center p-[30px]">
+                    <i class="fas fa-leaf text-[2.5rem] text-[var(--primary-color)] mb-[20px] inline-block"></i>
+                    <h3 class="text-[1.5rem] mb-[15px] text-[#2c3e50]">End-to-End Delivery</h3>
+                    <p>From naming to digital rollout support, everything under one roof</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+      <!-- Startup Services Detail -->
+      <section class="py-20 bg-[#fafafa]">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      
+            <!-- Text Content -->
+            <div>
+              <h2 class="text-[42px] font-medium text-[#222] leading-tight mb-6 text-center md:text-left">
+                Who It's For
+              </h2>
+              <p class="text-gray-500 text-base leading-7 mb-10 text-center md:text-left">
+                Sportskin empowers emerging sportswear and athleisure brands to launch with clarity, confidence, and competitive edge. We support early-stage startups with end-to-end guidance—from product concept to market launch.
+              </p>
+      
+              <!-- Process Cards -->
+              <div class="grid gap-4">
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <p class="text-black leading-relaxed text-base">
+                    Early-stage founders launching their first sportswear brand.
+                  </p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <p class="text-black leading-relaxed text-base">
+                    Manufacturers starting private label or OEM journeys
+                  </p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <p class="text-black leading-relaxed text-base">
+                    Fashion entrepreneurs rebranding their product lines
+                  </p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <p class="text-black leading-relaxed text-base">
+                    Exporters preparing for global buyers and marketplaces
+                  </p>
+                </div>
+               
+              </div>
+            </div>
+      
+            <!-- Image -->
+            <div class="flex justify-center items-center">
+
+              <img
+                src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Startup team working on sportswear designs"
+                class="w-full max-w-[500px] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+              />
+            </div>
+      
+          </div>
+        </div>
+      </section>
+
+
+      <section class="py-[50px] bg-gradient-to-r from-[#101010] via-[#090909 ] to-[#292741]
+
+
+      bg-cover bg-center bg-fixed relative text-white text-center">
+        <!-- Overlay -->
+        <!-- <div class="absolute inset-0 bg-gray-800 bg-opacity-80"></div> -->
+      
+        <!-- Content -->
+        <div class="relative z-10 max-w-[800px] mx-auto px-4">
+          <h2 class="text-[3rem] font-bold mb-[20px]">
+            Ready to Transform Your Activewear Vision?
+          </h2>
+          <p class="text-[1.2rem] mb-[40px] opacity-90">
+            Let's create performance-driven designs that stand out in the market. Our team is ready to help you bring your ideas to life.
+          </p>
+      
+          <div class="flex justify-center gap-[20px]">
+            <a href="contact.html" class="px-[35px] py-[15px] rounded-[30px] text-[1.1rem] font-semibold text-white border-2 border-white transition-all duration-300  hover:bg-[#292741]">
+              Get Started
+            </a>
+            <a href="#" class="px-[35px] py-[15px] rounded-[30px] text-[1.1rem] font-semibold text-white border-2 border-white transition-all duration-300 hover:bg-[#292741] ">
+              Learn More
+            </a>
+          </div>
+        </div>
+    </section>
     </main>
 
     <!-- Footer -->
@@ -302,7 +410,7 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="#academy">Academy</a></li>
+                        <li><a href="academy.html">Academy</a></li>
                         <li><a href="#testimonials">Resources</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -328,5 +436,39 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openBtn = document.getElementById('openMobileNavbar');
+            const closeBtn = document.getElementById('closeMobileNavbar');
+            const sidebar = document.getElementById('mobileNavbar');
+            const overlay = document.getElementById('mobileNavbarOverlay');
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+    
+            function openSidebar() {
+                sidebar.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+    
+            openBtn.addEventListener('click', openSidebar);
+            closeBtn.addEventListener('click', closeSidebar);
+            overlay.addEventListener('click', closeSidebar);
+    
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parent = this.parentElement;
+                    const dropdown = parent.querySelector('.mobile-dropdown');
+                    dropdown.classList.toggle('open');
+                    this.classList.toggle('open');
+                });
+            });
+        });
+        </script>
 </body>
 </html>

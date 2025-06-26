@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Design & Sampling | Sportskin</title>
+  
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="final.css">
+    <style>
+        .rotating-circle {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-image {
+            position: absolute;
+            width: 65px;  
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .circle-text {
+            position: relative;
+            z-index: 1;
+        }
+    </style>
+</head>
+<body>
+     <!-- Navbar -->
+     <nav class="navbar">
+        <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
+        <ul class="nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="dropdown-parent">
+                <a href="#">Services </a>
+                <div class="mega-dropdown">
+                    <div class="dropdown-container">
+                        <a href="design-and-sampling.html">Design & Sampling</a>
+                        <a href="buying-and-sourcing.html">Buying & Sourcing</a>
+                        <a href="manufacturing.html">Manufacturing</a>
+                        <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
+                        <a href="branding-logos.html">Branding & Logos</a>
+                    </div>
+                </div>
+            </li>
+            <li class="dropdown-parent">
+                <a href="#">Verticals</a>
+                <div class="mega-dropdown">
+                    <div class="dropdown-container">
+                        <a href="startups.html">Startups</a>
+                         <a href="manufactures-exporters.html">Manufacturers & Exporters</a>
+                        <a href="b2b-brands.html">B2B Brands</a>
+                    </div>
+                </div>
+            </li>
+          <li><a href="academy.html">Academy</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+    <div class="mobile-header">
+      <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+      <div class="hamburger" id="openMobileNavbar">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+    </div>
+
+    <!-- Mobile Sidebar Navbar -->
+    <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
+    <nav class="mobile-navbar" id="mobileNavbar">
+        <div class="mobile-navbar-header">
+            <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
+            <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown-parent">
+                <a href="#" class="mobile-dropdown-toggle">Services <span class="arrow">&#9654;</span></a>
+                <ul class="mobile-dropdown">
+                    <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                    <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                    <li><a href="manufacturing.html">Manufacturing</a></li>
+                    <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                    <li><a href="branding-logos.html">Branding & Logos</a></li>
+                </ul>
+            </li>
+            <li class="mobile-dropdown-parent">
+                <a href="#" class="mobile-dropdown-toggle">Verticals <span class="arrow">&#9654;</span></a>
+                <ul class="mobile-dropdown">
+                    <li><a href="startups.html">Startups</a></li>
+                    <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
+                    <li><a href="b2b-brands.html">B2B Brands</a></li>
+                </ul>
+            </li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
+   
+    <main>
+  
+        
+             <!-- Academy Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-container">
+            <div class="row">
+                <div class="col-12">
+                    <h1 class="contact-heading">WELCOME TO SPORTSKIN ACADEMY</h1>
+                    <h2 class="contact-tagline">Your Gateway to Mastering the Science, Art & Business of Sportswear</h2>
+                    <p>Whether you're dreaming of becoming a sportswear designer, launching a new brand, or innovating in manufacturing – Sportskin Academy brings you targeted, industry-first learning modules that help you understand, build, and scale in the Activewear world.</p>
+                  
+                    <div class="contact-image">
+                        <img src="images/logo-symbol-removebg.png" alt="Contact Us Image">
+                    </div>
+                    <div class="arrow-down">
+                        <svg width="40" height="40" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 20L12 4" stroke="#333" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                            <path d="M5 13L12 20L19 13" stroke="#333" stroke-width="1.5" stroke-linecap="round"
+                                stroke-linejoin="round" />
+                        </svg>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+           
+       <!-- why choose us -->
+       <section class="eco__solutions__wrapper">
+        <div class="eco__content__container">
+            <div class="eco__label__badge">
+                
+                <span>WHY CHOOSE US</span>
+            </div>
+            
+            <h1 class="eco__primary__title">For Aspiring Sportswear Designers, Fashion Institute Graduates & Curious Creators.</h1>
+            
+            <p class="eco__description__text">
+                The fashion and sportswear world may seem similar, but the technical demands of activewear are completely different. Many young creatives lack exposure to performance textiles, industry-standard fit requirements, and the know-how to develop functional apparel.
+            </p>
+            
+            <ul class="eco__features__listing">
+                <li class="eco__feature__entry">
+                    <span class="eco__arrow__indicator">→</span>
+                    <span>The foundations of sportswear vs casualwear</span>
+                </li>
+                <li class="eco__feature__entry">
+                    <span class="eco__arrow__indicator">→</span>
+                    <span>Activewear-specific silhouettes, trims, stitching, and fit</span>
+                </li>
+                <li class="eco__feature__entry">
+                    <span class="eco__arrow__indicator">→</span>
+                    <span>How to build a complete performancewear tech pack.</span>
+                </li>
+                <li class="eco__feature__entry">
+                    <span class="eco__arrow__indicator">→</span>
+                    <span>Fabric functionality and how to spot trends in sportswear</span>
+                </li>
+                <li class="eco__feature__entry">
+                    <span class="eco__arrow__indicator">→</span>
+                    <span>Real-world projects to build a functional portfolio</span>
+                </li>
+            </ul>
+            
+           
+        </div>
+        
+        <div class="eco__gallery__layout">
+            <div class="eco__images__column__left">
+                <div class="eco__image__frame">
+                    <img src="images/demo-gym-and-fitness-home-07.jpg" alt="Environmental solution with tree and globe reflection">
+                </div>
+                <div class="eco__image__frame">
+                    <img src="images/demo-gym-and-fitness-home-08.jpg" alt="Children planting together">
+                </div>
+            </div>
+            <div class="eco__images__column__right">
+                <div class="eco__image__frame--single">
+                    <img src="images/demo-gym-and-fitness-home-10.jpg" alt="Renewable energy with solar panels and wind turbine">
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- image section -->
+    <section class="eco-solutions-container">
+        
+        <!-- Images Section - Will appear below content on mobile -->
+        <div class="eco-images-section order-2 md:order-1">
+            <div class="eco-left-column">
+                <div class="eco-support-card">
+                    <div>
+                        <h2 class="eco-support-title">24/7 support</h2>
+                        <p class="eco-support-subtitle">We provide 24/7 services<br>to our customers</p>
+                    </div>
+                    
+                </div>
+                
+                <div class="eco-image-card eco-small">
+                    <img src="images/demo-gym-and-fitness-home-06.jpg" alt="Globe with leaves representing environmental conservation">
+                </div>
+            </div>
+
+            <div class="eco-right-column">
+                <div class="eco-image-card eco-large">
+                    <img src="images/demo-gym-and-fitness-home-08.jpg" alt="Industrial landscape with wind turbines and green technology">
+                </div>
+            </div>
+        </div>
+
+        <!-- Content Section - Will appear above images on mobile -->
+        <div class="eco-content-wrapper order-1 md:order-2">
+            <div class="eco-brand-header">
+                
+                <span class="eco-brand-text">Eco-Friendly Solutions</span>
+            </div>
+
+            <h1 class="eco-main-heading">
+                For Start-up Founders, Brand Buyers, Category Managers & Sportswear Professionals
+            </h1>
+
+            <p class="eco-description">
+                If you're building a brand or managing a sportswear category, you've likely faced inconsistent vendors, unclear sourcing strategies, or trial-by-error product development. Without a clear roadmap, it's hard to scale or differentiate.
+            </p>
+
+            <div class="eco-features-grid">
+                <div class="eco-feature-item">
+                    <div class="eco-arrow-icon">→</div>
+                    <span class="eco-feature-text">How to define a winning product strategy and spot market gaps</span>
+                </div>
+                <div class="eco-feature-item">
+                    <div class="eco-arrow-icon">→</div>
+                    <span class="eco-feature-text">Fit testing processes, wear trials, and streamlined production</span>
+                </div>
+                <div class="eco-feature-item">
+                    <div class="eco-arrow-icon">→</div>
+                    <span class="eco-feature-text">GTM models tailored to sportswear brands</span>
+                </div>
+                <div class="eco-feature-item">
+                    <div class="eco-arrow-icon">→</div>
+                    <span class="eco-feature-text">Eco-Friendly Waste Disposal</span>
+                </div>
+            </div>
+        </div>
+    </section> 
+
+    <section class="py-20 bg-[#fafafa]">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+      
+            <!-- Text Content -->
+            <div>
+              <h2 class="text-[35px] font-medium text-[#222] leading-tight mb-6 text-center md:text-left">
+                For Manufacturers, Merchandisers, Sampling Heads & Tailor Masters
+              </h2>
+              <p class="text-gray-500 text-base leading-7 mb-10 text-center md:text-left">
+                As manufacturers enter the performancewear segment, many struggle with stitching techniques, fabric selection, or decoding technical buyer packs. Misalignment between sampling, construction, and QA can result in lost clients and wasted resources.
+              </p>
+      
+              <!-- Process Cards -->
+              <div class="grid gap-2">
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <p class="text-black leading-relaxed text-[14px]">
+                    Garment construction for activewear — bonding, flatlock, cover-stitch, and more
+                  </p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <p class="text-black leading-relaxed text-[14px]">
+                    How to interpret buyer tech packs and handle high-stretch fabrics
+                  </p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <p class="text-black leading-relaxed text-[14px]">
+                    Understanding fit, recovery, and material behavior
+                  </p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <p class="text-black leading-relaxed text-[14px]">
+                    Sampling protocols, SPI benchmarks, and lab test essentials
+                  </p>
+                </div>
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <p class="text-black leading-relaxed text-[14px]">
+                    Roles of QA, QC, and merchandising teams in performancewear production
+                  </p>
+                </div>
+              </div>
+            </div>
+       
+            <!-- Image -->
+            <div class="flex justify-center items-center order-first md:order-last">
+              <img
+                src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Startup team working on sportswear designs"
+                class="w-full max-w-[500px] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+              />
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+      <section class="py-[80px]">
+        <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[80px] items-start px-5">
+          <!-- Left Section -->
+          <div class="pr-0 md:pr-[40px]">
+            <div class="inline-flex items-center bg-[#414141] text-[#fffdf6] py-2 px-4 rounded-[20px] text-[14px] font-semibold mb-6 uppercase tracking-[0.5px]">
+                How We Work With You
+            </div>
+            <h1 class="text-[42px] md:text-[36px] font-medium leading-[1.1] text-[#222] mb-6 max-w-full">
+                Not Sure Where to Begin? Join Our Masterclass
+            </h1>
+            <p class="text-[18px] leading-[1.6] text-[#666] mb-8">
+                If you’re unsure where your skills or business fits in, our exclusive introductory Masterclass – “All About Activewear” is the perfect place to start.
+            </p>
+            <div class="mb-10">
+                <img src="images/demo-gym-and-fitness-home-06.jpg" alt="Description of your image" class="w-full h-[200px] rounded-lg shadow-md">
+              </div>
+          </div>
+      
+          <!-- Right Section -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-[24px]">
+            <!-- Service Card 1 -->
+            <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
+                  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                    <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z" />
+                  </svg>
+                </div>
+                <!-- <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-black">
+                 
+    Consultation & Diagnostic Session
+                </h3> -->
+                <p class="text-[18px] leading-[1.5] text-[#666] group-hover:text-white/90">
+                    Learn how the activewear industry works from idea to execution
+                </p>
+              </div>
+            </div>
+      
+            <!-- Service Card 2 -->
+            <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
+                  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                    <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" />
+                  </svg>
+                </div>
+                <!-- <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-black">
+                  
+    Range Development Planning
+                </h3> -->
+                <p class="text-[18px] leading-[1.5] text-[#666] group-hover:text-white/90">
+                    Discover the ideal path based on your current role or goals
+                </p>
+              </div>
+            </div>
+      
+            <!-- Service Card 3 -->
+            <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
+                  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                    <path d="M9 11H7V9H9V11ZM13 11H11V9H13V11ZM17 11H15V9H17V11ZM19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19Z" />
+                  </svg>
+                </div>
+                <!-- <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-black">
+                
+    Sampling & Sourcing Setup
+                </h3> -->
+                <p class="text-[18px] leading-[1.5] text-[#666] group-hover:text-white/90">
+                    Explore our Bronze, Silver, and Gold learning paths
+                </p>
+              </div>
+            </div>
+      
+            <!-- Service Card 4 -->
+            <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
+              <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
+              <div class="relative z-10">
+                <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
+                  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                    <path d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z" />
+                  </svg>
+                </div>
+                <!-- <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-black">
+                    Ongoing Advisory or Retainer Support
+                </h3> -->
+                <p class="text-[18px] leading-[1.5] text-[#666] group-hover:text-white/90">
+                    Get a free downloadable checklist to assess your readiness
+                </p>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+
+
+
+</main>
+
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Sportskin</h3>
+                    <p>Shaping the future of sportswear through design, innovation, sustainability and performance.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                        <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                        <li><a href="manufacturing.html">Manufacturing</a></li>
+                        <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                        <li><a href="branding-logos.html">Branding & Logos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="academy.html">Academy</a></li>
+                        <li><a href="#testimonials">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>Sportskin International Pvt Ltd. B2- 1404,
+                            The Plaza at 106 Spire Condominiums Dwarka Expressway, Sector 106 122006
+                        </li>
+                        <li>Gurgaon, Haryana</li>
+                        <li>+91 9910065827</li>
+                        <li>info@sportskin.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sportskin. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openBtn = document.getElementById('openMobileNavbar');
+            const closeBtn = document.getElementById('closeMobileNavbar');
+            const sidebar = document.getElementById('mobileNavbar');
+            const overlay = document.getElementById('mobileNavbarOverlay');
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+    
+            function openSidebar() {
+                sidebar.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+    
+            openBtn.addEventListener('click', openSidebar);
+            closeBtn.addEventListener('click', closeSidebar);
+            overlay.addEventListener('click', closeSidebar);
+    
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parent = this.parentElement;
+                    const dropdown = parent.querySelector('.mobile-dropdown');
+                    dropdown.classList.toggle('open');
+                    this.classList.toggle('open');
+                });
+            });
+        });
+        </script>
+</body>
+</html>

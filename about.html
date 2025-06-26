@@ -7,15 +7,32 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT" crossorigin="anonymous">
-    <link rel="stylesheet" href="combined.css">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="final.css">
     <style>
+        .logo-circle{
+    
+    overflow: hidden;
+    border-radius: 8px;
+   
+    width: 100%;
+    max-width: 150px;
+    margin: 50px auto;
+    text-align: center;
+    position: relative;
+}
 
+
+.logo-circle img{width: 100%;
+    height: auto;
+    border-radius: 10px;
+    transition: transform 0.3s ease;
+    animation: rotate 20s linear infinite;}
     </style>
 </head>
 
 <body>
+   <!-- Navbar -->
    <!-- Navbar -->
    <nav class="navbar">
     <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
@@ -29,12 +46,11 @@
                     <a href="design-and-sampling.html">Design & Sampling</a>
                     <a href="buying-and-sourcing.html">Buying & Sourcing</a>
                     <a href="manufacturing.html">Manufacturing</a>
-                        <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
-                        <a href="branding-logos.html">Branding & Logos</a>
+                    <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
+                    <a href="branding-logos.html">Branding & Logos</a>
                 </div>
             </div>
         </li>
-
         <li class="dropdown-parent">
             <a href="#">Verticals</a>
             <div class="mega-dropdown">
@@ -42,30 +58,71 @@
                     <a href="startups.html">Startups</a>
                      <a href="manufactures-exporters.html">Manufacturers & Exporters</a>
                     <a href="b2b-brands.html">B2B Brands</a>
-                  
                 </div>
             </div>
         </li>
-        <li><a href="#">Academy</a></li>
+      <li><a href="academy.html">Academy</a></li>
         <li><a href="#">Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
-    <div class="hamburger">
-        <div class="line1"></div>
-        <div class="line2"></div>
-        <div class="line3"></div>
+</nav>
+<div class="mobile-header">
+  <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+  <div class="hamburger" id="openMobileNavbar">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+  </div>
+</div>
+
+<!-- Mobile Sidebar Navbar -->
+<div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
+<nav class="mobile-navbar" id="mobileNavbar">
+    <div class="mobile-navbar-header">
+        <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
+        <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
     </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="mobile-dropdown-parent">
+            <a href="#" class="mobile-dropdown-toggle">Services <span class="arrow">&#9654;</span></a>
+            <ul class="mobile-dropdown">
+                <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                <li><a href="manufacturing.html">Manufacturing</a></li>
+                <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                <li><a href="branding-logos.html">Branding & Logos</a></li>
+            </ul>
+        </li>
+        <li class="mobile-dropdown-parent">
+            <a href="#" class="mobile-dropdown-toggle">Verticals <span class="arrow">&#9654;</span></a>
+            <ul class="mobile-dropdown">
+                <li><a href="startups.html">Startups</a></li>
+                <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
+                <li><a href="b2b-brands.html">B2B Brands</a></li>
+            </ul>
+        </li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="#">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
 </nav>
 
-
-    <!-- About Us Section -->
-    <section class="about-section">
-        <div class="about-container">
-            <div class="row">
-                <div class="col-12">
-                    <h2 class="about-tagline">Helping you create with people<br>and planet in mind.</h2>
-
-                    <h1 class="about-heading">ABOUT US</h1>
+    <!-- About Us Section --> 
+    <section class="py-[180px] font-[Montserrat,sans-serif]">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="text-center">
+            
+            <!-- Tagline -->
+            <h2 class="text-2xl md:text-[1.5rem] text-gray-600 font-normal mb-12">
+              Helping you create with people<br />and planet in mind.
+            </h2>
+      
+            <!-- Main Heading -->
+            <h1 class="text-4xl md:text-6xl text-[#222] font-normal mb-10">
+              ABOUT US
+            </h1>
 
                     <!-- New image element -->
                     <div class="logo-circle">
@@ -87,115 +144,118 @@
     </section>
 
     <!-- Founders & Journey Section -->
-    <section class="founders-section">
-        <div class="founders-container">
-            <div class="founders-content">
-                <div class="founders-text reveal fade-right">
-                    <h1 class="founders-title">Our Journey</h1>
-                    <p class="fw-bold " style=" color: #E47B35;">From Vision to Industry Transformation</p>
-                    <p class="founders-description">
-                        Sportskin began with a simple yet powerful belief — that sportswear in India deserved a
-                        revolution. Our founder, Mridul Das, brought over 25 years of deep experience with iconic brands
-                        like Adidas and Future Group to create something India had never seen before: an end-to-end
-                        sportswear consultancy.
-
-
-                    </p>
-                    <p class="founders-description">
-                        From leading national innovation for Khelo India to transforming grassroots apparel
-                        accessibility, Mridul's journey has always focused on making performance wear more inclusive and
-                        effective. In 2023, Sportskin was launched to bring strategic insight, sustainable sourcing, and
-                        design excellence to startups, manufacturers, and global brands entering the Indian market.
-                    </p>
-                    <p class="founders-description">
-                        Today, Sportskin is not just a company; it's a growing movement of creators, innovators, and
-                        entrepreneurs building the future of activewear—one brand, one product, and one athlete at a
-                        time.
-                    </p>
-                </div>
-                <div class="founders-image reveal fade-left">
-                    <img src="images/founder.png" alt="SPORTSKIN Founder"
-                        class="founder-img">
-                </div>
+    <section class="py-24 bg-[#f8f8f8] overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="flex flex-col lg:flex-row items-center gap-12 lg:gap-16">
+            <!-- Text Section -->
+            <div class="flex-1 text-center lg:text-left">
+              <h1 class="text-[50px] font-bold font-montserrat text-[#222] mb-5 pb-4 relative inline-block after:content-[''] after:absolute after:bottom-0 after:left-0 lg:after:left-0 after:w-20 after:h-[3px] after:bg-[#ff6600] after:transform lg:after:translate-x-0">
+                Our Journey
+              </h1>
+              <p class="font-bold text-[#E47B35] mb-4">From Vision to Industry Transformation</p>
+              <p class="text-[#555] text-base leading-8 mb-5 font-montserrat">
+                Sportskin began with a simple yet powerful belief — that sportswear in India deserved a
+                revolution. Our founder, Mridul Das, brought over 25 years of deep experience with iconic
+                brands like Adidas and Future Group to create something India had never seen before: an
+                end-to-end sportswear consultancy.
+              </p>
+              <p class="text-[#555] text-base leading-8 mb-5 font-montserrat">
+                From leading national innovation for Khelo India to transforming grassroots apparel
+                accessibility, Mridul's journey has always focused on making performance wear more inclusive and
+                effective. In 2023, Sportskin was launched to bring strategic insight, sustainable sourcing, and
+                design excellence to startups, manufacturers, and global brands entering the Indian market.
+              </p>
+              <p class="text-[#555] text-base leading-8 mb-5 font-montserrat">
+                Today, Sportskin is not just a company; it's a growing movement of creators, innovators, and
+                entrepreneurs building the future of activewear—one brand, one product, and one athlete at a
+                time.
+              </p>
             </div>
+      
+            <!-- Image Section -->
+            <div class="flex-1">
+              <img src="images/founder.png" alt="SPORTSKIN Founder"
+                class="w-full h-auto rounded-[10px] transition-transform duration-300 ease-in-out hover:scale-105">
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
+      
 
     <!-- Mission & Vision Section -->
-    <section class="mission-vision-section reveal">
-        <div class="container">
-            <!-- Mission Section -->
-           
-
-            <!-- Vision Section -->
-            <div class="vision-content">
-                <div class="vision-image reveal fade-left">
-                    <img src="images/vision.jpg" alt="Our Vision">
-                </div>
-                <div class="vision-text reveal fade-right">
-                    <div class="box-content">
-                        <h1>Our Vision</h1>
-                        <div class="underline"></div>
-                        <p class="fw-bold" style="color: #E47B35;">To Lead India's Sportswear Revolution</p>
-                        <p>We envision a future where India becomes a global hub for innovative, sustainable, and
-                            high-performance sportswear. Sportskin aims to be the driving force behind this
-                            transformation by serving as a trusted partner to brands, manufacturers, and institutions.</p>
-                        <p>We see a world where every founder has the tools, network, and expertise to build a
-                            competitive activewear brand. A world where manufacturers transition seamlessly into
-                            high-growth categories, and where India stands at the forefront of the global sportswear
-                            value chain.</p>
-                    </div>
-                </div>
+    <section class="py-24 bg-white overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4 space-y-24">
+          <!-- Vision Section -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            <!-- Image -->
+            <div class="relative overflow-hidden rounded-[15px] shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+              <img src="images/vision.jpg" alt="Our Vision" class="w-full h-auto transition-transform duration-500 ease-in-out hover:scale-105" />
             </div>
-            <div class="mission-content">
-                <div class="mission-text reveal fade-left">
-                    <div class="box-content">
-                        <h1>Our Mission</h1>
-                        <div class="underline"></div>
-                        <p class="fw-bold" style="color: #E47B35;">Building the Next Sportswear Leaders</p>
-                        <p>Our mission is to enable and empower at least 100 dynamic sportswear players—startups,
-                            manufacturers,
-                            and established global brands—over the next five transformative, high-growth years through
-                            strategy, innovation,
-                            sustainability, and mentorship.</p>
-                        <p>We strive to democratize access to world-class performance wear solutions by offering
-                            customized guidance across every stage of brand and product development. From concept to
-                            consumer, we exist to help you move with purpose, design with impact, and grow with
-                            confidence.</p>
-                    </div>
-                </div>
-                <div class="mission-image reveal fade-right">
-                    <img src="images/mission.jpg" alt="Our Mission">
-                </div>
+            <!-- Text -->
+            <div class="p-5">
+              <h1 class="text-[50px] font-bold font-montserrat text-[#222] mb-4">Our Vision</h1>
+              <div class="w-[60px] h-[3px] bg-[#ff6600] mb-5 transition-all duration-300 hover:w-[100px]"></div>
+              <p class="font-bold text-[#E47B35] mb-4">To Lead India's Sportswear Revolution</p>
+              <p class="text-[#555] text-base leading-8 font-montserrat mb-4">
+                We envision a future where India becomes a global hub for innovative, sustainable, and high-performance sportswear. Sportskin aims to be the driving force behind this transformation by serving as a trusted partner to brands, manufacturers, and institutions.
+              </p>
+              <p class="text-[#555] text-base leading-8 font-montserrat">
+                We see a world where every founder has the tools, network, and expertise to build a competitive activewear brand. A world where manufacturers transition seamlessly into high-growth categories, and where India stands at the forefront of the global sportswear value chain.
+              </p>
             </div>
+          </div>
+      
+          <!-- Mission Section -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            <!-- Text -->
+            <div class="order-2 lg:order-1 p-5">
+              <h1 class="text-[50px] font-bold font-montserrat text-[#222] mb-4">Our Mission</h1>
+              <div class="w-[60px] h-[3px] bg-[#ff6600] mb-5 transition-all duration-300 hover:w-[100px]"></div>
+              <p class="font-bold text-[#E47B35] mb-4">Building the Next Sportswear Leaders</p>
+              <p class="text-[#555] text-base leading-8 font-montserrat mb-4">
+                Our mission is to enable and empower at least 100 dynamic sportswear players—startups, manufacturers, and established global brands—over the next five transformative, high-growth years through strategy, innovation, sustainability, and mentorship.
+              </p>
+              <p class="text-[#555] text-base leading-8 font-montserrat">
+                We strive to democratize access to world-class performance wear solutions by offering customized guidance across every stage of brand and product development. From concept to consumer, we exist to help you move with purpose, design with impact, and grow with confidence.
+              </p>
+            </div>
+            <!-- Image -->
+            <div class="order-1 lg:order-2 relative overflow-hidden rounded-[15px] shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+              <img src="images/mission.jpg" alt="Our Mission" class="w-full h-auto transition-transform duration-500 ease-in-out hover:scale-105" />
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
 
     <!-- What We Do Section -->
-    <section class="what-we-do-section reveal">
-        <div class="container">
-            <div class="what-we-do-content">
-                <div class="what-we-do-image reveal fade-left">
-                    <img src="images/what-we-do.jpg" alt="What We Do at Sportskin">
-                </div>
-                <div class="what-we-do-text reveal fade-right">
-                    <h1>What We Do</h1>
-                    <div class="underline"></div>
-                    <div class="service-points">
-                        <p>We see a world where every founder has the tools, network, and expertise to build a
-                            competitive activewear brand. A world where manufacturers transition seamlessly into
-                            high-growth categories, and where India stands at the forefront of the global sportswear
-                            value chain.</p>
-                        <p>We also provide strategic consultancy and mentorship to guide early-stage brands and help
-                            manufacturers enter the activewear space. Our custom services include private label
-                            development, fabric innovation, and OEM/ODM support. Through Sportskin Academy, we equip
-                            founders and teams with the skills needed to thrive in this competitive market. We're not
-                            just your service provider — we're your growth partner.</p>
-                    </div>
-                </div>
+    <section class="py-24 bg-[#f8f8f8] overflow-hidden">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-14 items-center">
+            <!-- Image -->
+            <div class="relative overflow-hidden rounded-[15px] shadow-[0_10px_30px_rgba(0,0,0,0.1)]">
+              <img src="images/what-we-do.jpg" alt="What We Do at Sportskin"
+                   class="w-full h-auto transition-transform duration-500 ease-in-out hover:scale-105" />
             </div>
+      
+            <!-- Text -->
+            <div class="p-5 text-center lg:text-left">
+              <h1 class="text-[50px] font-bold font-montserrat text-[#222] mb-4">What We Do</h1>
+              <div class="w-[60px] h-[3px] bg-[#ff6600] mb-5 mx-auto lg:mx-0 transition-all duration-300 hover:w-[100px]"></div>
+              <div class="grid gap-6 mt-8">
+                <p class="text-[#555] text-base leading-8 font-montserrat">
+                  We see a world where every founder has the tools, network, and expertise to build a competitive activewear brand. A world where manufacturers transition seamlessly into high-growth categories, and where India stands at the forefront of the global sportswear value chain.
+                </p>
+                <p class="text-[#555] text-base leading-8 font-montserrat">
+                  We also provide strategic consultancy and mentorship to guide early-stage brands and help manufacturers enter the activewear space. Our custom services include private label development, fabric innovation, and OEM/ODM support. Through Sportskin Academy, we equip founders and teams with the skills needed to thrive in this competitive market. We're not just your service provider — we're your growth partner.
+                </p>
+              </div>
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+      
 
     <!-- Partners Section -->
     <section class="partners-section reveal">
@@ -321,7 +381,7 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="#academy">Academy</a></li>
+                        <li><a href="academy.html">Academy</a></li>
                         <li><a href="#testimonials">Resources</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -350,7 +410,40 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-j1CDi7MgGQ12Z7Qab0qlWQ/Qqz24Gc6BM0thvEMVjHnfYGF0rmFCozFSxQBxwHKO"
         crossorigin="anonymous"></script>
-
+        <script>
+            document.addEventListener('DOMContentLoaded', function() {
+                const openBtn = document.getElementById('openMobileNavbar');
+                const closeBtn = document.getElementById('closeMobileNavbar');
+                const sidebar = document.getElementById('mobileNavbar');
+                const overlay = document.getElementById('mobileNavbarOverlay');
+                const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+        
+                function openSidebar() {
+                    sidebar.classList.add('open');
+                    overlay.classList.add('open');
+                    document.body.style.overflow = 'hidden';
+                }
+                function closeSidebar() {
+                    sidebar.classList.remove('open');
+                    overlay.classList.remove('open');
+                    document.body.style.overflow = '';
+                }
+        
+                openBtn.addEventListener('click', openSidebar);
+                closeBtn.addEventListener('click', closeSidebar);
+                overlay.addEventListener('click', closeSidebar);
+        
+                dropdownToggles.forEach(toggle => {
+                    toggle.addEventListener('click', function(e) {
+                        e.preventDefault();
+                        const parent = this.parentElement;
+                        const dropdown = parent.querySelector('.mobile-dropdown');
+                        dropdown.classList.toggle('open');
+                        this.classList.toggle('open');
+                    });
+                });
+            });
+            </script>
     <script>
         // Enhanced reveal animation function
         function reveal() {

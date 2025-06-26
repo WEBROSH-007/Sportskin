@@ -4,10 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design & Sampling | Sportskin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="b2b.css">
+    <link rel="stylesheet" href="final.css">
     <style>
         .rotating-circle {
             position: relative;
@@ -30,6 +31,8 @@
             position: relative;
             z-index: 1;
         }
+              /* Footer Styles */
+
     </style>
 </head>
 <body>
@@ -61,26 +64,64 @@
                     </div>
                 </div>
             </li>
-            <li><a href="#">Academy</a></li>
+          <li><a href="academy.html">Academy</a></li>
             <li><a href="#">Resources</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
     </nav>
+    <div class="mobile-header">
+      <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+      <div class="hamburger" id="openMobileNavbar">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+    </div>
+
+    <!-- Mobile Sidebar Navbar -->
+    <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
+    <nav class="mobile-navbar" id="mobileNavbar">
+        <div class="mobile-navbar-header">
+            <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
+            <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
+        </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown-parent">
+                <a href="#" class="mobile-dropdown-toggle">Services <span class="arrow">&#9654;</span></a>
+                <ul class="mobile-dropdown">
+                    <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                    <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                    <li><a href="manufacturing.html">Manufacturing</a></li>
+                    <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                    <li><a href="branding-logos.html">Branding & Logos</a></li>
+                </ul>
+            </li>
+            <li class="mobile-dropdown-parent">
+                <a href="#" class="mobile-dropdown-toggle">Verticals <span class="arrow">&#9654;</span></a>
+                <ul class="mobile-dropdown">
+                    <li><a href="startups.html">Startups</a></li>
+                    <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
+                    <li><a href="b2b-brands.html">B2B Brands</a></li>
+                </ul>
+            </li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
+    </nav>
+
 
    
     <main>
-        <section class="branding-hero">
-            <div class="container-top">
-                <div class="hero-content">
-                    <div class="left-content">
-                        <div class="text-row-1">B2B </div>
-                        
-                        <div class="middle-row">
+        <section class="relative pt-[100px] pb-[100px] md:pt-[180px] md:pb-[100px] bg-[rgba(243,244,246,0.8)] min-h-[60vh] flex items-center">
+            <div class="max-w-[1200px] mx-auto p-4">
+                <!-- Desktop Layout (md and up) -->
+                <div class="hidden md:grid grid-cols-2 gap-[300px] items-start">
+                    <div class="text-left">
+                        <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] mb-[20px] uppercase">B2B</div>
+                        <div class="flex items-center gap-[40px] mb-[20px]">
                             <div class="rotating-circle">
                                 <div class="circle-text">
                                     <svg viewBox="0 0 180 180">
@@ -88,7 +129,7 @@
                                             <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
                                         </defs>
                                         <text>
-                                            <textPath href="#circle">
+                                            <textPath href="#circle" class="text-[18px] font-[500] uppercase tracking-[2px] text-[#666]">
                                                 SPORTSWEAR CONSULTANCY
                                             </textPath>
                                         </text>
@@ -96,12 +137,48 @@
                                 </div>
                                 <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
                             </div>
-                            
-                            <div class="text-row-2">BRANDS</div>
+                            <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">Brands</div>
                         </div>
                     </div>
-    
-                    <div class="description">
+                    
+                    <div class="max-w-[300px] text-[#666] text-[16px] leading-[1.6] font-[400] mt-[20px]">
+                        <p>
+                            Creating products with a strong identity. We provide ideas and adding the world called success brand.
+                        </p>
+                    </div>
+                </div>
+                
+                <!-- Mobile Layout (below md) -->
+                <div class="md:hidden flex flex-col items-center text-center space-y-8">
+                    <!-- First row: "Design &" centered -->
+                    <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
+                       B2B
+                    </div>
+                    
+                    <!-- Second row: "Sampling" text and logo in column -->
+                    <div class="flex flex-col items-center gap-[20px]">
+                        <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
+                            Brands
+                        </div>
+                        <div class="rotating-circle">
+                            <div class="circle-text">
+                                <svg viewBox="0 0 180 180">
+                                    <defs>
+                                        <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
+                                    </defs>
+                                    <text>
+                                        <textPath href="#circle" class="text-[16px] font-[500] uppercase tracking-[2px] text-[#666]">
+                                            SPORTSWEAR CONSULTANCY
+                                        </textPath>
+                                    </text>
+                                </svg>
+                            </div>
+                            <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
+                        </div>
+                    </div>
+                    
+                    <!-- Third row: Description text centered -->
+                    <div class="max-w-[300px] text-[#666] text-[16px] leading-[1.6] font-[400] text-center">
                         <p>
                             Creating products with a strong identity. We provide ideas and adding the world called success brand.
                         </p>
@@ -109,248 +186,288 @@
                 </div>
             </div>
         </section>
-   
-
-        <section id="about" class="about reveal fade-bottom">
-            <div class="container">
-                <div class="about-content">
-                    <div class="about-text reveal fade-left">
-                        <h3 class="small-heading">B2B BRANDS </h3>
-                        <h1 class="main-heading">Start Strong Scale Smart
-                            <!-- <span class="green-dot">.</span> -->
-                        </h1>
-                        <p>Sportskin partners with B2B sportswear and athleisure brands across India and globally to provide strategic, technical, and execution support across the full product lifecycle.</p>
-                       <p>Whether you're building new product lines, entering the Indian supply chain, or looking to speed up development without sacrificing quality — we're your on-ground growth partner. From design and development to sourcing, QC, and brand alignment, we help brands create market-ready collections with speed and precision.</p>
-                      
     
+        <section id="about" class="bg-[var(--gray-bg)] relative overflow-hidden  py-16 lg:py-24">
+            <div class="mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 1200px;">
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
+                    <!-- Text Content -->
+                    <div class="">
+                        <h3 class="relative inline-block text-[24px] text-[#333333] mb-[20px] after:block after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)] content-['']">MANUFACTURERS & EXPORTERS</h3>
+                        <h1 class="text-[40px]">Start Strong Scale Smart</h1>
+                        <p class="relative inline-block text-[16px] font-[500] font-[Montserrat,sans-serif] leading-[2] mt-[10px]">You've built a strong foundation in garment manufacturing. Now it's time to grow where the demand is headed: sportswear and athleisure.</p>
+                        <p class="relative inline-block text-[16px] font-[500] font-[Montserrat,sans-serif] leading-[2] mt-[10px]">At Sportskin, we partner with manufacturers and export units ready to enter high-growth activewear categories. We help you transform your production capabilities, align with global buyer expectations, and confidently develop performance-ready collections. Whether you're new to sportswear or scaling your offering, our proven process supports capability building, product strategy, and client acquisition.</p>
                     </div>
-                    <div class=" reveal fade-right">
-                        <img  class="startup-about-img" src="images/about.png" alt="About Sportskin">
+                    
+                    <!-- Image Content -->
+                    <div class="">
+                        <div class="relative">
+                            <img 
+                                src="images/about.png"
+                                alt="About Sportskin - Design team working on sportswear concepts" 
+                                class="w-full h-auto rounded-lg shadow-lg object-cover"
+                            >
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-
 <!-- what makes sportskin diffrent  -->
-<section class="whatmakes">
-    <div class="what-makes-container">
-        <div class="left-section">
-            <div class="badge"> How We Work With You</div>
-            <h1 class="main-title">  How We Work With You</h1>
-            <p class="main-description">We understand the resource, time, and decision pressures that startups face — and simplify them with our specialized approach to sportswear consulting.</p>
-            
-            <ul class="feature-list">
-                <li class="feature-item">Built specifically for performance and athleisure space — not generic fashion services.</li>
-                <li class="feature-item">One partner for strategy, design, sourcing, production, branding, and launch support.</li>
-            </ul>
-            
-         
+<section class="py-[80px]">
+    <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[80px] items-start px-5">
+      <!-- Left Section -->
+      <div class="pr-0 md:pr-[40px]">
+        <div class="inline-flex items-center bg-[#414141] text-[#fffdf6] py-2 px-4 rounded-[20px] text-[14px] font-semibold mb-6 uppercase tracking-[0.5px]">
+            How We Work With You
         </div>
-        
-        <div class="right-section">
-            <div class="service-card" data-service="consultancy">
-                <div class="service-card-content">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Consultation & Diagnostic Session</h3>
-                    <p class="service-description">Understand your goals, markets, current product gaps, and resource availability.</p>
-                </div>
+        <h1 class="text-[42px] md:text-[36px] font-medium leading-[1.1] text-[#222] mb-6 max-w-full">
+            How We Work With You
+        </h1>
+        <p class="text-[18px] leading-[1.6] text-[#666] mb-8">
+          We understand the resource, time, and decision pressures that startups face — and simplify them with our specialized approach to sportswear consulting.
+        </p>
+        <ul class="mb-10">
+          <li class="flex items-start text-[16px] text-[#555] mb-4">
+            <span class="text-[#ff8c00] font-bold mr-3 mt-[2px]">&rarr;</span>
+            Built specifically for performance and athleisure space — not generic fashion services.
+          </li>
+          <li class="flex items-start text-[16px] text-[#555] mb-4">
+            <span class="text-[#ff8c00] font-bold mr-3 mt-[2px]">&rarr;</span>
+            One partner for strategy, design, sourcing, production, branding, and launch support.
+          </li>
+        </ul>
+      </div>
+  
+      <!-- Right Section -->
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-[24px]">
+        <!-- Service Card 1 -->
+        <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
+          <div class="relative z-10">
+            <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z" />
+              </svg>
             </div>
-            
-            <div class="service-card" data-service="approach">
-                <div class="service-card-content">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Range Development Planning</h3>
-                    <p class="service-description">Define the scope of SKUs, material needs, performance goals, and budget.</p>
-                </div>
-            </div>
-            
-            <div class="service-card" data-service="support">
-                <div class="service-card-content">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M9 11H7V9H9V11ZM13 11H11V9H13V11ZM17 11H15V9H17V11ZM19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Sampling & Sourcing Setup</h3>
-                    <p class="service-description">Co-develop tech packs, initiate sampling, and connect with the right factories and suppliers.</p>
-                </div>
-            </div>
-            
-            <div class="service-card" data-service="execution">
-                <div class="service-card-content">
-                    <div class="service-icon">
-                        <svg viewBox="0 0 24 24">
-                            <path d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"/>
-                        </svg>
-                    </div>
-                    <h3 class="service-title">Ongoing Advisory or Retainer Support</h3>
-                    <p class="service-description">Stay engaged with on-demand consulting during product drops, scaling phases, or international rollouts.</p>
-                </div>
-            </div>
+            <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-black">
+             
+Consultation & Diagnostic Session
+            </h3>
+            <p class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90">
+                Understand your goals, markets, current product gaps, and resource availability
+            </p>
+          </div>
         </div>
+  
+        <!-- Service Card 2 -->
+        <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
+          <div class="relative z-10">
+            <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" />
+              </svg>
+            </div>
+            <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-black">
+              
+Range Development Planning
+            </h3>
+            <p class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90">
+                Define the scope of SKUs, material needs, performance goals, and budget.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Service Card 3 -->
+        <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
+          <div class="relative z-10">
+            <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                <path d="M9 11H7V9H9V11ZM13 11H11V9H13V11ZM17 11H15V9H17V11ZM19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19Z" />
+              </svg>
+            </div>
+            <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-black">
+            
+Sampling & Sourcing Setup
+            </h3>
+            <p class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90">
+                Co-develop tech packs, initiate sampling, and connect with the right factories and suppliers.
+            </p>
+          </div>
+        </div>
+  
+        <!-- Service Card 4 -->
+        <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
+          <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
+          <div class="relative z-10">
+            <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
+              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                <path d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z" />
+              </svg>
+            </div>
+            <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-black">
+                Ongoing Advisory or Retainer Support
+            </h3>
+            <p class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90">
+                Stay engaged with on-demand consulting during product drops, scaling phases, or international rollouts.
+            </p>
+          </div>
+        </div>
+  
+      </div>
     </div>
+  </section>
 
-</section>
-
-<section class="cta-section">
-    <div class="cta-content">
-      <h2> Why B2B Brands Work With Us</h2>
-      <p>
+<section class="bg-[#f0f4f8] py-16 px-5 flex items-center justify-center text-center">
+    <div class="max-w-[800px]">
+      <h2 class="text-4xl font-semibold text-gray-900 mb-5">Why B2B Brands Work With Us ?</h2>
+      <p class="text-lg text-gray-600 leading-relaxed">
         The B2B activewear market is growing rapidly — but fragmented sourcing, material inconsistency, and lack of category knowledge can stall innovation and delivery. At Sportskin, we bridge that gap.
         <br /><br />
-        We offer India-based sourcing intelligence, category-specific product development, and vendor-ready execution for activewear, athleisure, and performance lifestyle brands.
-        <br />
+        <strong class="text-gray-800 font-semibold">Sportskin</strong> We offer India-based sourcing intelligence, category-specific product development, and vendor-ready execution for activewear, athleisure, and performance lifestyle brands.
         You get the benefit of working with a hands-on team that understands your business goals, technical needs, and market expectations — all in one place.
       </p>
     </div>
   </section>
 
-<section>
-    <div class="container">
-       
-
-        <div class="content-wrapper">
-            <div class="image-section">
-                <div class="header">
-                    <h3>HOW WE WORK</h3>
-                    <h1 class="main-title">What We Offer to B2B Brands</h1>
+  <section>
+    <div class="max-w-[1200px] mx-auto p-4">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-[80px] items-start">
+            <div class="relative">
+                <div class="text-left mb-[40px]">
+                    <h3 class="text-[14px] font-semibold text-[#666] uppercase tracking-[2px] mb-[20px]">HOW WE WORK</h3>
+                    <h1 class="text-[42px] font-medium text-[#222] leading-[1.2] mb-[40px] max-w-[500px]">What We Offer to B2B Brands</h1>
                 </div>
-                <img src="images/demo-gym-and-fitness-home-06.jpg" class="main-image">
+                <img src="images/demo-gym-and-fitness-home-06.jpg" class="w-full h-[400px] rounded-[20px] object-cover shadow-[0_20px_40px_rgba(0,0,0,0.1)]">
             </div>
 
-            <div class="steps-section">
-                <div class="step">
-                    <div class="step-icon">
-                        <span class="step-number">1</span>
+            <div class="flex flex-col gap-[10px]">
+                <div class="flex gap-[20px] items-start">
+                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0">
+                        <span class="text-[#7f7e7e] font-semibold text-[40px]">1</span>
                     </div>
-                    <div class="step-content">
-                        <h4>Product Design & Range Planning</h4>
-                        <p>Co-develop new ranges with our expert team — from trend forecasts to range architecture, tech packs, and fit approvals.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <span class="step-number">2</span>
-                    </div>
-                    <div class="step-content">
-                        <h4>Sampling & Sourcing Support</h4>
-                        <p>We manage sample rounds, fabric selections, and vendor negotiations using our trusted, audited network of performancewear suppliers.</p>
+                    <div>
+                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">
+                            Product Design & Range Planning
+                        </h4>
+                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">
+                            Co-develop new ranges with our expert team — from trend forecasts to range architecture, tech packs, and fit approvals.
+                        </p>
                     </div>
                 </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <span class="step-number">3</span>
+
+                <div class="flex gap-[20px] items-start">
+                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0">
+                        <span class="text-[#7f7e7e] font-semibold text-[40px]">2</span>
                     </div>
-                    <div class="step-content">
-                        <h4>Private Label & OEM/ODM Solutions</h4>
-                        <p>We support full-cycle private label and white-label development for brands entering or expanding in activewear.</p>
-                    </div>
-                </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <span class="step-number">4</span>
-                    </div>
-                    <div class="step-content">
-                        <h4>Material Innovation Access</h4>
-                        <p>Choose from recycled yarns, moisture-wicking fabrics, 4-way stretch knits, and UV-protection finishes for premium performance.</p>
+                    <div>
+                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">Sampling & Sourcing Support</h4>
+                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">We manage sample rounds, fabric selections, and vendor negotiations using our trusted, audited network of performancewear suppliers.</p>
                     </div>
                 </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <span class="step-number">5</span>
+
+                <div class="flex gap-[20px] items-start">
+                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0">
+                        <span class="text-[#7f7e7e] font-semibold text-[40px]">3</span>
                     </div>
-                    <div class="step-content">
-                        <h4>India-Based Vendor Network</h4>
-                        <p>Leverage our regional manufacturing relationships for reliable, quality-controlled production at optimized pricing.</p>
+                    <div>
+                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">Private Label & OEM/ODM Solutions</h4>
+                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">We support full-cycle private label and white-label development for brands entering or expanding in activewear.</p>
                     </div>
                 </div>
-                <div class="step">
-                    <div class="step-icon">
-                        <span class="step-number">6</span>
+
+                <div class="flex gap-[20px] items-start">
+                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0">
+                        <span class="text-[#7f7e7e] font-semibold text-[40px]">4</span>
                     </div>
-                    <div class="step-content">
-                        <h4>Brand Alignment & Quality Consistency</h4>
-                        <p>Ensure that your production output aligns with brand standards — from trims and packaging to performance finishes and sizing.</p>
+                    <div>
+                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">Material Innovation Access</h4>
+                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">Choose from recycled yarns, moisture-wicking fabrics, 4-way stretch knits, and UV-protection finishes for premium performance.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-[20px] items-start">
+                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0">
+                        <span class="text-[#7f7e7e] font-semibold text-[40px]">5</span>
+                    </div>
+                    <div>
+                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">India-Based Vendor Network</h4>
+                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">Leverage our regional manufacturing relationships for reliable, quality-controlled production at optimized pricing.</p>
+                    </div>
+                </div>
+
+                <div class="flex gap-[20px] items-start">
+                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0">
+                        <span class="text-[#7f7e7e] font-semibold text-[40px]">6</span>
+                    </div>
+                    <div>
+                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">Brand Alignment & Quality Consistency</h4>
+                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">Ensure that your production output aligns with brand standards — from trims and packaging to performance finishes and sizing.</p>
                     </div>
                 </div>
             </div>
         </div>
     </div>
-
 </section>
 
 
 
 <!-- TOOLKIT-->
- <section>
-    <div class="container-toolkit">
-        <div class="content">
-            <div class="section-label"> Ideal For</div>
-            <h1 class="heading">
-                Startup Launch Toolkit Includes<br>
-               
-            </h1>
-            <p class="description-toolkit">
-                Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential. We offer personalized strategies, proven methods.
-            </p>
-            <!-- <a href="#contact" class="cta-button">Contact Now</a> -->
+<section class="py-20">
+    <div class="max-w-[1200px] mx-auto px-4 flex flex-col lg:flex-row gap-20">
+      
+      <!-- Left Content -->
+      <div class="flex-1 max-w-2xl">
+        <div class="uppercase text-emerald-500 text-sm font-semibold tracking-wider mb-5">Ideal For</div>
+        <h1 class="text-4xl font-bold text-gray-900 leading-tight mb-6">
+          Startup Launch Toolkit Includes
+        </h1>
+        <p class="text-lg text-gray-500 leading-relaxed mb-10">
+          Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential. We offer personalized strategies, proven methods.
+        </p>
+        <!-- Optional CTA -->
+        <!-- <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-700 text-white px-8 py-4 rounded-full font-semibold text-base shadow-lg hover:-translate-y-1 hover:shadow-xl transition">
+          Contact Now ↗
+        </a> -->
+      </div>
+  
+      <!-- Right Coaching Items -->
+      <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-xl w-full">
+        
+        <!-- Centered First Item -->
+        <div class="sm:col-span-2 max-w-sm mx-auto bg-white p-4 rounded-2xl shadow hover:-translate-y-1 hover:shadow-xl transition text-center">
+          <span class="text-sm font-medium text-black">
+            Domestic & international B2B brands building sportswear/athleisure lines
+          </span>
         </div>
-
-        <div class="coaching-grid">
-            <div class="coaching-item">
-                <!-- <img src="https://images.unsplash.com/photo-1573496359142-b8d87734a5a2?w=150&h=150&fit=crop&crop=face" alt="Communication Coach"> -->
-                <span class="coaching-text">Domestic & international B2B brands building sportswear/athleisure lines</span>
-            </div>
-
-            <div class="coaching-item">
-                <!-- <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=150&h=150&fit=crop&crop=face" alt="Personal Coach"> -->
-                <span class="coaching-text">Global brands seeking India-based production/sourcing partners</span>
-            </div>
-
-            <div class="coaching-item">
-                <!-- <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?w=150&h=150&fit=crop&crop=face" alt="Strategy Coach"> -->
-                <span class="coaching-text">Apparel brands expanding into activewear categories</span>
-            </div>
-
-            <div class="coaching-item">
-                <!-- <img src="https://images.unsplash.com/photo-1551836022-deb4988cc6c0?w=150&h=150&fit=crop&crop=face" alt="Productivity Coach"> -->
-                <span class="coaching-text">Labels looking for private label / OEM supply from India</span>
-            </div>
-
-            <div class="coaching-item">
-                <!-- <img src="https://images.unsplash.com/photo-1582750433449-648ed127bb54?w=150&h=150&fit=crop&crop=face" alt="Health Coach"> -->
-                <span class="coaching-text">D2C brands outsourcing tech development, sampling, or sourcing strategy</span>
-            </div>
-
-            <!-- <div class="coaching-item">
-                <img src="https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=150&h=150&fit=crop&crop=face" alt="Leadership Coach">
-                <span class="coaching-text">Brand identity & packaging</span>
-            </div>
-
-            <div class="coaching-item">
-                <img src="https://images.unsplash.com/photo-1559941197-d0c2d17c5b85?w=150&h=150&fit=crop&crop=face" alt="Marketing Coach">
-                <span class="coaching-text">Launch prep and advisory</span>
-            </div>
-
-            <div class="coaching-item">
-                <img src="https://images.unsplash.com/photo-1507591064344-4c6ce005b128?w=150&h=150&fit=crop&crop=face" alt="Career Transition Coach">
-                <span class="coaching-text">Career Transition Coaching</span>
-            </div> -->
+  
+        <div class="bg-white p-4 rounded-2xl shadow hover:-translate-y-1 hover:shadow-xl transition text-center">
+          <span class="text-sm font-medium text-black">
+            Global brands seeking India-based production/sourcing partners
+          </span>
         </div>
-
-       
+  
+        <div class="bg-white p-4 rounded-2xl shadow hover:-translate-y-1 hover:shadow-xl transition text-center">
+          <span class="text-sm font-medium text-black">
+            Apparel brands expanding into activewear categories
+          </span>
+        </div>
+  
+        <div class="bg-white p-4 rounded-2xl shadow hover:-translate-y-1 hover:shadow-xl transition text-center">
+          <span class="text-sm font-medium text-black">
+            Labels looking for private label / OEM supply from India
+          </span>
+        </div>
+  
+        <div class="bg-white p-4 rounded-2xl shadow hover:-translate-y-1 hover:shadow-xl transition text-center">
+          <span class="text-sm font-medium text-black">
+            D2C brands outsourcing tech development, sampling, or sourcing strategy
+          </span>
+        </div>
+      </div>
     </div>
-
-
- </section>
+  </section>
+  
 
 
     <!-- Footer -->
@@ -384,7 +501,7 @@
                     <ul class="footer-links">
                         <li><a href="index.html">Home</a></li>
                         <li><a href="about.html">About</a></li>
-                        <li><a href="#academy">Academy</a></li>
+                        <li><a href="academy.html">Academy</a></li>
                         <li><a href="#testimonials">Resources</a></li>
                         <li><a href="contact.html">Contact</a></li>
                     </ul>
@@ -410,6 +527,40 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const openBtn = document.getElementById('openMobileNavbar');
+            const closeBtn = document.getElementById('closeMobileNavbar');
+            const sidebar = document.getElementById('mobileNavbar');
+            const overlay = document.getElementById('mobileNavbarOverlay');
+            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+    
+            function openSidebar() {
+                sidebar.classList.add('open');
+                overlay.classList.add('open');
+                document.body.style.overflow = 'hidden';
+            }
+            function closeSidebar() {
+                sidebar.classList.remove('open');
+                overlay.classList.remove('open');
+                document.body.style.overflow = '';
+            }
+    
+            openBtn.addEventListener('click', openSidebar);
+            closeBtn.addEventListener('click', closeSidebar);
+            overlay.addEventListener('click', closeSidebar);
+    
+            dropdownToggles.forEach(toggle => {
+                toggle.addEventListener('click', function(e) {
+                    e.preventDefault();
+                    const parent = this.parentElement;
+                    const dropdown = parent.querySelector('.mobile-dropdown');
+                    dropdown.classList.toggle('open');
+                    this.classList.toggle('open');
+                });
+            });
+        });
+        </script>
     <script>
         let lastHoveredCard = null;
         

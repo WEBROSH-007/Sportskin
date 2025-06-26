@@ -4,10 +4,12 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Design & Sampling | Sportskin</title>
-
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <script src="https://cdn.tailwindcss.com"></script>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="sportswear-consultancy.css">
+    <link rel="stylesheet" href="final.css">
     <style>
         .rotating-circle {
             position: relative;
@@ -61,91 +63,162 @@
                     </div>
                 </div>
             </li>
-            <li><a href="#">Academy</a></li>
+          <li><a href="academy.html">Academy</a></li>
             <li><a href="#">Resources</a></li>
             <li><a href="contact.html">Contact</a></li>
         </ul>
-        <div class="hamburger">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
+    </nav>
+    <div class="mobile-header">
+      <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+      <div class="hamburger" id="openMobileNavbar">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+      </div>
+    </div>
+
+    <!-- Mobile Sidebar Navbar -->
+    <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
+    <nav class="mobile-navbar" id="mobileNavbar">
+        <div class="mobile-navbar-header">
+            <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
+            <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
         </div>
+        <ul class="mobile-nav-links">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li class="mobile-dropdown-parent">
+                <a href="#" class="mobile-dropdown-toggle">Services <span class="arrow">&#9654;</span></a>
+                <ul class="mobile-dropdown">
+                    <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                    <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                    <li><a href="manufacturing.html">Manufacturing</a></li>
+                    <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                    <li><a href="branding-logos.html">Branding & Logos</a></li>
+                </ul>
+            </li>
+            <li class="mobile-dropdown-parent">
+                <a href="#" class="mobile-dropdown-toggle">Verticals <span class="arrow">&#9654;</span></a>
+                <ul class="mobile-dropdown">
+                    <li><a href="startups.html">Startups</a></li>
+                    <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
+                    <li><a href="b2b-brands.html">B2B Brands</a></li>
+                </ul>
+            </li>
+            <li><a href="academy.html">Academy</a></li>
+            <li><a href="#">Resources</a></li>
+            <li><a href="contact.html">Contact</a></li>
+        </ul>
     </nav>
 
-  
     <main>
-        <section class="branding-hero">
-            <div class="container">
-                <div class="hero-content">
-                    <div class="left-content">
-                        <div class="text-row-1">Sportswear</div>
-                        
-                        <div class="middle-row">
-                            <div class="rotating-circle">
-                                <div class="circle-text">
-                                    <svg viewBox="0 0 180 180">
-                                        <defs>
-                                            <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
-                                        </defs>
-                                        <text>
-                                            <textPath href="#circle">
-                                                SPORTSWEAR CONSULTANCY
-                                            </textPath>
-                                        </text>
-                                    </svg>
-                                </div>
-                                <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
+      <section class="relative pt-[100px] pb-[100px] md:pt-[180px] md:pb-[100px] bg-[rgba(243,244,246,0.8)] min-h-[60vh] flex items-center">
+        <div class="max-w-[1200px] mx-auto p-4">
+            <!-- Desktop Layout (md and up) -->
+            <div class="hidden md:grid grid-cols-2  gap-[300px] items-start">
+                <div class="text-left">
+                    <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] mb-[20px] uppercase">SPORTSWEAR</div>
+                    <div class="flex items-center gap-[40px] mb-[20px]">
+                        <div class="rotating-circle">
+                            <div class="circle-text">
+                                <svg viewBox="0 0 180 180">
+                                    <defs>
+                                        <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
+                                    </defs>
+                                    <text>
+                                        <textPath href="#circle" class="text-[18px] font-[500] uppercase tracking-[2px] text-[#666]">
+                                            SPORTSWEAR CONSULTANCY
+                                        </textPath>
+                                    </text>
+                                </svg>
                             </div>
-                            
-                            <div class="text-row-2">Consultancy</div>
+                            <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
                         </div>
+                        <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">Consultancy</div>
                     </div>
-    
-                    <div class="description">
-                        <p>
-                            Creating products with a strong identity. We provide ideas and adding the world called success brand.
-                        </p>
-                    </div>
+                </div>
+                
+                <div class="max-w-[300px] text-[#666] text-[16px] leading-[1.6] font-[400] mt-[20px]">
+                    <p>
+                        Creating products with a strong identity. We provide ideas and adding the world called success brand.
+                    </p>
                 </div>
             </div>
-        </section>
+            
+            <!-- Mobile Layout (below md) -->
+            <div class="md:hidden flex flex-col items-center text-center space-y-8">
+                <!-- First row: "Design &" centered -->
+                <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
+                    Sportswear
+                </div>
+                
+                <!-- Second row: "Sampling" text and logo in column -->
+                <div class="flex flex-col items-center gap-[20px]">
+                    <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
+                        Consultancy
+                    </div>
+                    <div class="rotating-circle">
+                        <div class="circle-text">
+                            <svg viewBox="0 0 180 180">
+                                <defs>
+                                    <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
+                                </defs>
+                                <text>
+                                    <textPath href="#circle" class="text-[16px] font-[500] uppercase tracking-[2px] text-[#666]">
+                                        SPORTSWEAR CONSULTANCY
+                                    </textPath>
+                                </text>
+                            </svg>
+                        </div>
+                        <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
+                    </div>
+                </div>
+                
+                <!-- Third row: Description text centered -->
+                <div class="max-w-[300px] text-[#666] text-[16px] leading-[1.6] font-[400] text-center">
+                    <p>
+                        Creating products with a strong identity. We provide ideas and adding the world called success brand.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
        
-        <section class="hero">
-            <div class="hero-grid">
+        <section class="relative overflow-hidden py-20 px-6">
+            <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
                 <div>
-                    <div class="small-heading">Sportswear Consultancy</div>
-                    <h1 class="hero-title">
-                        Your Playbook to Win in Activewear</span>
+                    <div class="relative inline-block text-[24px] font-medium text-[#333333] mb-[20px] after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)]">Sportswear Consultancy</div>
+                    <h1 class="text-[32px] md:text-[42px] font-[500] text-[#222] mb-[1.5rem] leading-[1.1]">
+                        Your Playbook to Win in Activewear
                     </h1>
-                    <p class="hero-description">
+                    <p class="font-[1rem] text-[#374151] mb-[2rem] leading-[1.6]">
                         Sportskin, India's first end-to-end sportswear consultancy, is dedicated to helping brands, manufacturers, and institutions unlock their potential in the activewear and athleisure space.
                     </p>
-                    <p class="hero-text">
-                        We start by understanding your brand DNA, performance goals, and target customer, then guide you through 
-                        every stage — from trend analysis and tech pack development to material sourcing and final sample approval. 
-                        Whether you're launching your first range or scaling an existing one, we ensure your products look great, 
-                        fit better, and perform even better.
+                    <p class="font-[1rem] text-[#374151] mb-[2rem] leading-[1.6]">
+                        We start by understanding your brand DNA, performance goals, and target customer, then guide you through every stage — from trend analysis and tech pack development to material sourcing and final sample approval. Whether you're launching your first range or scaling an existing one, we ensure your products look great, fit better, and perform even better.
                     </p>
-                  
                 </div>
-                <div class="hero-visual">
-                    <div class="visual-container">
-                        <div class="visual-grid">
-                            <div class="visual-card color">
-                                <img src="images/sportswear.png" alt="Creative Design Icon" class="icon-large" style="width: 30px; height: 30px;">
-                                <h3> Industry Expertise</h3>
+                <div class="relative">
+                    <div class="relative bg-white p-8 rounded-2xl h-[300px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] before:content-[''] before:absolute before:inset-0 before:bg-[#e1e1e1] before:rounded-2xl before:-z-10 before:rotate-[3deg]">
+                        <div class="grid grid-cols-2 gap-6">
+                            <div class="bg-orange-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
+                                <img src="images/sportswear.png" alt="Creative Design Icon" class="w-8 h-6 mb-2 mx-auto">
+                                <h3 class="text-lg font-semibold text-gray-800">Creative Design</h3>
                             </div>
-                            <div class="visual-card color">
-                                <i class="fas fa-file-alt icon-large" style="color: #f59e0b;"></i>
-                                <h3>End-to-End Support</h3>
+                          
+                            <div class="bg-yellow-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
+                                <i class="fas fa-file-alt text-yellow-500 text-2xl mb-2"></i>
+                                <h3 class="text-lg font-semibold text-gray-800">Tech Packs</h3>
                             </div>
-                            <div class="visual-card color">
-                                <i class="fas fa-layer-group icon-large" style="color: #dc2626;"></i>
-                                <h3>Proven Results</h3>
+                          
+                            <div class="bg-red-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
+                                <i class="fas fa-layer-group text-red-600 text-2xl mb-2"></i>
+                                <h3 class="text-lg font-semibold text-gray-800">Materials</h3>
                             </div>
-                            <div class="visual-card color">
-                                <i class="fas fa-bullseye icon-large" style="color: #eab308;"></i>
-                                <h3>Performance</h3>
+                          
+                            <div class="bg-yellow-50 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
+                                <i class="fas fa-bullseye text-yellow-400 text-2xl mb-2"></i>
+                                <h3 class="text-lg font-semibold text-gray-800">Performance</h3>
                             </div>
                         </div>
                     </div>
@@ -154,257 +227,301 @@
         </section>
     
 
-           <!-- Main Services Section -->
-           <section class="solutions-section">
-            <div class="container">
-                <div class="solutions-header">
-                    <h2 class="solutions-title">360° Solutions for Activewear Success</h2>
-                    <p class="solutions-description">
-                        From startups to established manufacturers, we provide end-to-end guidance in the performance wear space
-                    </p>
-                </div>
+           <!-- Main Services Section --> 
+           <section class="py-20 bg-[rgba(243,244,246,0.3)]">
+            <div class="max-w-[1200px] mx-auto px-4">
+              
+              <!-- Section Header -->
+              <div class="text-center mb-16">
+                <h2 class="text-[42px] font-medium text-[#222] mb-4">360° Solutions for Activewear Success</h2>
+                <p class="text-gray-500 text-base max-w-[600px] mx-auto">
+                  From startups to established manufacturers, we provide end-to-end guidance in the performance wear space
+                </p>
+              </div>
+          
+              <!-- Grid -->
+              <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
                 
-                <div class="solutions-grid">
-                    <div class="solution-card blue">
-                        <div class="solution-card-header">
-                            <div class="solution-icon blue">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="10"></circle>
-                                    <circle cx="12" cy="12" r="6"></circle>
-                                    <circle cx="12" cy="12" r="2"></circle>
-                                </svg>
-                            </div>
-                            <h3 class="solution-title">For Startups</h3>
-                            <p class="solution-subtitle">Build Smart, Build to Grow</p>
-                        </div>
-                        <div class="solution-card-content">
-                            <p>End-to-end guidance from product concept to market launch</p>
-                        </div>
+                <!-- Card 1 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#2563eb]">
+                  <div class="text-center mb-4">
+                    <div class="w-12 h-12 mx-auto text-[#2563eb] mb-4 flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
+                        <circle cx="12" cy="12" r="10"></circle>
+                        <circle cx="12" cy="12" r="6"></circle>
+                        <circle cx="12" cy="12" r="2"></circle>
+                      </svg>
                     </div>
-    
-                    <div class="solution-card green">
-                        <div class="solution-card-header">
-                            <div class="solution-icon green">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                                    <circle cx="9" cy="7" r="4"></circle>
-                                    <path d="m22 21-3-3"></path>
-                                </svg>
-                            </div>
-                            <h3 class="solution-title">For Manufacturers</h3>
-                            <p class="solution-subtitle">From First Stitch to First Success</p>
-                        </div>
-                        <div class="solution-card-content">
-                            <p>Bridge traditional garment production with technical activewear demands</p>
-                        </div>
-                    </div>
-    
-                    <div class="solution-card purple">
-                        <div class="solution-card-header">
-                            <div class="solution-icon purple">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="solution-title">Sportskin Academy</h3>
-                            <p class="solution-subtitle">Level Up Your Expertise</p>
-                        </div>
-                        <div class="solution-card-content">
-                            <p>Knowledge platform for aspiring founders and design professionals</p>
-                        </div>
-                    </div>
-    
-                    <div class="solution-card orange">
-                        <div class="solution-card-header">
-                            <div class="solution-icon orange">
-                                <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <circle cx="12" cy="12" r="3"></circle>
-                                    <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
-                                </svg>
-                            </div>
-                            <h3 class="solution-title">Custom Services</h3>
-                            <p class="solution-subtitle">Tailored Solutions</p>
-                        </div>
-                        <div class="solution-card-content">
-                            <p>Specialized custom fabric development, private label, and OEM/ODM</p>
-                        </div>
-                    </div>
+                    <h3 class="text-xl font-semibold mb-1">For Startups</h3>
+                    <p class="font-semibold text-sm text-gray-600 mb-2">Build Smart, Build to Grow</p>
+                  </div>
+                  <p class="text-sm text-gray-500 text-center">End-to-end guidance from product concept to market launch</p>
                 </div>
+          
+                <!-- Card 2 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#059669]">
+                  <div class="text-center mb-4">
+                    <div class="w-12 h-12 mx-auto text-[#059669] mb-4 flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
+                        <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                        <circle cx="9" cy="7" r="4"></circle>
+                        <path d="m22 21-3-3"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">For Manufacturers</h3>
+                    <p class="font-semibold text-sm text-gray-600 mb-2">From First Stitch to First Success</p>
+                  </div>
+                  <p class="text-sm text-gray-500 text-center">Bridge traditional garment production with technical activewear demands</p>
+                </div>
+          
+                <!-- Card 3 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#7c3aed]">
+                  <div class="text-center mb-4">
+                    <div class="w-12 h-12 mx-auto text-[#7c3aed] mb-4 flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
+                        <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                        <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Sportskin Academy</h3>
+                    <p class="font-semibold text-sm text-gray-600 mb-2">Level Up Your Expertise</p>
+                  </div>
+                  <p class="text-sm text-gray-500 text-center">Knowledge platform for aspiring founders and design professionals</p>
+                </div>
+          
+                <!-- Card 4 -->
+                <div class="bg-white rounded-xl p-6 border border-gray-200 shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl hover:border-[#ea580c]">
+                  <div class="text-center mb-4">
+                    <div class="w-12 h-12 mx-auto text-[#ea580c] mb-4 flex items-center justify-center">
+                      <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
+                        <circle cx="12" cy="12" r="3"></circle>
+                        <path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 0 1 0 2.83 2 2 0 0 1-2.83 0l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-2 2 2 2 0 0 1-2-2v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 0 1-2.83 0 2 2 0 0 1 0-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1-2-2 2 2 0 0 1 2-2h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 0 1 0-2.83 2 2 0 0 1 2.83 0l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 2-2 2 2 0 0 1 2 2v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 0 1 2.83 0 2 2 0 0 1 0 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 2 2 2 2 0 0 1-2 2h-.09a1.65 1.65 0 0 0-1.51 1z"></path>
+                      </svg>
+                    </div>
+                    <h3 class="text-xl font-semibold mb-1">Custom Services</h3>
+                    <p class="font-semibold text-sm text-gray-600 mb-2">Tailored Solutions</p>
+                  </div>
+                  <p class="text-sm text-gray-500 text-center">Specialized custom fabric development, private label, and OEM/ODM</p>
+                </div>
+          
+              </div>
             </div>
-        </section>
+          </section>
+          
     
 
       <!-- Startup Services Detail -->
-      <section class="startup-services-section">
-        <div class="container">
-            <div class="startup-services-content">
-                <div class="startup-services-text">
-                    <h2 class="section-title">For Startups: Build Smart, Build to Grow</h2>
-                    <p class="startup-description">
-                        Sportskin empowers emerging sportswear and athleisure brands to launch with clarity, confidence, and competitive edge. 
-                        We support early-stage startups with end-to-end guidance—from product concept to market launch.
-                    </p>
-                    
-                    <div class="process-cards">
-                        <div class="process-card">
-                            <h4>Diagnostic & Strategy</h4>
-                            <p>Understand your vision, define core product line, and identify your USP</p>
-                        </div>
-                        <div class="process-card">
-                            <h4>Resource Planning</h4>
-                            <p>Form the right team and prioritize spending across design and development</p>
-                        </div>
-                        <div class="process-card">
-                            <h4>Product Development</h4>
-                            <p>Sampling, production guidance, and quality assurance</p>
-                        </div>
-                        <div class="process-card">
-                            <h4>Launch Support</h4>
-                            <p>Go-to-market strategy, brand campaigns, and scaling guidance</p>
-                        </div>
-                    </div>
+      <section class="py-20 bg-[#fafafa]">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="grid md:grid-cols-2 gap-16 items-center">
+            
+            <!-- Text Side -->
+            <div>
+              <h2 class="text-[42px] font-medium text-[#222] leading-[1.2] mb-6">
+                For Startups: Build Smart, Build to Grow
+              </h2>
+              <p class="text-gray-500 text-base leading-[1.7] mb-10">
+                Sportskin empowers emerging sportswear and athleisure brands to launch with clarity, confidence, and competitive edge.
+                We support early-stage startups with end-to-end guidance—from product concept to market launch.
+              </p>
+      
+              <!-- Cards -->
+              <div class="grid gap-4">
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <h4 class="font-semibold text-[1rem] text-gray-800 mb-3">Diagnostic & Strategy</h4>
+                  <p class="text-[0.95rem] text-gray-500 leading-[1.6]">
+                    Understand your vision, define core product line, and identify your USP
+                  </p>
                 </div>
-                
-                <div class="startup-services-visual">
-                    <img src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80" 
-                         alt="Startup team working on sportswear designs" 
-                         class="startup-image">
+      
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <h4 class="font-semibold text-[1rem] text-gray-800 mb-3">Resource Planning</h4>
+                  <p class="text-[0.95rem] text-gray-500 leading-[1.6]">
+                    Form the right team and prioritize spending across design and development
+                  </p>
                 </div>
+      
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <h4 class="font-semibold text-[1rem] text-gray-800 mb-3">Product Development</h4>
+                  <p class="text-[0.95rem] text-gray-500 leading-[1.6]">
+                    Sampling, production guidance, and quality assurance
+                  </p>
+                </div>
+      
+                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                  <h4 class="font-semibold text-[1rem] text-gray-800 mb-3">Launch Support</h4>
+                  <p class="text-[0.95rem] text-gray-500 leading-[1.6]">
+                    Go-to-market strategy, brand campaigns, and scaling guidance
+                  </p>
+                </div>
+              </div>
             </div>
+      
+            <!-- Image Side -->
+            <div class="flex justify-center items-center md:order-last ">
+              <img
+                src="https://images.unsplash.com/photo-1556740758-90de374c12ad?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=1000&q=80"
+                alt="Startup team working on sportswear designs"
+                class="w-full max-w-[500px] rounded-2xl shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+              />
+            </div>
+      
+          </div>
         </div>
-    </section>
-
+      </section>
+      
 
     <!-- CTA Section -->
-    <section class="cta-section">
-        <div class="container">
-            <div class="cta-content">
-                <h2 class="cta-title">Ready to Launch with Confidence?</h2>
-                <p class="cta-description">
-                    Book a 15-minute consultation with our founder for expert guidance
-                </p>
-                <button class="consulting-btn ">
-                    Book Your Consultation
-                    <svg class="arrow-icon" viewBox="0 0 24 24" width="24" height="24" fill="none" stroke="currentColor" stroke-width="2">
-                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                        <polyline points="12,5 19,12 12,19"></polyline>
-                    </svg>
-                </button>
-            </div>
+    <section class="py-20 bg-[#1f2937] text-white">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="text-center">
+            <h2 class="text-[2.25rem] font-bold mb-6">
+              Ready to Launch with Confidence?
+            </h2>
+            <p class="text-[1.25rem] mb-8 opacity-90">
+              Book a 15-minute consultation with our founder for expert guidance
+            </p>
+            <button class="inline-flex items-center gap-2 bg-white text-[#1f2937] font-semibold px-6 py-3 rounded-lg hover:bg-gray-100 transition-all duration-300">
+              Book Your Consultation
+              <svg class="w-6 h-6 stroke-current" viewBox="0 0 24 24" fill="none" stroke-width="2">
+                <line x1="5" y1="12" x2="19" y2="12"></line>
+                <polyline points="12,5 19,12 12,19"></polyline>
+              </svg>
+            </button>
+          </div>
         </div>
-    </section>
+      </section>
+      
 
     <!-- Sportswear Manufacturers Section -->
-    <section class="sportswear-manufacturers-wrapper">
-        <div class="sportswear-container">
-            <div class="sportswear-header">
-                <h2 class="sportswear-main-title">For New Sportswear Manufacturers & Exporters</h2>
-                <p class="sportswear-description">
-                    Starting a sportswear manufacturing business demands understanding of performance apparel, 
-                    global market trends, and specialized sourcing. We bridge the gap between traditional garment 
-                    production and technical activewear demands.
+    <section class="py-20 bg-[rgba(243,244,246,0.3)]">
+        <div class="max-w-[1200px] mx-auto px-8">
+          
+          <!-- Header -->
+          <div class="text-center mb-16">
+            <h2 class="text-[42px] font-medium text-[#222] mb-6">
+              For New Sportswear Manufacturers & Exporters
+            </h2>
+            <p class="text-base text-gray-500 max-w-[800px] mx-auto leading-[1.7]">
+              Starting a sportswear manufacturing business demands understanding of performance apparel, 
+              global market trends, and specialized sourcing. We bridge the gap between traditional garment 
+              production and technical activewear demands.
+            </p>
+          </div>
+      
+          <!-- Cards Grid -->
+          <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            
+            <!-- Card 1 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <div class="border-b border-gray-200 px-8 py-6">
+                <h3 class="text-xl font-semibold text-gray-800">Capability Building</h3>
+              </div>
+              <div class="px-8 py-6">
+                <ul class="list-none space-y-3">
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Sportswear fabric expertise</li>
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Functional finishes knowledge</li>
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Performance standards training</li>
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Quality control systems</li>
+                </ul>
+              </div>
+            </div>
+      
+            <!-- Card 2 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <div class="border-b border-gray-200 px-8 py-6">
+                <h3 class="text-xl font-semibold text-gray-800">Category Planning</h3>
+              </div>
+              <div class="px-8 py-6">
+                <ul class="list-none space-y-3">
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Range development</li>
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Buyer expectations alignment</li>
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Market positioning strategy</li>
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Technical specifications</li>
+                </ul>
+              </div>
+            </div>
+      
+            <!-- Card 3 -->
+            <div class="bg-white rounded-xl shadow-md overflow-hidden transition duration-200 hover:-translate-y-1 hover:shadow-xl">
+              <div class="border-b border-gray-200 px-8 py-6">
+                <h3 class="text-xl font-semibold text-gray-800">Market Readiness</h3>
+              </div>
+              <div class="px-8 py-6">
+                <ul class="list-none space-y-3">
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Exhibition preparation</li>
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Buyer pitch development</li>
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Sales channel strategy</li>
+                  <li class="text-gray-700 text-base pl-2 relative before:content-['•'] before:absolute before:left-0 before:text-indigo-500 before:font-bold">Scaling support</li>
+                </ul>
+              </div>
+            </div>
+      
+          </div>
+        </div>
+      </section>
+      
+
+      <section class="py-20">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+      
+            <!-- Info Card -->
+            <div class="bg-white rounded-xl p-8 shadow-md border border-gray-200">
+              <div class="mb-6">
+                <h3 class="text-2xl font-semibold text-gray-800 mb-4">
+                  Sportskin Academy: Level Up
+                </h3>
+                <p class="text-base text-gray-500 leading-relaxed">
+                  Our knowledge and training platform built to help aspiring founders, manufacturers, 
+                  and design professionals gain the skills to thrive in activewear.
                 </p>
+              </div>
+      
+              <!-- Features -->
+              <div class="flex flex-col gap-4">
+                <div class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-purple-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                  </svg>
+                  <span class="text-gray-700 font-medium">Beginner-friendly workshops</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-purple-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                  </svg>
+                  <span class="text-gray-700 font-medium">Expert-led masterclasses</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-purple-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                  </svg>
+                  <span class="text-gray-700 font-medium">Real-world insights</span>
+                </div>
+                <div class="flex items-center gap-3">
+                  <svg class="w-5 h-5 text-purple-600 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20" />
+                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z" />
+                  </svg>
+                  <span class="text-gray-700 font-medium">Actionable learning experiences</span>
+                </div>
+              </div>
             </div>
-            <div class="sportswear-cards-grid">
-                <div class="sportswear-capability-card">
-                    <div class="sportswear-card-title-section">
-                        <h3 class="sportswear-card-title">Capability Building</h3>
-                    </div>
-                    <div class="sportswear-card-body">
-                        <ul class="sportswear-features-list">
-                            <li class="sportswear-feature-item">Sportswear fabric expertise</li>
-                            <li class="sportswear-feature-item">Functional finishes knowledge</li>
-                            <li class="sportswear-feature-item">Performance standards training</li>
-                            <li class="sportswear-feature-item">Quality control systems</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sportswear-category-card">
-                    <div class="sportswear-card-title-section">
-                        <h3 class="sportswear-card-title">Category Planning</h3>
-                    </div>
-                    <div class="sportswear-card-body">
-                        <ul class="sportswear-features-list">
-                            <li class="sportswear-feature-item">Range development</li>
-                            <li class="sportswear-feature-item">Buyer expectations alignment</li>
-                            <li class="sportswear-feature-item">Market positioning strategy</li>
-                            <li class="sportswear-feature-item">Technical specifications</li>
-                        </ul>
-                    </div>
-                </div>
-                <div class="sportswear-market-card">
-                    <div class="sportswear-card-title-section">
-                        <h3 class="sportswear-card-title">Market Readiness</h3>
-                    </div>
-                    <div class="sportswear-card-body">
-                        <ul class="sportswear-features-list">
-                            <li class="sportswear-feature-item">Exhibition preparation</li>
-                            <li class="sportswear-feature-item">Buyer pitch development</li>
-                            <li class="sportswear-feature-item">Sales channel strategy</li>
-                            <li class="sportswear-feature-item">Scaling support</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
+      
+            <!-- Image Placeholder -->
+            <!-- Image Section -->
+<div class="h-[400px] rounded-xl overflow-hidden">
+  <img src="images/demo-gym-and-fitness-home-08.jpg" alt="Sportskin Academy" class="w-full h-full object-cover" />
+</div>
+
+      
+          </div>
         </div>
-    </section>
-
-    <section class="academy-custom-section">
-        <div class="container">
-            <div class="academy-custom-grid">
-                <div class="info-card">
-                    <div class="card-header">
-                        <h3>Sportskin Academy: Level Up</h3>
-                        <p class="card-description">
-                            Our knowledge and training platform built to help aspiring founders, manufacturers, 
-                            and design professionals gain the skills to thrive in activewear.
-                        </p>
-                    </div>
-                    <div class="card-content">
-                        <div class="academy-features">
-                            <div class="academy-feature">
-                                <svg class="book-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                                </svg>
-                                <span>Beginner-friendly workshops</span>
-                            </div>
-                            <div class="academy-feature">
-                                <svg class="book-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                                </svg>
-                                <span>Expert-led masterclasses</span>
-                            </div>
-                            <div class="academy-feature">
-                                <svg class="book-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                                </svg>
-                                <span>Real-world insights</span>
-                            </div>
-                            <div class="academy-feature">
-                                <svg class="book-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-                                </svg>
-                                <span>Actionable learning experiences</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="image-section">
-                    <div class="image-placeholder">
-                        <h4>Your Image Here</h4>
-                        <p>Replace this section with your desired image</p>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
+      </section>
+      
 
     <!-- Footer -->
     <footer class="footer">
@@ -463,5 +580,39 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const openBtn = document.getElementById('openMobileNavbar');
+        const closeBtn = document.getElementById('closeMobileNavbar');
+        const sidebar = document.getElementById('mobileNavbar');
+        const overlay = document.getElementById('mobileNavbarOverlay');
+        const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+
+        function openSidebar() {
+            sidebar.classList.add('open');
+            overlay.classList.add('open');
+            document.body.style.overflow = 'hidden';
+        }
+        function closeSidebar() {
+            sidebar.classList.remove('open');
+            overlay.classList.remove('open');
+            document.body.style.overflow = '';
+        }
+
+        openBtn.addEventListener('click', openSidebar);
+        closeBtn.addEventListener('click', closeSidebar);
+        overlay.addEventListener('click', closeSidebar);
+
+        dropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const parent = this.parentElement;
+                const dropdown = parent.querySelector('.mobile-dropdown');
+                dropdown.classList.toggle('open');
+                this.classList.toggle('open');
+            });
+        });
+    });
+    </script>
 </body>
 </html>
