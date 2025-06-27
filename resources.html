@@ -1,0 +1,402 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Grid with Modal</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&display=swap" rel="stylesheet">
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="final.css">
+</head>
+<body>
+   <!-- Navbar -->
+   <nav class="navbar">
+    <a href="index.html" class="logos">SPORTS<span class="logo">KIN</span></a>
+    <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="dropdown-parent">
+            <a href="#">Services </a>
+            <div class="mega-dropdown">
+                <div class="dropdown-container">
+                    <a href="design-and-sampling.html">Design & Sampling</a>
+                    <a href="buying-and-sourcing.html">Buying & Sourcing</a>
+                    <a href="manufacturing.html">Manufacturing</a>
+                    <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
+                    <a href="branding-logos.html">Branding & Logos</a>
+                </div>
+            </div>
+        </li>
+        <li class="dropdown-parent">
+            <a href="#">Verticals</a>
+            <div class="mega-dropdown">
+                <div class="dropdown-container">
+                    <a href="startups.html">Startups</a>
+                     <a href="manufactures-exporters.html">Manufacturers & Exporters</a>
+                    <a href="b2b-brands.html">B2B Brands</a>
+                </div>
+            </div>
+        </li>
+      <li><a href="academy.html">Academy</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<div class="mobile-header">
+  <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+  <div class="hamburger" id="openMobileNavbar">
+      <div class="line1"></div>
+      <div class="line2"></div>
+      <div class="line3"></div>
+  </div>
+</div>
+
+<!-- Mobile Sidebar Navbar -->
+<div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
+<nav class="mobile-navbar" id="mobileNavbar">
+    <div class="mobile-navbar-header">
+        <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
+        <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
+    </div>
+    <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="mobile-dropdown-parent">
+            <a href="#" class="mobile-dropdown-toggle">Services <span class="arrow">&#9654;</span></a>
+            <ul class="mobile-dropdown">
+                <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                <li><a href="manufacturing.html">Manufacturing</a></li>
+                <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                <li><a href="branding-logos.html">Branding & Logos</a></li>
+            </ul>
+        </li>
+        <li class="mobile-dropdown-parent">
+            <a href="#" class="mobile-dropdown-toggle">Verticals <span class="arrow">&#9654;</span></a>
+            <ul class="mobile-dropdown">
+                <li><a href="startups.html">Startups</a></li>
+                <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
+                <li><a href="b2b-brands.html">B2B Brands</a></li>
+            </ul>
+        </li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+
+
+    <section class="bg-gray-50 min-h-screen py-[100px]">
+        <div class="max-w-[1200px] mx-auto px-4 py-8">
+        <!-- Grid Layout -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+            <!-- Card 1 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal(1)">
+                <div class="h-48 bg-gray-200 relative">
+                    <img src="images/academy.jpg" alt="Cheerful Loving Couple Bakers" class="h-48 w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Cheerful Loving Couple Bakers Drinking Coffee</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Discover the warmth and joy of collaborative work in this charming bakery setting. The couple's synchronized movements and shared smiles tell a story of partnership that extends beyond business.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal(2)">
+                <div class="h-48 bg-gray-200 relative">
+                    <img src="images/academy.jpg" alt="Loft Office With Vintage Decor" class="h-48 w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Loft Office With Vintage Decor For Creative Working</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        It's no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal(3)">
+                <div class="h-48 bg-gray-200 relative">
+                    <img src="images/academy.jpg" alt="Cosy Bright Office In Yellow And Grey" class="h-48 w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Cosy Bright Office In Yellow And Grey Colors</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Discover the warmth and joy of collaborative work in this charming bakery setting. The couple's synchronized movements and shared smiles tell a story of partnership that extends beyond business.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal(4)">
+                <div class="h-48 bg-gray-200 relative">
+                    <img src="images/about.png" alt="Modern Workspace Design" class="h-48 w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Modern Workspace Design</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        It's no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 5 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal(5)">
+                <div class="h-48 bg-gray-200 relative">
+                    <img src="images/brand.png" alt="Creative Studio Environment" class="h-48 w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Creative Studio Environment</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        It's no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 6 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal(6)">
+                <div class="h-48 bg-gray-200 relative">
+                    <img src="images/buying-sourcing.jpg" alt="Minimalist Office Setup" class="h-48 w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Minimalist Office Setup</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        It's no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 7 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal(7)">
+                <div class="h-48 bg-gray-200 relative">
+                    <img src="images/demo-gym-and-fitness-home-06.jpg" alt="Industrial Style Workspace" class="h-48 w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Industrial Style Workspace</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        It's no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available. However, the...
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 8 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal(8)">
+                <div class="h-48 bg-gray-200 relative">
+                    <img src="images/demo-gym-and-fitness-home-10.jpg" alt="Contemporary Office Interior" class="h-48 w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Contemporary Office Interior</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Step into a thoughtfully curated workspace that bridges industrial heritage with modern functionality.
+                    </p>
+                </div>
+            </div>
+
+            <!-- Card 9 -->
+            <div class="bg-white rounded-lg shadow-lg overflow-hidden cursor-pointer transform hover:scale-105 transition-transform duration-300" onclick="openModal(9)">
+                <div class="h-48 bg-gray-200 relative">
+                    <img src="images/inspired-designer1.jpg" alt="Collaborative Work Environment" class="h-48 w-full object-cover">
+                </div>
+                <div class="p-6">
+                    <h3 class="text-xl font-bold text-gray-800 mb-3">Collaborative Work Environment</h3>
+                    <p class="text-gray-600 text-sm leading-relaxed">
+                        Step into a thoughtfully curated workspace that bridges industrial heritage with modern functionality.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Modal -->
+    <div id="modal" class="fixed inset-0 z-50 hidden overflow-y-auto pt-[80px]">
+        <div class="flex items-center justify-center min-h-screen px-4 pt-4 pb-20 text-center sm:block sm:p-0">
+            <!-- Background overlay -->
+            <div class="fixed inset-0 transition-opacity bg-gray-900 bg-opacity-75" onclick="closeModal()"></div>
+
+            <!-- Modal panel -->
+            <div class="inline-block w-full max-w-4xl p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+                <!-- Modal header -->
+                <div class="flex items-center justify-between mb-6">
+                    <h3 id="modal-title" class="text-2xl font-bold text-gray-900"></h3>
+                    <button onclick="closeModal()" class="text-gray-400 hover:text-gray-600 transition-colors">
+                        <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M6 18L18 6M6 6l12 12"></path>
+                        </svg>
+                    </button>
+                </div>
+
+                <!-- Modal image -->
+                <div class="mb-6">
+                    <img id="modal-image" src="" alt="" class="w-full h-64 object-cover rounded-lg">
+                </div>
+
+                <!-- Modal content -->
+                <div id="modal-content" class="prose max-w-none">
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        It's no secret that the digital industry is booming. From exciting startups to global brands, companies are reaching out to digital agencies, responding to the new possibilities available.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        However, the industry is becoming increasingly competitive, and agencies need to find ways to stand out from the crowd. One way to do this is by offering specialized services that cater to specific industries or niches.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed mb-4">
+                        Digital transformation has become a necessity rather than a luxury. Companies that fail to adapt to the digital landscape risk being left behind by their competitors. This has created a massive opportunity for digital agencies to help businesses navigate this transformation.
+                    </p>
+                    <p class="text-gray-700 leading-relaxed">
+                        The key to success in this industry is staying ahead of the curve and continuously evolving your services to meet the changing needs of your clients. This means investing in new technologies, staying up-to-date with industry trends, and building a team of skilled professionals.
+                    </p>
+                </div>
+
+                <!-- Modal footer -->
+                <div class="mt-8 flex justify-end">
+                    <button onclick="closeModal()" class="px-6 py-2 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors">
+                        Close
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container-footer">
+            <div class="footer-grid">
+                <div class="footer-col">
+                    <h3>Sportskin</h3>
+                    <p>Shaping the future of sportswear through design, innovation, sustainability and performance.</p>
+                    <div class="footer-social">
+                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
+                    </div>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Services</h3>
+                    <ul class="footer-links">
+                        <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                        <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                        <li><a href="manufacturing.html">Manufacturing</a></li>
+                        <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                        <li><a href="branding-logos.html">Branding & Logos</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Quick Links</h3>
+                    <ul class="footer-links">
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="about.html">About</a></li>
+                        <li><a href="academy.html">Academy</a></li>
+                         <li><a href="resources.html">Resources</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+
+                <div class="footer-col">
+                    <h3>Contact</h3>
+                    <ul class="footer-links">
+                        <li>Sportskin International Pvt Ltd. B2- 1404,
+                            The Plaza at 106 Spire Condominiums Dwarka Expressway, Sector 106 122006
+                        </li>
+                        <li>Gurgaon, Haryana</li>
+                        <li>+91 9910065827</li>
+                        <li>info@sportskin.com</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-bottom">
+                <p>&copy; 2025 Sportskin. All Rights Reserved.</p>
+            </div>
+        </div>
+    </footer>
+
+
+    <script>
+        const modalData = {
+            1: {
+                title: "Cheerful Loving Couple Bakers Drinking Coffee",
+                content: "Experience the psychological impact of intentional color choices in this energizing workspace. The vibrant yellow accents against sophisticated grey foundations create a perfect balance of stimulation and stability. The geometric patterns on the rug add visual texture without overwhelming the space, while the strategic placement of plants brings life and freshness to the environment. Modern Eames-style chairs provide both comfort and style, their clean lines complementing the room's contemporary aesthetic. This design showcases how color psychology can be applied to enhance both mood and productivity in professional settings.",
+                image:"images/about.png"
+            },
+            2: {
+                title: "Loft Office With Vintage Decor For Creative Working",
+                content: "Experience the psychological impact of intentional color choices in this energizing workspace. The vibrant yellow accents against sophisticated grey foundations create a perfect balance of stimulation and stability. The geometric patterns on the rug add visual texture without overwhelming the space, while the strategic placement of plants brings life and freshness to the environment. Modern Eames-style chairs provide both comfort and style, their clean lines complementing the room's contemporary aesthetic. This design showcases how color psychology can be applied to enhance both mood and productivity in professional settings.",
+                image:"images/about.png"
+            },
+            3: {
+                title: "Cosy Bright Office In Yellow And Grey Colors",
+                content: "Experience the psychological impact of intentional color choices in this energizing workspace. The vibrant yellow accents against sophisticated grey foundations create a perfect balance of stimulation and stability. The geometric patterns on the rug add visual texture without overwhelming the space, while the strategic placement of plants brings life and freshness to the environment. Modern Eames-style chairs provide both comfort and style, their clean lines complementing the room's contemporary aesthetic. This design showcases how color psychology can be applied to enhance both mood and productivity in professional settings.",
+                image:"images/about.png"
+            },
+            4: {
+                title: "Modern Workspace Design",
+                content: "Experience the psychological impact of intentional color choices in this energizing workspace. The vibrant yellow accents against sophisticated grey foundations create a perfect balance of stimulation and stability. The geometric patterns on the rug add visual texture without overwhelming the space, while the strategic placement of plants brings life and freshness to the environment. Modern Eames-style chairs provide both comfort and style, their clean lines complementing the room's contemporary aesthetic. This design showcases how color psychology can be applied to enhance both mood and productivity in professional settings.",
+                image:"images/about.png"
+            },
+            5: {
+                title: "Creative Studio Environment",
+                content: "Experience the psychological impact of intentional color choices in this energizing workspace. The vibrant yellow accents against sophisticated grey foundations create a perfect balance of stimulation and stability. The geometric patterns on the rug add visual texture without overwhelming the space, while the strategic placement of plants brings life and freshness to the environment. Modern Eames-style chairs provide both comfort and style, their clean lines complementing the room's contemporary aesthetic. This design showcases how color psychology can be applied to enhance both mood and productivity in professional settings.",
+                image:"images/about.png"
+            },
+            6: {
+                title: "Minimalist Office Setup",
+                content: "Experience the psychological impact of intentional color choices in this energizing workspace. The vibrant yellow accents against sophisticated grey foundations create a perfect balance of stimulation and stability. The geometric patterns on the rug add visual texture without overwhelming the space, while the strategic placement of plants brings life and freshness to the environment. Modern Eames-style chairs provide both comfort and style, their clean lines complementing the room's contemporary aesthetic. This design showcases how color psychology can be applied to enhance both mood and productivity in professional settings.",
+                image:"images/about.png"
+            },
+            7: {
+                title: "Industrial Style Workspace",
+                content: "Experience the psychological impact of intentional color choices in this energizing workspace. The vibrant yellow accents against sophisticated grey foundations create a perfect balance of stimulation and stability. The geometric patterns on the rug add visual texture without overwhelming the space, while the strategic placement of plants brings life and freshness to the environment. Modern Eames-style chairs provide both comfort and style, their clean lines complementing the room's contemporary aesthetic. This design showcases how color psychology can be applied to enhance both mood and productivity in professional settings.",
+                image:"images/about.png"
+            },
+            8: {
+                title: "Contemporary Office Interior",
+                content: "Experience the psychological impact of intentional color choices in this energizing workspace. The vibrant yellow accents against sophisticated grey foundations create a perfect balance of stimulation and stability. The geometric patterns on the rug add visual texture without overwhelming the space, while the strategic placement of plants brings life and freshness to the environment. Modern Eames-style chairs provide both comfort and style, their clean lines complementing the room's contemporary aesthetic. This design showcases how color psychology can be applied to enhance both mood and productivity in professional settings.",
+                image:"images/about.png"
+            },
+            9: {
+                title: "Collaborative Work Environment",
+                content: "Experience the psychological impact of intentional color choices in this energizing workspace. The vibrant yellow accents against sophisticated grey foundations create a perfect balance of stimulation and stability. The geometric patterns on the rug add visual texture without overwhelming the space, while the strategic placement of plants brings life and freshness to the environment. Modern Eames-style chairs provide both comfort and style, their clean lines complementing the room's contemporary aesthetic. This design showcases how color psychology can be applied to enhance both mood and productivity in professional settings.",
+                image: "images/academy.jpg"
+            }
+        };
+
+        function openModal(cardId) {
+            const modal = document.getElementById('modal');
+            const modalTitle = document.getElementById('modal-title');
+            const modalContent = document.getElementById('modal-content');
+            const modalImage = document.getElementById('modal-image');
+            
+            const data = modalData[cardId];
+            
+            modalTitle.textContent = data.title;
+            modalImage.src = data.image; // You can set the image source here
+            modalImage.alt = data.title;
+            modalContent.innerHTML = `
+                <p class="text-gray-700 leading-relaxed">${data.content}</p>
+            `;
+            
+            modal.classList.remove('hidden');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            const modal = document.getElementById('modal');
+            modal.classList.add('hidden');
+            document.body.style.overflow = 'auto';
+        }
+
+        // Close modal on escape key
+        document.addEventListener('keydown', function(event) {
+            if (event.key === 'Escape') {
+                closeModal();
+            }
+        });
+    </script>
+</body>
+</html>
