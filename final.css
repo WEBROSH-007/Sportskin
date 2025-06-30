@@ -814,6 +814,7 @@ body {
     width: 150px;
     height: 100%;
     z-index: 2;
+    pointer-events: none;
 }
 
 .partners-slider::before {
@@ -828,10 +829,11 @@ body {
 
 .slide-track {
     display: flex;
-    width: calc(250px * 8);
-    /* Total width of all slides */
-    animation: scroll 25s linear infinite;
+    width: calc(250px * 9); /* 9 cards total (4 original + 5 duplicate) */
+    animation: scroll 30s linear infinite;
     padding: 0 20px;
+    position: relative;
+    z-index: 1;
 }
 
 .partner-card {
@@ -839,6 +841,8 @@ body {
     padding: 15px;
     text-align: center;
     flex-shrink: 0;
+    position: relative;
+    z-index: 1;
 }
 
 .partner-logo {
@@ -872,10 +876,8 @@ body {
     0% {
         transform: translateX(0);
     }
-
     100% {
-        transform: translateX(calc(-250px * 4));
-        /* Half of total width */
+        transform: translateX(calc(-250px * 4.5)); /* Move exactly 4.5 cards (half the total) */
     }
 }
 
@@ -909,6 +911,19 @@ body {
 
     .partner-card h3 {
         font-size: 1rem;
+    }
+    
+    .slide-track {
+        width: calc(200px * 9); /* 9 cards total for mobile */
+    }
+    
+    @keyframes scroll {
+        0% {
+            transform: translateX(0);
+        }
+        100% {
+            transform: translateX(calc(-200px * 4.5)); /* Move exactly 4.5 cards for mobile */
+        }
     }
 }
 
