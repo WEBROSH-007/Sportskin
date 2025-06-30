@@ -8,72 +8,45 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="final.css"> 
+    <link rel="stylesheet" href="services.css"> 
     <style>
-        .rotating-circle {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
-
-        .logo-image {
-            position: absolute;
-            width: 65px;  
-            height: auto;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-        }
-
-        .circle-text {
-            position: relative;
-            z-index: 1;
-        }
+     
     </style>
 </head>
 <body> 
    <!-- Navbar -->
-   <nav class="navbar">
+   <nav class="navbar" id="navbar">
     <a href="index.html" class="logos">SPORTS<span class="logo">KIN</span></a>
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li class="dropdown-parent">
-            <a href="#">Services </a>
-            <div class="mega-dropdown">
-                <div class="dropdown-container">
-                    <a href="design-and-sampling.html">Design & Sampling</a>
-                    <a href="buying-and-sourcing.html">Buying & Sourcing</a>
-                    <a href="manufacturing.html">Manufacturing</a>
-                    <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
-                    <a href="branding-logos.html">Branding & Logos</a>
-                </div>
-            </div>
-        </li>
-        <li class="dropdown-parent">
-            <a href="#">Verticals</a>
-            <div class="mega-dropdown">
-                <div class="dropdown-container">
-                    <a href="startups.html">Startups</a>
-                     <a href="manufactures-exporters.html">Manufacturers & Exporters</a>
-                    <a href="b2b-brands.html">B2B Brands</a>
-                </div>
-            </div>
-        </li>
-      <li><a href="academy.html">Academy</a></li>
+        <li><a href="#" id="servicesBtn">Services</a></li>
+        <li><a href="#">Verticals</a></li>
+        <li><a href="academy.html">Academy</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
     </ul>
 </nav>
+
+<!-- Submenu Bar -->
+<div class="submenu-bar" id="submenuBar">
+    <div class="submenu-container">
+        <a href="design-and-sampling.html">Design & Sampling</a>
+        <a href="buying-and-sourcing.html">Buying & Sourcing</a>
+        <a href="manufacturing.html">B2B Manufacturing</a>
+        <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
+        <a href="branding-logos.html">Branding & Logos</a>
+    </div>
+</div>
+
+<!-- Mobile Header -->
 <div class="mobile-header">
-  <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
-  <div class="hamburger" id="openMobileNavbar">
-      <div class="line1"></div>
-      <div class="line2"></div>
-      <div class="line3"></div>
-  </div>
+    <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+    <div class="hamburger" id="openMobileNavbar">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+    </div>
 </div>
 
 <!-- Mobile Sidebar Navbar -->
@@ -91,7 +64,7 @@
             <ul class="mobile-dropdown">
                 <li><a href="design-and-sampling.html">Design & Sampling</a></li>
                 <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
-                <li><a href="manufacturing.html">Manufacturing</a></li>
+                <li><a href="manufacturing.html">B2B Manufacturing</a></li>
                 <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
                 <li><a href="branding-logos.html">Branding & Logos</a></li>
             </ul>
@@ -137,10 +110,9 @@
                         </div>
                     </div>
                     
-                    <div class="max-w-[300px] text-[#666] text-[16px] leading-[1.6] font-[400] mt-[20px]">
-                        <p>
-                            Transform your activewear ideas into performance-driven, market-ready prototypes with expert-led design and agile sampling services.
-                        </p>
+                    <div class=" text-[#666] text-[16px] leading-[1.6] font-[400] ">
+                        <img src="images/about.png" alt="Design & Sampling" class="w-full  h-auto object-contain">
+
                     </div>
                 </div>
                 
@@ -174,10 +146,9 @@
                     </div>
                     
                     <!-- Third row: Description text centered -->
-                    <div class="max-w-[300px] text-[#666] text-[16px] leading-[1.6] font-[400] text-center">
-                        <p>
-                            Transform your activewear ideas into performance-driven, market-ready prototypes with expert-led design and agile sampling services.
-                        </p>
+                    <div class=" text-[#666] text-[16px] leading-[1.6] font-[400] ">
+                        <img src="images/about.png" alt="Design & Sampling" class="w-full  h-auto object-contain">
+
                     </div>
                 </div>
             </div>
@@ -246,6 +217,10 @@
                           Moodboards, color stories, silhouettes, and style forecasting tailored to your brand vision.
                         </p>
                       </div>
+
+                      <div class="bg-white  rounded-[10px] p-[30px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
+                        <img src="images/about.png" alt="Design & Sampling" class="w-full  h-full object-contain">
+                    </div>
                       
                       <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
                         <i class="fas fa-palette text-[2.5rem] text-[#d79744] mb-[20px]"></i>
@@ -270,6 +245,7 @@
                         <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Performance & Fit Alignment</h3>
                         <p>Products that deliver function, comfort, and style — built for movement.</p>
                     </div>
+                   
                    
                 </div>
             </div>
@@ -340,33 +316,38 @@
                   </div>
                   
 
-                    <!-- Fashion Entrepreneurs Card -->
-<div class="bg-white p-[40px_30px] rounded-[15px] shadow-[0_5px_20px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out relative overflow-hidden hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]">
-    <div class="w-[70px] h-[70px] bg-black rounded-full flex items-center justify-center mb-[25px]">
-      <i class="fas fa-store text-white text-[2rem]"></i>
-    </div>
-  
-    <p class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Fashion Entrepreneurs</h3>
-  
-    <p class="text-[#666] mb-[25px] leading-[1.6]">
-      Scale your existing brand with expert support. From trend analysis to technical design, we help you expand your activewear offerings.
-    </p>
-  
-    <ul class="list-none p-0 m-0">
-      <li class="flex items-center mb-[12px] text-[#555]">
-        <i class="fas fa-check text-[var(--primary-color)] mr-[10px] text-[0.9rem]"></i>
-        Collection Expansion
-      </li>
-      <li class="flex items-center mb-[12px] text-[#555]">
-        <i class="fas fa-check text-[var(--primary-color)] mr-[10px] text-[0.9rem]"></i>
-        Performance Enhancement
-      </li>
-      <li class="flex items-center mb-[12px] text-[#555]">
-        <i class="fas fa-check text-[var(--primary-color)] mr-[10px] text-[0.9rem]"></i>
-        Technical Innovation
-      </li>
-    </ul>
-  </div>
+                  <div class="bg-white p-[40px_30px] rounded-[15px] shadow-[0_5px_20px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out relative overflow-hidden hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]">
+                    <div class="w-[70px] h-[70px] bg-black rounded-full flex items-center justify-center mb-[25px]">
+                      <i class="fas fa-industry text-white text-[2rem]"></i>
+                    </div>
+                  
+                    <p class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">B2B Buyers</h3>
+                  
+                    <p class="text-[#666] mb-[25px] leading-[1.6]">
+                        End-to-end activewear solutions for B2B buyers—custom design, sampling, sourcing, and bulk production with speed.
+                    </p>
+                  
+                    <ul class="list-none p-0 m-0">
+                      <li class="flex items-center mb-[12px] text-[#555]">
+                        <i class="fas fa-check text-[var(--primary-color)] mr-[10px] text-[0.9rem]"></i>
+                        Private Label/Brands
+                      </li>
+                      <li class="flex items-center mb-[12px] text-[#555]">
+                        <i class="fas fa-check text-[var(--primary-color)] mr-[10px] text-[0.9rem]"></i>
+                        OEM/ODM
+                        
+                      </li>
+                      <li class="flex items-center mb-[12px] text-[#555]">
+                        <i class="fas fa-check text-[var(--primary-color)] mr-[10px] text-[0.9rem]"></i>
+                        Customized Sportswear
+                      </li>
+                      <li class="flex items-center mb-[12px] text-[#555]">
+                        <i class="fas fa-check text-[var(--primary-color)] mr-[10px] text-[0.9rem]"></i>
+                        Sports Uniform
+                      </li>
+                      
+                    </ul>
+                  </div>
   
   <!-- Manufacturers Card -->
   <div class="bg-white p-[40px_30px] rounded-[15px] shadow-[0_5px_20px_rgba(0,0,0,0.05)] transition-all duration-300 ease-in-out relative overflow-hidden hover:-translate-y-[10px] hover:shadow-[0_15px_30px_rgba(0,0,0,0.1)]">
@@ -395,6 +376,8 @@
       </li>
     </ul>
   </div>
+
+  
   
                 </div>
             </div>
@@ -470,7 +453,7 @@
                             The Plaza at 106 Spire Condominiums Dwarka Expressway, Sector 106 122006
                         </li>
                         <li>Gurgaon, Haryana</li>
-                        <li>+91 9910065827</li>
+                        <li>+91 9818125176</li>
                         <li>info@sportskin.com</li>
                     </ul>
                 </div>
@@ -484,38 +467,83 @@
 
     
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const openBtn = document.getElementById('openMobileNavbar');
-            const closeBtn = document.getElementById('closeMobileNavbar');
-            const sidebar = document.getElementById('mobileNavbar');
-            const overlay = document.getElementById('mobileNavbarOverlay');
-            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-    
-            function openSidebar() {
-                sidebar.classList.add('open');
-                overlay.classList.add('open');
-                document.body.style.overflow = 'hidden';
+
+const navbar = document.getElementById('navbar');
+        const submenuBar = document.getElementById('submenuBar');
+        const servicesBtn = document.getElementById('servicesBtn');
+        let submenuVisible = false;
+        let lastScrollTop = 0;
+
+        // Services button click handler
+        servicesBtn.addEventListener('click', function(e) {
+            e.preventDefault();
+            submenuVisible = !submenuVisible;
+            
+            if (submenuVisible) {
+                submenuBar.classList.add('visible');
+                servicesBtn.parentElement.classList.add('active');
+                document.body.style.paddingTop = '120px';
+            } else {
+                submenuBar.classList.remove('visible');
+                servicesBtn.parentElement.classList.remove('active');
+                document.body.style.paddingTop = '60px';
             }
-            function closeSidebar() {
-                sidebar.classList.remove('open');
-                overlay.classList.remove('open');
-                document.body.style.overflow = '';
+        });
+
+        // Scroll handler
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('scrolled');
+                if (submenuVisible) {
+                    submenuBar.classList.add('scrolled');
+                    document.body.style.paddingTop = '60px';
+                }
+            } else {
+                navbar.classList.remove('scrolled');
+                if (submenuVisible) {
+                    submenuBar.classList.remove('scrolled');
+                    document.body.style.paddingTop = '120px';
+                }
             }
-    
-            openBtn.addEventListener('click', openSidebar);
-            closeBtn.addEventListener('click', closeSidebar);
-            overlay.addEventListener('click', closeSidebar);
-    
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const parent = this.parentElement;
-                    const dropdown = parent.querySelector('.mobile-dropdown');
-                    dropdown.classList.toggle('open');
-                    this.classList.toggle('open');
-                });
+            
+            lastScrollTop = currentScroll;
+        });
+
+
+       // Mobile navbar functionality (unchanged)
+       const openMobileNavbar = document.getElementById('openMobileNavbar');
+        const closeMobileNavbar = document.getElementById('closeMobileNavbar');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+        const mobileNavbarOverlay = document.getElementById('mobileNavbarOverlay');
+
+        openMobileNavbar.addEventListener('click', function() {
+            mobileNavbar.classList.add('open');
+            mobileNavbarOverlay.classList.add('open');
+        });
+
+        closeMobileNavbar.addEventListener('click', function() {
+            mobileNavbar.classList.remove('open');
+            mobileNavbarOverlay.classList.remove('open');
+        });
+
+        mobileNavbarOverlay.addEventListener('click', function() {
+            mobileNavbar.classList.remove('open');
+            mobileNavbarOverlay.classList.remove('open');
+        });
+
+        // Mobile dropdown toggles
+        const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+        mobileDropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const dropdown = this.nextElementSibling;
+                dropdown.classList.toggle('open');
+                this.classList.toggle('open');
             });
         });
+
         </script>
 </body>
 </html>

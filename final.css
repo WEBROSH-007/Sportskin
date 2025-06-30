@@ -1321,12 +1321,7 @@ p {
     animation: fadeInLeft 1s ease forwards;
 }
 
-.about-text h2 {
-    position: relative;
-    display: inline-block;
-    font-size: 72px;
-    font-weight: 300;
-}
+
 
 .sp {
     font-style: italic;
@@ -1442,23 +1437,7 @@ p {
     position: relative;
 }
 
-#card1 { --index: 1; z-index: 1; }
-#card2 { --index: 2; z-index: 2; }
-#card3 { --index: 3; z-index: 3; }
-#card4 { --index: 4; z-index: 4; }
-#card5 { --index: 5; z-index: 5; }
 
-.card1 {
-    position: sticky;
-    top: 130px;
-    height: var(--cardHeight);
-    z-index: var(--index);
-   
-}
-
-.card{
-    border: white;
-}
 
 .card-body {
     box-sizing: border-box;
