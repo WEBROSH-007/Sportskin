@@ -10,7 +10,27 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="services.css"> 
     <style>
-     
+      .rotating-circle {
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .logo-image {
+            position: absolute;
+            width: 65px;  
+            height: auto;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 2;
+        }
+
+        .circle-text {
+            position: relative;
+            z-index: 1;
+        }
     </style>
 </head>
 <body> 
@@ -20,8 +40,8 @@
     <ul class="nav-links">
         <li><a href="index.html">Home</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="#" id="servicesBtn">Services</a></li>
-        <li><a href="#">Verticals</a></li>
+        <li><a href="design-and-sampling.html" id="servicesBtn">Services</a></li>
+        <li><a href="startups.html">Verticals</a></li>
         <li><a href="academy.html">Academy</a></li>
         <li><a href="resources.html">Resources</a></li>
         <li><a href="contact.html">Contact</a></li>
@@ -53,7 +73,7 @@
 <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
 <nav class="mobile-navbar" id="mobileNavbar">
     <div class="mobile-navbar-header">
-        <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
+        <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
         <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
     </div>
     <ul class="mobile-nav-links">
@@ -474,21 +494,15 @@ const navbar = document.getElementById('navbar');
         let submenuVisible = false;
         let lastScrollTop = 0;
 
-        // Services button click handler
-        servicesBtn.addEventListener('click', function(e) {
-            e.preventDefault();
-            submenuVisible = !submenuVisible;
-            
-            if (submenuVisible) {
-                submenuBar.classList.add('visible');
-                servicesBtn.parentElement.classList.add('active');
-                document.body.style.paddingTop = '120px';
-            } else {
-                submenuBar.classList.remove('visible');
-                servicesBtn.parentElement.classList.remove('active');
-                document.body.style.paddingTop = '60px';
-            }
-        });
+        // Ensure submenu starts hidden
+        submenuBar.classList.remove('visible');
+        servicesBtn.parentElement.classList.remove('active');
+
+        // Make submenu always visible
+        submenuBar.classList.add('visible');
+        servicesBtn.parentElement.classList.add('active');
+        document.body.style.paddingTop = '0px';
+        submenuVisible = true;
 
         // Scroll handler
         window.addEventListener('scroll', function() {
@@ -496,16 +510,12 @@ const navbar = document.getElementById('navbar');
             
             if (currentScroll > 100) {
                 navbar.classList.add('scrolled');
-                if (submenuVisible) {
-                    submenuBar.classList.add('scrolled');
-                    document.body.style.paddingTop = '60px';
-                }
+                submenuBar.classList.add('scrolled');
+                document.body.style.paddingTop = '60px';
             } else {
                 navbar.classList.remove('scrolled');
-                if (submenuVisible) {
-                    submenuBar.classList.remove('scrolled');
-                    document.body.style.paddingTop = '120px';
-                }
+                submenuBar.classList.remove('scrolled');
+                document.body.style.paddingTop = '120px';
             }
             
             lastScrollTop = currentScroll;

@@ -7,7 +7,7 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="final.css">
+    <link rel="stylesheet" href="services.css">
     <style>
         .rotating-circle {
             position: relative;
@@ -34,81 +34,74 @@
     </style>
 </head>
 <body>
+ 
     <!-- Navbar -->
-    <nav class="navbar">
-        <a href="index.html" class="logos">SPORTS<span class="logo">KIN</span></a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="dropdown-parent">
-                <a href="#">Services </a>
-                <div class="mega-dropdown">
-                    <div class="dropdown-container">
-                        <a href="design-and-sampling.html">Design & Sampling</a>
-                        <a href="buying-and-sourcing.html">Buying & Sourcing</a>
-                        <a href="manufacturing.html">Manufacturing</a>
-                        <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
-                        <a href="branding-logos.html">Branding & Logos</a>
-                    </div>
-                </div>
-            </li>
-            <li class="dropdown-parent">
-                <a href="#">Verticals</a>
-                <div class="mega-dropdown">
-                    <div class="dropdown-container">
-                        <a href="startups.html">Startups</a>
-                         <a href="manufactures-exporters.html">Manufacturers & Exporters</a>
-                        <a href="b2b-brands.html">B2B Brands</a>
-                    </div>
-                </div>
-            </li>
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="logos">SPORTS<span class="logo">KIN</span></a>
+      <ul class="nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li><a href="design-and-sampling.html">Services</a></li>
+          <li><a href="startups.html" id="servicesBtn">Verticals</a></li>
           <li><a href="academy.html">Academy</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
-    <div class="mobile-header">
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
+  
+  <!-- Submenu Bar -->
+  <div class="submenu-bar" id="submenuBar">
+      <div class="submenu-container">
+          <a href="startups.html">Startups</a>
+          <a href="manufactures-exporters.html">Manufacturers & Exporters</a>
+          <a href="b2b-brands.html">B2B Brands</a>
+      </div>
+  </div>
+  
+  <!-- Mobile Header -->
+  <div class="mobile-header">
       <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
       <div class="hamburger" id="openMobileNavbar">
           <div class="line1"></div>
           <div class="line2"></div>
           <div class="line3"></div>
       </div>
-    </div>
+  </div>
+  
+  <!-- Mobile Sidebar Navbar -->
+  <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
+  <nav class="mobile-navbar" id="mobileNavbar">
+      <div class="mobile-navbar-header">
+          <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+          <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
+      </div>
+      <ul class="mobile-nav-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="about.html">About</a></li>
+          <li class="mobile-dropdown-parent">
+              <a href="#" class="mobile-dropdown-toggle">Services <span class="arrow">&#9654;</span></a>
+              <ul class="mobile-dropdown">
+                  <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+                  <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+                  <li><a href="manufacturing.html">B2B Manufacturing</a></li>
+                  <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
+                  <li><a href="branding-logos.html">Branding & Logos</a></li>
+              </ul>
+          </li>
+          <li class="mobile-dropdown-parent">
+              <a href="#" class="mobile-dropdown-toggle">Verticals <span class="arrow">&#9654;</span></a>
+              <ul class="mobile-dropdown">
+                  <li><a href="startups.html">Startups</a></li>
+                  <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
+                  <li><a href="b2b-brands.html">B2B Brands</a></li>
+              </ul>
+          </li>
+          <li><a href="academy.html">Academy</a></li>
+          <li><a href="resources.html">Resources</a></li>
+          <li><a href="contact.html">Contact</a></li>
+      </ul>
+  </nav>
 
-    <!-- Mobile Sidebar Navbar -->
-    <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
-    <nav class="mobile-navbar" id="mobileNavbar">
-        <div class="mobile-navbar-header">
-            <a href="#" class="logos">SPORTS<span class="logo">KIN</span></a>
-            <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="mobile-dropdown-parent">
-                <a href="#" class="mobile-dropdown-toggle">Services <span class="arrow">&#9654;</span></a>
-                <ul class="mobile-dropdown">
-                    <li><a href="design-and-sampling.html">Design & Sampling</a></li>
-                    <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
-                    <li><a href="manufacturing.html">Manufacturing</a></li>
-                    <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
-                    <li><a href="branding-logos.html">Branding & Logos</a></li>
-                </ul>
-            </li>
-            <li class="mobile-dropdown-parent">
-                <a href="#" class="mobile-dropdown-toggle">Verticals <span class="arrow">&#9654;</span></a>
-                <ul class="mobile-dropdown">
-                    <li><a href="startups.html">Startups</a></li>
-                    <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
-                    <li><a href="b2b-brands.html">B2B Brands</a></li>
-                </ul>
-            </li>
-            <li><a href="academy.html">Academy</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
-    </nav>
 
    
     <main>
@@ -175,11 +168,10 @@
                 </div>
                 
                 <!-- Third row: Description text centered -->
-                <div class="max-w-[300px] text-[#666] text-[16px] leading-[1.6] font-[400] text-center">
-                    <p>
-                        Launch your sportswear startup with strategy, product development, sourcing, and market planning tailored for first-time founders.
-                    </p>
-                </div>
+                <div class=" text-[#666] text-[16px] leading-[1.6] font-[400] ">
+                  <img src="images/about.png" alt="Design & Sampling" class="w-full  h-auto object-contain">
+
+              </div>
             </div>
         </div>
     </section>
@@ -659,36 +651,69 @@
     
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-        document.addEventListener('DOMContentLoaded', function() {
-            const openBtn = document.getElementById('openMobileNavbar');
-            const closeBtn = document.getElementById('closeMobileNavbar');
-            const sidebar = document.getElementById('mobileNavbar');
-            const overlay = document.getElementById('mobileNavbarOverlay');
-            const dropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-    
-            function openSidebar() {
-                sidebar.classList.add('open');
-                overlay.classList.add('open');
-                document.body.style.overflow = 'hidden';
+  const navbar = document.getElementById('navbar');
+        const submenuBar = document.getElementById('submenuBar');
+        const servicesBtn = document.getElementById('servicesBtn');
+        let submenuVisible = false;
+        let lastScrollTop = 0;
+
+        // Ensure submenu starts hidden
+        submenuBar.classList.remove('visible');
+        servicesBtn.parentElement.classList.remove('active');
+
+        // Make submenu always visible
+        submenuBar.classList.add('visible');
+        servicesBtn.parentElement.classList.add('active');
+        document.body.style.paddingTop = '0px';
+        submenuVisible = true;
+
+        // Scroll handler
+        window.addEventListener('scroll', function() {
+            const currentScroll = window.pageYOffset;
+            
+            if (currentScroll > 100) {
+                navbar.classList.add('scrolled');
+                submenuBar.classList.add('scrolled');
+                document.body.style.paddingTop = '60px';
+            } else {
+                navbar.classList.remove('scrolled');
+                submenuBar.classList.remove('scrolled');
+                document.body.style.paddingTop = '120px';
             }
-            function closeSidebar() {
-                sidebar.classList.remove('open');
-                overlay.classList.remove('open');
-                document.body.style.overflow = '';
-            }
-    
-            openBtn.addEventListener('click', openSidebar);
-            closeBtn.addEventListener('click', closeSidebar);
-            overlay.addEventListener('click', closeSidebar);
-    
-            dropdownToggles.forEach(toggle => {
-                toggle.addEventListener('click', function(e) {
-                    e.preventDefault();
-                    const parent = this.parentElement;
-                    const dropdown = parent.querySelector('.mobile-dropdown');
-                    dropdown.classList.toggle('open');
-                    this.classList.toggle('open');
-                });
+            
+            lastScrollTop = currentScroll;
+        });
+
+
+       // Mobile navbar functionality (unchanged)
+       const openMobileNavbar = document.getElementById('openMobileNavbar');
+        const closeMobileNavbar = document.getElementById('closeMobileNavbar');
+        const mobileNavbar = document.getElementById('mobileNavbar');
+        const mobileNavbarOverlay = document.getElementById('mobileNavbarOverlay');
+
+        openMobileNavbar.addEventListener('click', function() {
+            mobileNavbar.classList.add('open');
+            mobileNavbarOverlay.classList.add('open');
+        });
+
+        closeMobileNavbar.addEventListener('click', function() {
+            mobileNavbar.classList.remove('open');
+            mobileNavbarOverlay.classList.remove('open');
+        });
+
+        mobileNavbarOverlay.addEventListener('click', function() {
+            mobileNavbar.classList.remove('open');
+            mobileNavbarOverlay.classList.remove('open');
+        });
+
+        // Mobile dropdown toggles
+        const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
+        mobileDropdownToggles.forEach(toggle => {
+            toggle.addEventListener('click', function(e) {
+                e.preventDefault();
+                const dropdown = this.nextElementSibling;
+                dropdown.classList.toggle('open');
+                this.classList.toggle('open');
             });
         });
         </script>
