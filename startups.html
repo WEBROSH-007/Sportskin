@@ -37,7 +37,9 @@
  
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
-      <a href="index.html" class="logos">SPORTS<span class="logo">KIN</span></a>
+      <a href="index.html" class="logos">
+        <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
+      </a>
       <ul class="nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
@@ -60,7 +62,9 @@
   
   <!-- Mobile Header -->
   <div class="mobile-header">
-      <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+       <a href="index.html" class="logos">
+            <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
+          </a>
       <div class="hamburger" id="openMobileNavbar">
           <div class="line1"></div>
           <div class="line2"></div>
@@ -72,14 +76,16 @@
   <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
   <nav class="mobile-navbar" id="mobileNavbar">
       <div class="mobile-navbar-header">
-          <a href="#" class="mobile-logos">SPORTS<span class="logo">KIN</span></a>
+           <a href="index.html" class="logos">
+            <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
+          </a>
           <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
       </div>
       <ul class="mobile-nav-links">
           <li><a href="index.html">Home</a></li>
           <li><a href="about.html">About</a></li>
           <li class="mobile-dropdown-parent">
-              <a href="#" class="mobile-dropdown-toggle">Services <span class="arrow">&#9654;</span></a>
+            <a href="#" class="mobile-dropdown-toggle">Services<i class="fas fa-chevron-right arrow text-xs transition-transform duration-300"></i></a>
               <ul class="mobile-dropdown">
                   <li><a href="design-and-sampling.html">Design & Sampling</a></li>
                   <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
@@ -89,7 +95,7 @@
               </ul>
           </li>
           <li class="mobile-dropdown-parent">
-              <a href="#" class="mobile-dropdown-toggle">Verticals <span class="arrow">&#9654;</span></a>
+              <a href="#" class="mobile-dropdown-toggle">Verticals<i class="fas fa-chevron-right arrow text-xs transition-transform duration-300"></i></a>
               <ul class="mobile-dropdown">
                   <li><a href="startups.html">Startups</a></li>
                   <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
@@ -678,7 +684,7 @@
             } else {
                 navbar.classList.remove('scrolled');
                 submenuBar.classList.remove('scrolled');
-                document.body.style.paddingTop = '120px';
+              document.body.style.paddingTop = '0px';
             }
             
             lastScrollTop = currentScroll;
