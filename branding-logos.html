@@ -1,507 +1,784 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design & Sampling | Sportskin</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+    />
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="services.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="services.css" />
     <style>
-        .rotating-circle {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      .rotating-circle {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .logo-image {
-            position: absolute;
-            width: 65px;  
-            height: auto;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-        }
+      .logo-image {
+        position: absolute;
+        width: 65px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
 
-        .circle-text {
-            position: relative;
-            z-index: 1;
-        }
+      .circle-text {
+        position: relative;
+        z-index: 1;
+      }
     </style>
-</head>
-<body>
-     <!-- Navbar -->
-     <nav class="navbar" id="navbar">
-        <a href="index.html" class="logos">
-            <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
-          </a>
-        <ul class="nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li><a href="design-and-sampling.html" id="servicesBtn">Services</a></li>
-            <li><a href="startups.html">Verticals</a></li>
-            <li><a href="academy.html">Academy</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+  </head>
+  <body>
+    <!-- Navbar -->
+    <nav class="navbar" id="navbar">
+      <a href="index.html" class="logos">
+        <img src="images/logo.png" alt="Sportskin Logo" style="height: 30px" />
+      </a>
+      <ul class="nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li>
+          <a href="design-and-sampling.html" id="servicesBtn">Services</a>
+        </li>
+        <li><a href="startups.html">Verticals</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
-    
+
     <!-- Submenu Bar -->
     <div class="submenu-bar" id="submenuBar">
-        <div class="submenu-container">
-            <a href="design-and-sampling.html">Design & Sampling</a>
-            <a href="buying-and-sourcing.html">Buying & Sourcing</a>
-            <a href="manufacturing.html">B2B Manufacturing</a>
-            <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
-            <a href="branding-logos.html">Branding & Logos</a>
-        </div>
+      <div class="submenu-container">
+        <a href="design-and-sampling.html">Design & Sampling</a>
+        <a href="buying-and-sourcing.html">Buying & Sourcing</a>
+        <a href="manufacturing.html">B2B Manufacturing</a>
+        <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
+        <a href="branding-logos.html">Branding & Logos</a>
+      </div>
     </div>
-    
+
     <!-- Mobile Header -->
     <div class="mobile-header">
-        <a href="index.html" class="logos">
-            <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
-          </a>
-        <div class="hamburger" id="openMobileNavbar">
-            <div class="line1"></div>
-            <div class="line2"></div>
-            <div class="line3"></div>
-        </div>
+      <a href="index.html" class="logos">
+        <img src="images/logo.png" alt="Sportskin Logo" style="height: 30px" />
+      </a>
+      <div class="hamburger" id="openMobileNavbar">
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
+      </div>
     </div>
-    
+
     <!-- Mobile Sidebar Navbar -->
     <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
     <nav class="mobile-navbar" id="mobileNavbar">
-        <div class="mobile-navbar-header">
-            <a href="index.html" class="logos">
-                <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
-              </a>
-            <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
-        </div>
-        <ul class="mobile-nav-links">
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About</a></li>
-            <li class="mobile-dropdown-parent">
-              <a href="#" class="mobile-dropdown-toggle">Services<i class="fas fa-chevron-right arrow text-xs transition-transform duration-300"></i></a>
-                <ul class="mobile-dropdown">
-                    <li><a href="design-and-sampling.html">Design & Sampling</a></li>
-                    <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
-                    <li><a href="manufacturing.html">B2B Manufacturing</a></li>
-                    <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
-                    <li><a href="branding-logos.html">Branding & Logos</a></li>
-                </ul>
+      <div class="mobile-navbar-header">
+        <a href="index.html" class="logos">
+          <img
+            src="images/logo.png"
+            alt="Sportskin Logo"
+            style="height: 30px"
+          />
+        </a>
+        <button class="close-mobile-navbar" id="closeMobileNavbar">
+          &times;
+        </button>
+      </div>
+      <ul class="mobile-nav-links">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="mobile-dropdown-parent">
+          <a href="#" class="mobile-dropdown-toggle"
+            >Services<i
+              class="fas fa-chevron-right arrow text-xs transition-transform duration-300"
+            ></i
+          ></a>
+          <ul class="mobile-dropdown">
+            <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+            <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+            <li><a href="manufacturing.html">B2B Manufacturing</a></li>
+            <li>
+              <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
             </li>
-            <li class="mobile-dropdown-parent">
-                <a href="#" class="mobile-dropdown-toggle">Verticals<i class="fas fa-chevron-right arrow text-xs transition-transform duration-300"></i></a>
-                <ul class="mobile-dropdown">
-                    <li><a href="startups.html">Startups</a></li>
-                    <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
-                    <li><a href="b2b-brands.html">B2B Brands</a></li>
-                </ul>
+            <li><a href="branding-logos.html">Branding & Logos</a></li>
+          </ul>
+        </li>
+        <li class="mobile-dropdown-parent">
+          <a href="#" class="mobile-dropdown-toggle"
+            >Verticals<i
+              class="fas fa-chevron-right arrow text-xs transition-transform duration-300"
+            ></i
+          ></a>
+          <ul class="mobile-dropdown">
+            <li><a href="startups.html">Startups</a></li>
+            <li>
+              <a href="manufactures-exporters.html"
+                >Manufacturers & Exporters</a
+              >
             </li>
-            <li><a href="academy.html">Academy</a></li>
-            <li><a href="resources.html">Resources</a></li>
-            <li><a href="contact.html">Contact</a></li>
-        </ul>
+            <li><a href="b2b-brands.html">B2B Brands</a></li>
+          </ul>
+        </li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
     </nav>
 
-   
     <main>
-         <!-- Hero Section -->
-         <section class="relative pt-[100px] pb-[100px] md:pt-[180px] md:pb-[100px] bg-[rgba(243,244,246,0.8)] min-h-[60vh] flex items-center">
-            <div class="max-w-[1200px] mx-auto p-4">
-                <!-- Desktop Layout (md and up) -->
-                <div class="hidden md:grid grid-cols-2  gap-[300px] items-start">
-                    <div class="text-left">
-                        <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] mb-[20px] uppercase">Branding &</div>
-                        <div class="flex items-center gap-[40px] mb-[20px]">
-                            <div class="rotating-circle">
-                                <div class="circle-text">
-                                    <svg viewBox="0 0 180 180">
-                                        <defs>
-                                            <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
-                                        </defs>
-                                        <text>
-                                            <textPath href="#circle" class="text-[18px] font-[500] uppercase tracking-[2px] text-[#666]">
-                                                SPORTSWEAR CONSULTANCY
-                                            </textPath>
-                                        </text>
-                                    </svg>
-                                </div>
-                                <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
-                            </div>
-                            <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">Logos</div>
-                        </div>
-                    </div>
-                    
-                    <div class=" text-[#666] text-[16px] leading-[1.6] font-[400] ">
-                        <img src="images/bl-top.avif" alt="Design & Sampling" class="w-full  h-auto object-contain">
-
-                    </div>
-                </div>
-                
-                <!-- Mobile Layout (below md) -->
-                <div class="md:hidden flex flex-col items-center text-center space-y-8">
-                    <!-- First row: "Design &" centered -->
-                    <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
-                        Branding &
-                    </div>
-                    
-                    <!-- Second row: "Sampling" text and logo in column -->
-                    <div class="flex flex-col items-center gap-[20px]">
-                        <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
-                            Logos
-                        </div>
-                        <div class="rotating-circle">
-                            <div class="circle-text">
-                                <svg viewBox="0 0 180 180">
-                                    <defs>
-                                        <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
-                                    </defs>
-                                    <text>
-                                        <textPath href="#circle" class="text-[16px] font-[500] uppercase tracking-[2px] text-[#666]">
-                                            SPORTSWEAR CONSULTANCY
-                                        </textPath>
-                                    </text>
-                                </svg>
-                            </div>
-                            <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
-                        </div>
-                    </div>
-                    
-                    <!-- Third row: Description text centered -->
-                    <div class=" text-[#666] text-[16px] leading-[1.6] font-[400] ">
-                        <img src="images/bl-top.avif" alt="Design & Sampling" class="w-full  h-auto object-contain">
-
-                    </div>
-                </div>
-            </div>
-        </section>
-
-    <!-- Main Content Section -->
-    <section class="relative overflow-hidden py-20 px-6">
-        <div class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            <div>
-                <div class="relative inline-block text-[24px] font-medium text-[#333333] mb-[20px] after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]">Branding & Logos</div>
-                <h1 class="text-[32px] md:text-[42px] font-[500] text-[#222] mb-[1.5rem] leading-[1.1]">
-                    Identity That Moves With Purpose
-                </h1>
-                <p class="font-[1rem] text-[#374151] mb-[2rem] leading-[1.6]">
-                    In the crowded world of sportswear and athleisure, your brand identity is your biggest differentiator. At Sportskin, we help you shape a brand that resonates — through visual identity, voice, and values. From naming and logo design to labels and packaging, our branding solutions are designed to connect, communicate, and convert.
-                </p>
-                <p class="font-[1rem] text-[#374151] mb-[2rem] leading-[1.6]">
-                    In the crowded world of sportswear and athleisure, your brand identity is your biggest differentiator. At Sportskin, we help you shape a brand that resonates — through visual identity, voice, and values. From naming and logo design to labels and packaging, our branding solutions are designed to connect, communicate, and convert.
-                </p>
-            </div>
-            <div class="relative">
-                <div class="relative bg-white p-8 rounded-2xl h-[300px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] before:content-[''] before:absolute before:inset-0 before:bg-[#e1e1e1] before:rounded-2xl before:-z-10 before:rotate-[3deg]">
-                    <div class="grid grid-cols-2 gap-6">
-                        <div class="bg-orange-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
-                            <img src="images/bl-visual-identity.png" alt="Creative Design Icon" class="w-8 h-8 mb-2 mx-auto">
-                            <h3 class="text-lg font-semibold text-gray-800">Visual Identity</h3>
-                        </div>
-                      
-                        <div class="bg-yellow-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
-                            <img src="images/bl-brand-storytelling.png" alt="Creative Design Icon" class="w-8 h-8 mb-2 mx-auto">
-                            <h3 class="text-lg font-semibold text-gray-800">Brand Storytelling</h3>
-                        </div>
-                      
-                        <div class="bg-red-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
-                            <img src="images/bl-logo-creation.png" alt="Creative Design Icon" class="w-8 h-8 mb-2 mx-auto">
-                            <h3 class="text-lg font-semibold text-gray-800">Logo Creation</h3>
-                        </div>
-                      
-                        <div class="bg-yellow-50 p-[10px] rounded-lg text-center flex flex-col items-center justify-center">
-                            <img src="images/bl-packaging-design.png" alt="Creative Design Icon" class="w-8 h-8 mb-2 mx-auto">
-                            <h3 class="text-lg font-semibold text-gray-800">Packaging Design</h3>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section class="py-[80px] bg-[#f8f9fa]">
+      <!-- Hero Section -->
+      <section
+        class="relative pt-[100px] pb-[100px] md:pt-[180px] md:pb-[100px] bg-[rgba(243,244,246,0.8)] min-h-[60vh] flex items-center"
+      >
         <div class="max-w-[1200px] mx-auto p-4">
-            <h2 class="relative text-center text-[42px] font-medium mb-[40px] text-[#222]   capitalize
-            after:content-[''] after:absolute after:bottom-[-5px] after:left-1/2 after:transform after:-translate-x-1/2 
-            after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]">What's Included in Our Branding & Logos Services</h2>
-            <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
-                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
-                    <img src="images/bl-brand-discovery.png" alt="Creative Design Icon" class="w-[50px] h-[50px] mb-2 mx-auto">
-                    <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Brand Discovery & Strategy</h3>
-                    <p>We begin with understanding your brand's story — your vision, values, target audience, and positioning. This strategic foundation drives all creative decisions going forward.</p>
+          <!-- Desktop Layout (md and up) -->
+          <div class="hidden md:grid grid-cols-2 gap-[300px] items-start">
+            <div class="text-left">
+              <div
+                class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] mb-[20px] uppercase"
+              >
+                Branding &
+              </div>
+              <div class="flex items-center gap-[40px] mb-[20px]">
+                <div class="rotating-circle">
+                  <div class="circle-text">
+                    <svg viewBox="0 0 180 180">
+                      <defs>
+                        <path
+                          id="circle"
+                          d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
+                        />
+                      </defs>
+                      <text>
+                        <textPath
+                          href="#circle"
+                          class="text-[18px] font-[500] uppercase tracking-[2px] text-[#666]"
+                        >
+                          SPORTSWEAR CONSULTANCY
+                        </textPath>
+                      </text>
+                    </svg>
+                  </div>
+                  <img
+                    src="images/logo-symbol-removebg.png"
+                    alt="Sportskin Logo"
+                    class="logo-image"
+                  />
                 </div>
-                <div class="bg-white  rounded-[10px] p-[30px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
-                    <img src="images/bl-whats-included.avif" alt="Design & Sampling" class="w-full  h-full object-contain">
+                <div
+                  class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase"
+                >
+                  Logos
                 </div>
-                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
-                    <img src="images/bl-logo-typography.png" alt="Creative Design Icon" class="w-[50px] h-[50px] mb-2 mx-auto">
-                    <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Logo & Typography Design</h3>
-                    <p>We create multiple logo directions tailored to your brand personality — bold, technical, minimalist, or lifestyle. Each identity system is supported by modern typography and scalable use cases.</p>
-                </div>
-                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
-                    <img src="images/bl-visual-assests.png" alt="Creative Design Icon" class="w-[50px] h-[50px] mb-2 mx-auto">
-                    <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Visual Assets & Packaging</h3>
-                    <p>From product labels and tags to packaging mockups, we design a consistent visual language that brings your collection to life — online and on shelf.</p>
-                </div>
-                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
-                    <img src="images/bl-brand-guidelines.png" alt="Creative Design Icon" class="w-[50px] h-[50px] mb-2 mx-auto">
-                    <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Brand Guidelines Document</h3>
-                    <p>You'll receive a complete brand guide, including logo usage, color palettes, fonts, and tone of voice — ensuring consistency across teams and channels.</p>
-                </div>
-                <div class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]">
-                    <img src="images/bl-launch-support.png" alt="Creative Design Icon" class="w-[50px] h-[50px] mb-2 mx-auto">
-                    <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Optional Launch Support</h3>
-                    <p>We also help you roll out your brand with social-ready assets, packaging mockups, and digital brand kits.</p>
-                </div>
-              
+              </div>
             </div>
-        </div>
-    </section>
 
-    <!-- Why Choose Section -->
-    <section class="py-[80px] bg-[#fff]">
-        <div class="max-w-[1200px] mx-auto p-4">
-            <h2 class="relative text-center text-[42px] font-medium mb-[40px] text-[#222]   capitalize
-            after:content-[''] after:absolute after:bottom-[-5px] after:left-1/2 after:transform after:-translate-x-1/2 
-            after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]">Why Choose Sportskin for Branding & Logos?</h2>
-            <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
-                <div class="text-center p-[30px]  border-r border-gray-200">
-                    <img src="images/bl-category-building.png" alt="Creative Design Icon" class="w-[50px] h-[50px] mb-2 mx-auto">
-                    <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Category-Specific Branding</h3>
-                    <p>We design for the sportswear and athleisure space — not generic templates</p>
-                </div>
-                <div class="text-center p-[30px]  border-r border-gray-200">
-                    <img src="images/bl-startegic-meets-more.png" alt="Creative Design Icon" class="w-[50px] h-[50px] mb-2 mx-auto">
-                    <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Strategic Meets Creativity</h3>
-                    <p>Every asset we build serves a clear function in your growth journey</p>
-                </div>
-                <div class="text-center p-[30px]  border-r border-gray-200">
-                    <img src="images/bl-creator-approach.png" alt="Creative Design Icon" class="w-[50px] h-[50px] mb-2 mx-auto">
-                    <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">Creator-First Approach</h3>
-                    <p>We align your branding with your product vision and market goals</p>
-                </div>
-                <div class="text-center p-[30px]">
-                    <img src="images/bl-end-to.png" alt="Creative Design Icon" class="w-[50px] h-[50px] mb-2 mx-auto">
-                    <h3 class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize">End-to-End Delivery</h3>
-                    <p>From naming to digital rollout support, everything under one roof</p>
-                </div>
+            <div class="text-[#666] text-[16px] leading-[1.6] font-[400]">
+              <img
+                src="images/bl-top.avif"
+                alt="Design & Sampling"
+                class="w-full h-auto object-contain"
+              />
             </div>
+          </div>
+
+          <!-- Mobile Layout (below md) -->
+          <div
+            class="md:hidden flex flex-col items-center text-center space-y-8"
+          >
+            <!-- First row: "Design &" centered -->
+            <div
+              class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase"
+            >
+              Branding &
+            </div>
+
+            <!-- Second row: "Sampling" text and logo in column -->
+            <div class="flex flex-col items-center gap-[20px]">
+              <div
+                class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase"
+              >
+                Logos
+              </div>
+              <div class="rotating-circle">
+                <div class="circle-text">
+                  <svg viewBox="0 0 180 180">
+                    <defs>
+                      <path
+                        id="circle"
+                        d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
+                      />
+                    </defs>
+                    <text>
+                      <textPath
+                        href="#circle"
+                        class="text-[16px] font-[500] uppercase tracking-[2px] text-[#666]"
+                      >
+                        SPORTSWEAR CONSULTANCY
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+                <img
+                  src="images/logo-symbol-removebg.png"
+                  alt="Sportskin Logo"
+                  class="logo-image"
+                />
+              </div>
+            </div>
+
+            <!-- Third row: Description text centered -->
+            <div class="text-[#666] text-[16px] leading-[1.6] font-[400]">
+              <img
+                src="images/bl-top.avif"
+                alt="Design & Sampling"
+                class="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
+
+      <!-- Main Content Section -->
+      <section class="relative overflow-hidden py-20 px-6">
+        <div
+          class="max-w-[1200px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-12 items-center"
+        >
+          <div>
+            <div
+              class="relative inline-block text-[24px] font-medium text-[#333333] mb-[20px] after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]"
+            >
+              Branding & Logos
+            </div>
+            <h1
+              class="text-[32px] md:text-[42px] font-[500] text-[#222] mb-[1.5rem] leading-[1.1]"
+            >
+              Identity That Moves With Purpose
+            </h1>
+            <p class="font-[1rem] text-[#374151] mb-[2rem] leading-[1.6]">
+              In the crowded world of sportswear and athleisure, your brand
+              identity is your biggest differentiator. At Sportskin, we help you
+              shape a brand that resonates — through visual identity, voice, and
+              values. From naming and logo design to labels and packaging, our
+              branding solutions are designed to connect, communicate, and
+              convert.
+            </p>
+            <p class="font-[1rem] text-[#374151] mb-[2rem] leading-[1.6]">
+              In the crowded world of sportswear and athleisure, your brand
+              identity is your biggest differentiator. At Sportskin, we help you
+              shape a brand that resonates — through visual identity, voice, and
+              values. From naming and logo design to labels and packaging, our
+              branding solutions are designed to connect, communicate, and
+              convert.
+            </p>
+          </div>
+          <div class="relative">
+            <div
+              class="relative bg-white p-8 rounded-2xl h-[300px] shadow-[0_25px_50px_-12px_rgba(0,0,0,0.25)] before:content-[''] before:absolute before:inset-0 before:bg-[#e1e1e1] before:rounded-2xl before:-z-10 before:rotate-[3deg]"
+            >
+              <div class="grid grid-cols-2 gap-6">
+                <div
+                  class="bg-orange-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center"
+                >
+                  <img
+                    src="images/bl-visual-identity.png"
+                    alt="Creative Design Icon"
+                    class="w-8 h-8 mb-2 mx-auto"
+                  />
+                  <h3 class="text-lg font-semibold text-gray-800">
+                    Visual Identity
+                  </h3>
+                </div>
+
+                <div
+                  class="bg-yellow-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center"
+                >
+                  <img
+                    src="images/bl-brand-storytelling.png"
+                    alt="Creative Design Icon"
+                    class="w-8 h-8 mb-2 mx-auto"
+                  />
+                  <h3 class="text-lg font-semibold text-gray-800">
+                    Brand Storytelling
+                  </h3>
+                </div>
+
+                <div
+                  class="bg-red-100 p-[10px] rounded-lg text-center flex flex-col items-center justify-center"
+                >
+                  <img
+                    src="images/bl-logo-creation.png"
+                    alt="Creative Design Icon"
+                    class="w-8 h-8 mb-2 mx-auto"
+                  />
+                  <h3 class="text-lg font-semibold text-gray-800">
+                    Logo Creation
+                  </h3>
+                </div>
+
+                <div
+                  class="bg-yellow-50 p-[10px] rounded-lg text-center flex flex-col items-center justify-center"
+                >
+                  <img
+                    src="images/bl-packaging-design.png"
+                    alt="Creative Design Icon"
+                    class="w-8 h-8 mb-2 mx-auto"
+                  />
+                  <h3 class="text-lg font-semibold text-gray-800">
+                    Packaging Design
+                  </h3>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Services Section -->
+      <section class="py-[80px] bg-[#f8f9fa]">
+        <div class="max-w-[1200px] mx-auto p-4">
+          <h2
+            class="relative text-center text-[42px] font-medium mb-[40px] text-[#222] capitalize after:content-[''] after:absolute after:bottom-[-5px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]"
+          >
+            What's Included in Our Branding & Logos Services
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-3 gap-[30px]">
+            <div
+              class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]"
+            >
+              <img
+                src="images/bl-brand-discovery.png"
+                alt="Creative Design Icon"
+                class="w-[50px] h-[50px] mb-2 mx-auto"
+              />
+              <h3
+                class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize"
+              >
+                Brand Discovery & Strategy
+              </h3>
+              <p>
+                We begin with understanding your brand's story — your vision,
+                values, target audience, and positioning. This strategic
+                foundation drives all creative decisions going forward.
+              </p>
+            </div>
+            <div
+              class="bg-white rounded-[10px] p-[30px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]"
+            >
+              <img
+                src="images/bl-whats-included.avif"
+                alt="Design & Sampling"
+                class="w-full h-full object-contain"
+              />
+            </div>
+            <div
+              class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]"
+            >
+              <img
+                src="images/bl-logo-typography.png"
+                alt="Creative Design Icon"
+                class="w-[50px] h-[50px] mb-2 mx-auto"
+              />
+              <h3
+                class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize"
+              >
+                Logo & Typography Design
+              </h3>
+              <p>
+                We create multiple logo directions tailored to your brand
+                personality — bold, technical, minimalist, or lifestyle. Each
+                identity system is supported by modern typography and scalable
+                use cases.
+              </p>
+            </div>
+            <div
+              class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]"
+            >
+              <img
+                src="images/bl-visual-assests.png"
+                alt="Creative Design Icon"
+                class="w-[50px] h-[50px] mb-2 mx-auto"
+              />
+              <h3
+                class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize"
+              >
+                Visual Assets & Packaging
+              </h3>
+              <p>
+                From product labels and tags to packaging mockups, we design a
+                consistent visual language that brings your collection to life —
+                online and on shelf.
+              </p>
+            </div>
+            <div
+              class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]"
+            >
+              <img
+                src="images/bl-brand-guidelines.png"
+                alt="Creative Design Icon"
+                class="w-[50px] h-[50px] mb-2 mx-auto"
+              />
+              <h3
+                class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize"
+              >
+                Brand Guidelines Document
+              </h3>
+              <p>
+                You'll receive a complete brand guide, including logo usage,
+                color palettes, fonts, and tone of voice — ensuring consistency
+                across teams and channels.
+              </p>
+            </div>
+            <div
+              class="bg-white p-[30px] rounded-[10px] shadow-[0_5px_15px_rgba(0,0,0,0.1)] text-center transition-transform duration-300 ease-in-out hover:translate-y-[-5px]"
+            >
+              <img
+                src="images/bl-launch-support.png"
+                alt="Creative Design Icon"
+                class="w-[50px] h-[50px] mb-2 mx-auto"
+              />
+              <h3
+                class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize"
+              >
+                Optional Launch Support
+              </h3>
+              <p>
+                We also help you roll out your brand with social-ready assets,
+                packaging mockups, and digital brand kits.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Why Choose Section -->
+      <section class="py-[80px] bg-[#fff]">
+        <div class="max-w-[1200px] mx-auto p-4">
+          <h2
+            class="relative text-center text-[42px] font-medium mb-[40px] text-[#222] capitalize after:content-[''] after:absolute after:bottom-[-5px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]"
+          >
+            Why Choose Sportskin for Branding & Logos?
+          </h2>
+          <div class="grid grid-cols-1 md:grid-cols-4 gap-[30px]">
+            <div class="text-center p-[30px] border-r border-gray-200">
+              <img
+                src="images/bl-category-building.png"
+                alt="Creative Design Icon"
+                class="w-[50px] h-[50px] mb-2 mx-auto"
+              />
+              <h3
+                class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize"
+              >
+                Category-Specific Branding
+              </h3>
+              <p>
+                We design for the sportswear and athleisure space — not generic
+                templates
+              </p>
+            </div>
+            <div class="text-center p-[30px] border-r border-gray-200">
+              <img
+                src="images/bl-startegic-meets-more.png"
+                alt="Creative Design Icon"
+                class="w-[50px] h-[50px] mb-2 mx-auto"
+              />
+              <h3
+                class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize"
+              >
+                Strategic Meets Creativity
+              </h3>
+              <p>
+                Every asset we build serves a clear function in your growth
+                journey
+              </p>
+            </div>
+            <div class="text-center p-[30px] border-r border-gray-200">
+              <img
+                src="images/bl-creator-approach.png"
+                alt="Creative Design Icon"
+                class="w-[50px] h-[50px] mb-2 mx-auto"
+              />
+              <h3
+                class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize"
+              >
+                Creator-First Approach
+              </h3>
+              <p>
+                We align your branding with your product vision and market goals
+              </p>
+            </div>
+            <div class="text-center p-[30px]">
+              <img
+                src="images/bl-end-to.png"
+                alt="Creative Design Icon"
+                class="w-[50px] h-[50px] mb-2 mx-auto"
+              />
+              <h3
+                class="relative text-[24px] font-medium text-[#333333] mb-[20px] capitalize"
+              >
+                End-to-End Delivery
+              </h3>
+              <p>
+                From naming to digital rollout support, everything under one
+                roof
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
 
       <!-- Startup Services Detail -->
       <section class="py-20 bg-[#fafafa]">
         <div class="max-w-[1200px] mx-auto px-4">
           <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-      
             <!-- Text Content -->
             <div>
-                <h2 class="relative text-left text-[42px] font-medium mb-[40px] text-[#222]   capitalize
-                after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:transform after:-translate-x-0 
-                after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]">
+              <h2
+                class="relative text-left text-[42px] font-medium mb-[40px] text-[#222] capitalize after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:transform after:-translate-x-0 after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]"
+              >
                 Who It's For
               </h2>
-              <p class="text-gray-500 text-base leading-7 mb-10 text-left ">
-                Sportskin empowers emerging sportswear and athleisure brands to launch with clarity, confidence, and competitive edge. We support early-stage startups with end-to-end guidance—from product concept to market launch.
+              <p class="text-gray-500 text-base leading-7 mb-10 text-left">
+                Sportskin empowers emerging sportswear and athleisure brands to
+                launch with clarity, confidence, and competitive edge. We
+                support early-stage startups with end-to-end guidance—from
+                product concept to market launch.
               </p>
-      
+
               <!-- Process Cards -->
               <div class="grid gap-4">
-                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
                   <p class="text-black leading-relaxed text-base">
                     Early-stage founders launching their first sportswear brand.
                   </p>
                 </div>
-                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
                   <p class="text-black leading-relaxed text-base">
                     Manufacturers starting private label or OEM journeys
                   </p>
                 </div>
-                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
                   <p class="text-black leading-relaxed text-base">
                     Fashion entrepreneurs rebranding their product lines
                   </p>
                 </div>
-                <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
                   <p class="text-black leading-relaxed text-base">
                     Exporters preparing for global buyers and marketplaces
                   </p>
                 </div>
-               
               </div>
             </div>
-      
+
             <!-- Image -->
             <div class="flex justify-center items-center">
-
               <img
                 src="images/Who-Its-For_50.jpg"
                 alt="Startup team working on sportswear designs"
                 class="w-full max-w-[500px] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
               />
             </div>
-      
           </div>
         </div>
       </section>
 
-
-      <section class="py-[50px] bg-[rgb(224,224,224)] bg-cover bg-center bg-fixed relative text-white text-center">
+      <section
+        class="py-[50px] bg-[rgb(224,224,224)] bg-cover bg-center bg-fixed relative text-white text-center"
+      >
         <!-- Overlay -->
         <!-- <div class="absolute inset-0 bg-gray-800 bg-opacity-80"></div> -->
-      
+
         <!-- Content -->
         <div class="relative z-10 max-w-[800px] mx-auto px-4">
           <h2 class="text-[3rem] font-bold mb-[20px] text-black">
             Ready to Transform Your Activewear Vision?
           </h2>
           <p class="text-[1.2rem] mb-[40px] opacity-90 text-black">
-            Let's create performance-driven designs that stand out in the market. Our team is ready to help you bring your ideas to life.
+            Let's create performance-driven designs that stand out in the
+            market. Our team is ready to help you bring your ideas to life.
           </p>
-      
+
           <div class="flex justify-center gap-[20px]">
-            <a href="contact.html" class="px-[35px] py-[15px] rounded-[30px] text-[1.1rem] font-semibold text-black border-2 border-[#E47B35] transition-all duration-300   hover:bg-[#ebebeb]">
+            <a
+              href="contact.html"
+              class="px-[35px] py-[15px] rounded-[30px] text-[1.1rem] font-semibold text-black border-2 border-[#E47B35] transition-all duration-300 hover:bg-[#ebebeb]"
+            >
               Get Started
             </a>
-            <a href="#" class="px-[35px] py-[15px] rounded-[30px] text-[1.1rem] font-semibold text-black border-2 border-[#E47B35] transition-all duration-300 hover:bg-[#ebebeb1] ">
+            <a
+              href="#"
+              class="px-[35px] py-[15px] rounded-[30px] text-[1.1rem] font-semibold text-black border-2 border-[#E47B35] transition-all duration-300 hover:bg-[#ebebeb1]"
+            >
               Learn More
             </a>
           </div>
         </div>
-    </section>
+      </section>
     </main>
 
     <!-- Footer -->
     <footer class="footer">
-        <div class="container-footer">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Sportskin</h3>
-                    <p>Shaping the future of sportswear through design, innovation, sustainability and performance.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="design-and-sampling.html">Design & Sampling</a></li>
-                        <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
-                        <li><a href="manufacturing.html">Manufacturing</a></li>
-                        <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
-                        <li><a href="branding-logos.html">Branding & Logos</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="academy.html">Academy</a></li>
-                         <li><a href="resources.html">Resources</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li>Sportskin International Pvt Ltd. B2- 1404,
-                            The Plaza at 106 Spire Condominiums Dwarka Expressway, Sector 106 122006
-                        </li>
-                        <li>Gurgaon, Haryana</li>
-                        <li>+91 9818125176</li>
-                        <li>info@sportskin.com</li>
-                    </ul>
-                </div>
+      <div class="container-footer">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>Sportskin</h3>
+            <p>
+              Shaping the future of sportswear through design, innovation,
+              sustainability and performance.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-icon facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
             </div>
+          </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sportskin. All Rights Reserved.</p>
-            </div>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+              <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+              <li><a href="manufacturing.html">Manufacturing</a></li>
+              <li>
+                <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
+              </li>
+              <li><a href="branding-logos.html">Branding & Logos</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="academy.html">Academy</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+              <li>
+                Sportskin International Pvt Ltd. B2- 1404, The Plaza at 106
+                Spire Condominiums Dwarka Expressway, Sector 106 122006
+              </li>
+              <li>Gurgaon, Haryana</li>
+              <li>+91 9818125176</li>
+              <li>info@sportskin.com</li>
+            </ul>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sportskin. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-     const navbar = document.getElementById('navbar');
-        const submenuBar = document.getElementById('submenuBar');
-        const servicesBtn = document.getElementById('servicesBtn');
-        let submenuVisible = false;
-        let lastScrollTop = 0;
+      const navbar = document.getElementById("navbar");
+      const submenuBar = document.getElementById("submenuBar");
+      const servicesBtn = document.getElementById("servicesBtn");
+      let submenuVisible = false;
+      let lastScrollTop = 0;
 
-        // Ensure submenu starts hidden
-        submenuBar.classList.remove('visible');
-        servicesBtn.parentElement.classList.remove('active');
+      // Ensure submenu starts hidden
+      submenuBar.classList.remove("visible");
+      servicesBtn.parentElement.classList.remove("active");
 
-        // Make submenu always visible
-        submenuBar.classList.add('visible');
-        servicesBtn.parentElement.classList.add('active');
-        document.body.style.paddingTop = '0px';
-        submenuVisible = true;
+      // Make submenu always visible
+      submenuBar.classList.add("visible");
+      servicesBtn.parentElement.classList.add("active");
+      document.body.style.paddingTop = "0px";
+      submenuVisible = true;
 
-        // Scroll handler
-        window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                navbar.classList.add('scrolled');
-                submenuBar.classList.add('scrolled');
-                document.body.style.paddingTop = '60px';
-            } else {
-                navbar.classList.remove('scrolled');
-                submenuBar.classList.remove('scrolled');
-              document.body.style.paddingTop = '0px';
-            }
-            
-            lastScrollTop = currentScroll;
+      // Scroll handler
+      window.addEventListener("scroll", function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+          navbar.classList.add("scrolled");
+          submenuBar.classList.add("scrolled");
+          document.body.style.paddingTop = "60px";
+        } else {
+          navbar.classList.remove("scrolled");
+          submenuBar.classList.remove("scrolled");
+          document.body.style.paddingTop = "0px";
+        }
+
+        lastScrollTop = currentScroll;
+      });
+
+      // Mobile navbar functionality (unchanged)
+      const openMobileNavbar = document.getElementById("openMobileNavbar");
+      const closeMobileNavbar = document.getElementById("closeMobileNavbar");
+      const mobileNavbar = document.getElementById("mobileNavbar");
+      const mobileNavbarOverlay = document.getElementById(
+        "mobileNavbarOverlay"
+      );
+
+      openMobileNavbar.addEventListener("click", function () {
+        mobileNavbar.classList.add("open");
+        mobileNavbarOverlay.classList.add("open");
+      });
+
+      closeMobileNavbar.addEventListener("click", function () {
+        mobileNavbar.classList.remove("open");
+        mobileNavbarOverlay.classList.remove("open");
+      });
+
+      mobileNavbarOverlay.addEventListener("click", function () {
+        mobileNavbar.classList.remove("open");
+        mobileNavbarOverlay.classList.remove("open");
+      });
+
+      // Mobile dropdown toggles
+      const mobileDropdownToggles = document.querySelectorAll(
+        ".mobile-dropdown-toggle"
+      );
+      mobileDropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const dropdown = this.nextElementSibling;
+          dropdown.classList.toggle("open");
+          this.classList.toggle("open");
         });
-
-
-       // Mobile navbar functionality (unchanged)
-       const openMobileNavbar = document.getElementById('openMobileNavbar');
-        const closeMobileNavbar = document.getElementById('closeMobileNavbar');
-        const mobileNavbar = document.getElementById('mobileNavbar');
-        const mobileNavbarOverlay = document.getElementById('mobileNavbarOverlay');
-
-        openMobileNavbar.addEventListener('click', function() {
-            mobileNavbar.classList.add('open');
-            mobileNavbarOverlay.classList.add('open');
-        });
-
-        closeMobileNavbar.addEventListener('click', function() {
-            mobileNavbar.classList.remove('open');
-            mobileNavbarOverlay.classList.remove('open');
-        });
-
-        mobileNavbarOverlay.addEventListener('click', function() {
-            mobileNavbar.classList.remove('open');
-            mobileNavbarOverlay.classList.remove('open');
-        });
-
-        // Mobile dropdown toggles
-        const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-        mobileDropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                const dropdown = this.nextElementSibling;
-                dropdown.classList.toggle('open');
-                this.classList.toggle('open');
-            });
-        });
-
-        </script>
-</body>
+      });
+    </script>
+  </body>
 </html>

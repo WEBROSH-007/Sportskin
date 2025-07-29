@@ -1,752 +1,1116 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Design & Sampling | Sportskin</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="services.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="services.css" />
     <style>
-        .rotating-circle {
-            position: relative;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-        }
+      .rotating-circle {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+      }
 
-        .logo-image {
-            position: absolute;
-            width: 65px;  
-            height: auto;
-            top: 50%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            z-index: 2;
-        }
+      .logo-image {
+        position: absolute;
+        width: 65px;
+        height: auto;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 2;
+      }
 
-        .circle-text {
-            position: relative;
-            z-index: 1;
-        }
-        
+      .circle-text {
+        position: relative;
+        z-index: 1;
+      }
     </style>
-</head>
-<body>
- 
+  </head>
+  <body>
     <!-- Navbar -->
     <nav class="navbar" id="navbar">
       <a href="index.html" class="logos">
-        <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
+        <img src="images/logo.png" alt="Sportskin Logo" style="height: 30px" />
       </a>
       <ul class="nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li><a href="design-and-sampling.html">Services</a></li>
-          <li><a href="startups.html" id="servicesBtn">Verticals</a></li>
-          <li><a href="academy.html">Academy</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li><a href="design-and-sampling.html">Services</a></li>
+        <li><a href="startups.html" id="servicesBtn">Verticals</a></li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-  </nav>
-  
-  <!-- Submenu Bar -->
-  <div class="submenu-bar" id="submenuBar">
+    </nav>
+
+    <!-- Submenu Bar -->
+    <div class="submenu-bar" id="submenuBar">
       <div class="submenu-container">
-          <a href="startups.html">Startups</a>
-          <a href="manufactures-exporters.html">Manufacturers & Exporters</a>
-          <a href="b2b-brands.html">B2B Brands</a>
+        <a href="startups.html">Startups</a>
+        <a href="manufactures-exporters.html">Manufacturers & Exporters</a>
+        <a href="b2b-brands.html">B2B Brands</a>
       </div>
-  </div>
-  
-  <!-- Mobile Header -->
-  <div class="mobile-header">
-       <a href="index.html" class="logos">
-            <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
-          </a>
+    </div>
+
+    <!-- Mobile Header -->
+    <div class="mobile-header">
+      <a href="index.html" class="logos">
+        <img src="images/logo.png" alt="Sportskin Logo" style="height: 30px" />
+      </a>
       <div class="hamburger" id="openMobileNavbar">
-          <div class="line1"></div>
-          <div class="line2"></div>
-          <div class="line3"></div>
+        <div class="line1"></div>
+        <div class="line2"></div>
+        <div class="line3"></div>
       </div>
-  </div>
-  
-  <!-- Mobile Sidebar Navbar -->
-  <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
-  <nav class="mobile-navbar" id="mobileNavbar">
+    </div>
+
+    <!-- Mobile Sidebar Navbar -->
+    <div class="mobile-navbar-overlay" id="mobileNavbarOverlay"></div>
+    <nav class="mobile-navbar" id="mobileNavbar">
       <div class="mobile-navbar-header">
-           <a href="index.html" class="logos">
-            <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
-          </a>
-          <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
+        <a href="index.html" class="logos">
+          <img
+            src="images/logo.png"
+            alt="Sportskin Logo"
+            style="height: 30px"
+          />
+        </a>
+        <button class="close-mobile-navbar" id="closeMobileNavbar">
+          &times;
+        </button>
       </div>
       <ul class="mobile-nav-links">
-          <li><a href="index.html">Home</a></li>
-          <li><a href="about.html">About</a></li>
-          <li class="mobile-dropdown-parent">
-            <a href="#" class="mobile-dropdown-toggle">Services<i class="fas fa-chevron-right arrow text-xs transition-transform duration-300"></i></a>
-              <ul class="mobile-dropdown">
-                  <li><a href="design-and-sampling.html">Design & Sampling</a></li>
-                  <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
-                  <li><a href="manufacturing.html">B2B Manufacturing</a></li>
-                  <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
-                  <li><a href="branding-logos.html">Branding & Logos</a></li>
-              </ul>
-          </li>
-          <li class="mobile-dropdown-parent">
-              <a href="#" class="mobile-dropdown-toggle">Verticals<i class="fas fa-chevron-right arrow text-xs transition-transform duration-300"></i></a>
-              <ul class="mobile-dropdown">
-                  <li><a href="startups.html">Startups</a></li>
-                  <li><a href="manufactures-exporters.html">Manufacturers & Exporters</a></li>
-                  <li><a href="b2b-brands.html">B2B Brands</a></li>
-              </ul>
-          </li>
-          <li><a href="academy.html">Academy</a></li>
-          <li><a href="resources.html">Resources</a></li>
-          <li><a href="contact.html">Contact</a></li>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About</a></li>
+        <li class="mobile-dropdown-parent">
+          <a href="#" class="mobile-dropdown-toggle"
+            >Services<i
+              class="fas fa-chevron-right arrow text-xs transition-transform duration-300"
+            ></i
+          ></a>
+          <ul class="mobile-dropdown">
+            <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+            <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+            <li><a href="manufacturing.html">B2B Manufacturing</a></li>
+            <li>
+              <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
+            </li>
+            <li><a href="branding-logos.html">Branding & Logos</a></li>
+          </ul>
+        </li>
+        <li class="mobile-dropdown-parent">
+          <a href="#" class="mobile-dropdown-toggle"
+            >Verticals<i
+              class="fas fa-chevron-right arrow text-xs transition-transform duration-300"
+            ></i
+          ></a>
+          <ul class="mobile-dropdown">
+            <li><a href="startups.html">Startups</a></li>
+            <li>
+              <a href="manufactures-exporters.html"
+                >Manufacturers & Exporters</a
+              >
+            </li>
+            <li><a href="b2b-brands.html">B2B Brands</a></li>
+          </ul>
+        </li>
+        <li><a href="academy.html">Academy</a></li>
+        <li><a href="resources.html">Resources</a></li>
+        <li><a href="contact.html">Contact</a></li>
       </ul>
-  </nav>
+    </nav>
 
-
-   
     <main>
-      <section class="relative pt-[100px] pb-[100px] md:pt-[180px] md:pb-[100px] bg-[rgba(243,244,246,0.8)] min-h-[60vh] flex items-center">
+      <section
+        class="relative pt-[100px] pb-[100px] md:pt-[180px] md:pb-[100px] bg-[rgba(243,244,246,0.8)] min-h-[60vh] flex items-center"
+      >
         <div class="max-w-[1200px] mx-auto p-4">
-            <!-- Desktop Layout (md and up) -->
-            <div class="hidden md:grid grid-cols-2  gap-[300px] items-start">
-                <div class="text-left">
-                    <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] mb-[20px] uppercase">Sportswear</div>
-                    <div class="flex items-center gap-[40px] mb-[20px]">
-                        <div class="rotating-circle">
-                            <div class="circle-text">
-                                <svg viewBox="0 0 180 180">
-                                    <defs>
-                                        <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
-                                    </defs>
-                                    <text>
-                                        <textPath href="#circle" class="text-[18px] font-[500] uppercase tracking-[2px] text-[#666]">
-                                            SPORTSWEAR CONSULTANCY
-                                        </textPath>
-                                    </text>
-                                </svg>
-                            </div>
-                            <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
-                        </div>
-                        <div class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">Startups</div>
-                    </div>
+          <!-- Desktop Layout (md and up) -->
+          <div class="hidden md:grid grid-cols-2 gap-[300px] items-start">
+            <div class="text-left">
+              <div
+                class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] mb-[20px] uppercase"
+              >
+                Sportswear
+              </div>
+              <div class="flex items-center gap-[40px] mb-[20px]">
+                <div class="rotating-circle">
+                  <div class="circle-text">
+                    <svg viewBox="0 0 180 180">
+                      <defs>
+                        <path
+                          id="circle"
+                          d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
+                        />
+                      </defs>
+                      <text>
+                        <textPath
+                          href="#circle"
+                          class="text-[18px] font-[500] uppercase tracking-[2px] text-[#666]"
+                        >
+                          SPORTSWEAR CONSULTANCY
+                        </textPath>
+                      </text>
+                    </svg>
+                  </div>
+                  <img
+                    src="images/logo-symbol-removebg.png"
+                    alt="Sportskin Logo"
+                    class="logo-image"
+                  />
                 </div>
-                
-                <div class=" text-[#666] text-[16px] leading-[1.6] font-[400] ">
-                  <img src="images/startups_main.jpg" alt="Design & Sampling" class="w-full  h-auto object-contain">
-
+                <div
+                  class="text-[60px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase"
+                >
+                  Startups
+                </div>
               </div>
             </div>
-            
-            <!-- Mobile Layout (below md) -->
-            <div class="md:hidden flex flex-col items-center text-center space-y-8">
-                <!-- First row: "Design &" centered -->
-                <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
-                   Sportswear
-                </div>
-                
-                <!-- Second row: "Sampling" text and logo in column -->
-                <div class="flex flex-col items-center gap-[20px]">
-                    <div class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase">
-                        Startups
-                    </div>
-                    <div class="rotating-circle">
-                        <div class="circle-text">
-                            <svg viewBox="0 0 180 180">
-                                <defs>
-                                    <path id="circle" d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"/>
-                                </defs>
-                                <text>
-                                    <textPath href="#circle" class="text-[16px] font-[500] uppercase tracking-[2px] text-[#666]">
-                                        SPORTSWEAR CONSULTANCY
-                                    </textPath>
-                                </text>
-                            </svg>
-                        </div>
-                        <img src="images/logo-symbol-removebg.png" alt="Sportskin Logo" class="logo-image">
-                    </div>
-                </div>
-                
-                <!-- Third row: Description text centered -->
-                <div class=" text-[#666] text-[16px] leading-[1.6] font-[400] ">
-                  <img src="images/startups_main.jpg" alt="Design & Sampling" class="w-full  h-auto object-contain">
 
+            <div class="text-[#666] text-[16px] leading-[1.6] font-[400]">
+              <img
+                src="images/startups_main.jpg"
+                alt="Design & Sampling"
+                class="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
+
+          <!-- Mobile Layout (below md) -->
+          <div
+            class="md:hidden flex flex-col items-center text-center space-y-8"
+          >
+            <!-- First row: "Design &" centered -->
+            <div
+              class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase"
+            >
+              Sportswear
+            </div>
+
+            <!-- Second row: "Sampling" text and logo in column -->
+            <div class="flex flex-col items-center gap-[20px]">
+              <div
+                class="text-[40px] font-normal text-[#1a1a1a] leading-[0.9] tracking-[-0.02em] uppercase"
+              >
+                Startups
+              </div>
+              <div class="rotating-circle">
+                <div class="circle-text">
+                  <svg viewBox="0 0 180 180">
+                    <defs>
+                      <path
+                        id="circle"
+                        d="M 90, 90 m -70, 0 a 70,70 0 1,1 140,0 a 70,70 0 1,1 -140,0"
+                      />
+                    </defs>
+                    <text>
+                      <textPath
+                        href="#circle"
+                        class="text-[16px] font-[500] uppercase tracking-[2px] text-[#666]"
+                      >
+                        SPORTSWEAR CONSULTANCY
+                      </textPath>
+                    </text>
+                  </svg>
+                </div>
+                <img
+                  src="images/logo-symbol-removebg.png"
+                  alt="Sportskin Logo"
+                  class="logo-image"
+                />
               </div>
             </div>
+
+            <!-- Third row: Description text centered -->
+            <div class="text-[#666] text-[16px] leading-[1.6] font-[400]">
+              <img
+                src="images/startups_main.jpg"
+                alt="Design & Sampling"
+                class="w-full h-auto object-contain"
+              />
+            </div>
+          </div>
         </div>
-    </section>
+      </section>
 
-        <section id="about" class="bg-white relative overflow-hidden  py-16 lg:py-24">
-            <div class=" mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 1200px;">
-                <div class=" grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-                    <!-- Text Content -->
-                    <div class=" ">
-                          <h3 class="relative inline-block text-[24px] text-[#333333] mb-[20px] after:block after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)] content-['']">Startups </h3>
-                                <h1 class=" text-[40px]">Start Strong Scale Smart
-                                  
-                                </h1>
-                                <p class="relative inline-block text-[16px] font-[500] font-[Montserrat,sans-serif] leading-[2] mt-[10px]">Launching a sportswear brand is exciting — but without expert guidance, it can quickly become overwhelming and expensive. At Sportskin, we specialize in helping startups bring their vision to life with clarity, confidence, and strategic precision.</p>
-                                <p class="relative inline-block text-[16px] font-[500] font-[Montserrat,sans-serif] leading-[2] mt-[10px]">From concept development and category selection to sourcing, sampling, and go-to-market strategy — we act as your behind-the-scenes partner, guiding you every step of the way.</p>
-                                <p class="relative inline-block text-[16px] font-[500] font-[Montserrat,sans-serif] leading-[2] mt-[10px]">We don’t just give advice — we help you execute. So whether you’re building your very first collection or validating your brand idea, Sportskin is your launchpad.</p>
-        
-                    </div>
-                    
-                    <!-- Image Content -->
-                    <div class="">
-                        <div class="relative">
-                            <img 
-                                src="images/startups_stay_strong.jpg"
-                                alt="About Sportskin - Design team working on sportswear concepts" 
-                                class="w-full h-auto rounded-lg shadow-lg object-cover"
-                            >
-                        </div>
-                    </div>
-                </div>
+      <section
+        id="about"
+        class="bg-white relative overflow-hidden py-16 lg:py-24"
+      >
+        <div class="mx-auto px-4 sm:px-6 lg:px-8" style="max-width: 1200px">
+          <div
+            class="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center"
+          >
+            <!-- Text Content -->
+            <div class=" ">
+              <h3
+                class="relative inline-block text-[24px] text-[#333333] mb-[20px] after:block after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)] content-['']"
+              >
+                Startups
+              </h3>
+              <h1 class="text-[40px]">Start Strong Scale Smart</h1>
+              <p
+                class="relative inline-block text-[16px] font-[500] font-[Montserrat,sans-serif] leading-[2] mt-[10px]"
+              >
+                Launching a sportswear brand is exciting — but without expert
+                guidance, it can quickly become overwhelming and expensive. At
+                Sportskin, we specialize in helping startups bring their vision
+                to life with clarity, confidence, and strategic precision.
+              </p>
+              <p
+                class="relative inline-block text-[16px] font-[500] font-[Montserrat,sans-serif] leading-[2] mt-[10px]"
+              >
+                From concept development and category selection to sourcing,
+                sampling, and go-to-market strategy — we act as your
+                behind-the-scenes partner, guiding you every step of the way.
+              </p>
+              <p
+                class="relative inline-block text-[16px] font-[500] font-[Montserrat,sans-serif] leading-[2] mt-[10px]"
+              >
+                We don’t just give advice — we help you execute. So whether
+                you’re building your very first collection or validating your
+                brand idea, Sportskin is your launchpad.
+              </p>
             </div>
-        </section>
-        
 
-<section class="py-[100px] bg-[var(--gray-bg)]">
-    <div class="max-w-[1200px] mx-auto p-4">
-       
+            <!-- Image Content -->
+            <div class="">
+              <div class="relative">
+                <img
+                  src="images/startups_stay_strong.jpg"
+                  alt="About Sportskin - Design team working on sportswear concepts"
+                  class="w-full h-auto rounded-lg shadow-lg object-cover"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
 
-        <div class="grid grid-cols-1 md:grid-cols-2 gap-[80px] items-start">
+      <section class="py-[100px] bg-[var(--gray-bg)]">
+        <div class="max-w-[1200px] mx-auto p-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-[80px] items-start">
             <div class="relative">
-                <div class="text-left mb-[40px]">
-                  <h3 class="relative inline-block text-[24px] text-[#333333] mb-[20px] after:block after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)] content-['']">How We Work</h3>
-                    <h1 class="text-[42px] font-medium text-[#222] leading-[1.2] mb-[40px] max-w-[500px]">How We Help Startups Succeed</h1>
-                </div>
-                <img src="images/startups_how_we.jpg"  class="w-full h-[400px] rounded-[20px] object-cover shadow-[0_20px_40px_rgba(0,0,0,0.1)]">
+              <div class="text-left mb-[40px]">
+                <h3
+                  class="relative inline-block text-[24px] text-[#333333] mb-[20px] after:block after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)] content-['']"
+                >
+                  How We Work
+                </h3>
+                <h1
+                  class="text-[42px] font-medium text-[#222] leading-[1.2] mb-[40px] max-w-[500px]"
+                >
+                  How We Help Startups Succeed
+                </h1>
+              </div>
+              <img
+                src="images/startups_howwe.jpeg"
+                class="w-full h-[400px] rounded-[20px] object-cover shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+              />
             </div>
 
             <div class="flex flex-col gap-[10px]">
-                <div class="flex gap-[20px] items-start">
-                  <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0 ">
-                    <span class="text-[#7f7e7e] font-semibold text-[40px]">1</span>
-                  </div>
-                  <div>
-                    <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">
-                      Discovery & Brand Vision Alignment
-                    </h4>
-                    <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">
-                      We start with a deep-dive into your goals, values, audience, and product ideas — shaping a foundation that's authentic and future-ready.
-                   
-                    </div>
+              <div class="flex gap-[20px] items-start">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-[#7f7e7e] font-semibold text-[40px]"
+                    >1</span
+                  >
                 </div>
-
-                <div class="flex gap-[20px] items-start">
-                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0 ">
-                      <span class="text-[#7f7e7e] font-semibold text-[40px]">2</span>
-                    </div>
-                    <div>
-                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">Product & Market Strategy</h4>
-                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">We help you identify the right categories (athleisure, performance, kids, etc.), define your product range, and build a brand that stands out in a competitive landscape.</p>
-                    </div>
+                <div>
+                  <h4
+                    class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]"
+                  >
+                    Discovery & Brand Vision Alignment
+                  </h4>
+                  <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">
+                    We start with a deep-dive into your goals, values, audience,
+                    and product ideas — shaping a foundation that's authentic
+                    and future-ready.
+                  </p>
                 </div>
+              </div>
 
-                
-                <div class="flex gap-[20px] items-start">
-                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0 ">
-                      <span class="text-[#7f7e7e] font-semibold text-[40px]">3</span>
-                    </div>
-                    <div>
-                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">Design & Development</h4>
-                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">Our team supports you in turning your ideas into real products — with expert-led design, tech packs, sustainable fabric options, and fit sampling.</p>
-                    </div>
+              <div class="flex gap-[20px] items-start">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-[#7f7e7e] font-semibold text-[40px]"
+                    >2</span
+                  >
                 </div>
-
-                
-                <div class="flex gap-[20px] items-start">
-                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0 ">
-                      <span class="text-[#7f7e7e] font-semibold text-[40px]">4</span>
-                    </div>
-                    <div>
-                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">Sourcing & Vendor Matching</h4>
-                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">Tap into our ethical supplier network to source the right materials and manufacturers aligned with your MOQ, price, and performance needs.</p>
-                    </div>
+                <div>
+                  <h4
+                    class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]"
+                  >
+                    Product & Market Strategy
+                  </h4>
+                  <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">
+                    We help you identify the right categories (athleisure,
+                    performance, kids, etc.), define your product range, and
+                    build a brand that stands out in a competitive landscape.
+                  </p>
                 </div>
+              </div>
 
-               
-                <div class="flex gap-[20px] items-start">
-                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0 ">
-                      <span class="text-[#7f7e7e] font-semibold text-[40px]">5</span>
-                    </div>
-                    <div>
-                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">Go-to-Market Planning</h4>
-                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">From sales channels and pricing to launch calendars and marketing content — we help you create a smart, phased launch roadmap.</p>
-                    </div>
+              <div class="flex gap-[20px] items-start">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-[#7f7e7e] font-semibold text-[40px]"
+                    >3</span
+                  >
                 </div>
-
-               
-                <div class="flex gap-[20px] items-start">
-                    <div class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0 ">
-                      <span class="text-[#7f7e7e] font-semibold text-[40px]">6</span>
-                    </div>
-                    <div>
-                        <h4 class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]">Ongoing Mentorship</h4>
-                        <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">Stay connected through on-demand strategy sessions or long-term advisory as your business grows and evolves.</p>
-                    </div>
+                <div>
+                  <h4
+                    class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]"
+                  >
+                    Design & Development
+                  </h4>
+                  <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">
+                    Our team supports you in turning your ideas into real
+                    products — with expert-led design, tech packs, sustainable
+                    fabric options, and fit sampling.
+                  </p>
                 </div>
+              </div>
 
-                
+              <div class="flex gap-[20px] items-start">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-[#7f7e7e] font-semibold text-[40px]"
+                    >4</span
+                  >
+                </div>
+                <div>
+                  <h4
+                    class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]"
+                  >
+                    Sourcing & Vendor Matching
+                  </h4>
+                  <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">
+                    Tap into our ethical supplier network to source the right
+                    materials and manufacturers aligned with your MOQ, price,
+                    and performance needs.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-[20px] items-start">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-[#7f7e7e] font-semibold text-[40px]"
+                    >5</span
+                  >
+                </div>
+                <div>
+                  <h4
+                    class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]"
+                  >
+                    Go-to-Market Planning
+                  </h4>
+                  <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">
+                    From sales channels and pricing to launch calendars and
+                    marketing content — we help you create a smart, phased
+                    launch roadmap.
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex gap-[20px] items-start">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] flex items-center justify-center flex-shrink-0"
+                >
+                  <span class="text-[#7f7e7e] font-semibold text-[40px]"
+                    >6</span
+                  >
+                </div>
+                <div>
+                  <h4
+                    class="text-[22px] font-semibold text-[#2c3e50] mb-[12px] leading-[1.3]"
+                  >
+                    Ongoing Mentorship
+                  </h4>
+                  <p class="text-[#5a6c7d] text-[16px] leading-[1.6]">
+                    Stay connected through on-demand strategy sessions or
+                    long-term advisory as your business grows and evolves.
+                  </p>
+                </div>
+              </div>
             </div>
+          </div>
         </div>
-    </div>
-
-</section>
-<!-- what makes sportskin diffrent  -->
-<section class="py-[80px]">
-    <div class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[80px] items-start px-5">
-      <!-- Left Section -->
-      <div class="pr-0 md:pr-[40px]">
-        <h3 class="relative inline-block text-[24px] text-[#333333] mb-[20px] after:block after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)] content-['']">
-          What Makes Sportskin Different
-        </h3>
-        <h1 class="text-[42px] md:text-[36px] font-medium leading-[1.1] text-[#222] mb-6 max-w-full">
-          What Makes Sportskin Different
-        </h1>
-        <p class="text-[18px] leading-[1.6] text-[#666] mb-8">
-          We understand the resource, time, and decision pressures that startups face — and simplify them with our specialized approach to sportswear consulting.
-        </p>
-        <img src="images/startups_what_makes.jpg" alt="Image" class="mb-4" />
-      </div>
-  
-      <!-- Right Section -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 gap-[24px]">
-        <!-- Service Card 1 -->
-        <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
-          <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
-          <div class="relative z-10">
-            <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
-              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
-                <path d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z" />
-              </svg>
-            </div>
-            <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3  group-hover:text-[rgb(255,255,255)];">
-              India's First Sportswear-Focused Consultancy
+      </section>
+      <!-- what makes sportskin diffrent  -->
+      <section class="py-[80px]">
+        <div
+          class="max-w-[1200px] mx-auto grid grid-cols-1 md:grid-cols-2 gap-[80px] items-start px-5"
+        >
+          <!-- Left Section -->
+          <div class="pr-0 md:pr-[40px]">
+            <h3
+              class="relative inline-block text-[24px] text-[#333333] mb-[20px] after:block after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)] content-['']"
+            >
+              What Makes Sportskin Different
             </h3>
-            <p class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90">
-              Built specifically for the performance and athleisure space — not generic fashion services.
+            <h1
+              class="text-[42px] md:text-[36px] font-medium leading-[1.1] text-[#222] mb-6 max-w-full"
+            >
+              What Makes Sportskin Different
+            </h1>
+            <p class="text-[18px] leading-[1.6] text-[#666] mb-8">
+              We understand the resource, time, and decision pressures that
+              startups face — and simplify them with our specialized approach to
+              sportswear consulting.
+            </p>
+            <img
+              src="images/startups_what_makes.jpg"
+              alt="Image"
+              class="mb-4"
+            />
+          </div>
+
+          <!-- Right Section -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-[24px]">
+            <!-- Service Card 1 -->
+            <div
+              class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"
+              ></div>
+              <div class="relative z-10">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur"
+                >
+                  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                    <path
+                      d="M12 2L2 7V10C2 16 6 20.5 12 22C18 20.5 22 16 22 10V7L12 2Z"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-[rgb(255,255,255)]"
+                >
+                  India's First Sportswear-Focused Consultancy
+                </h3>
+                <p
+                  class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90"
+                >
+                  Built specifically for the performance and athleisure space —
+                  not generic fashion services.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service Card 2 -->
+            <div
+              class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"
+              ></div>
+              <div class="relative z-10">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur"
+                >
+                  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                    <path
+                      d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-[rgb(255,255,255)]"
+                >
+                  Founder-Centric Approach
+                </h3>
+                <p
+                  class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90"
+                >
+                  We understand the resource, time, and decision pressures that
+                  startups face — and simplify them.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service Card 3 -->
+            <div
+              class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"
+              ></div>
+              <div class="relative z-10">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur"
+                >
+                  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                    <path
+                      d="M9 11H7V9H9V11ZM13 11H11V9H13V11ZM17 11H15V9H17V11ZM19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19Z"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-[rgb(255,255,255)]"
+                >
+                  One Partner, End-to-End Support
+                </h3>
+                <p
+                  class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90"
+                >
+                  Strategy, design, sourcing, production, branding, launch — we
+                  cover the full journey.
+                </p>
+              </div>
+            </div>
+
+            <!-- Service Card 4 -->
+            <div
+              class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group"
+            >
+              <div
+                class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"
+              ></div>
+              <div class="relative z-10">
+                <div
+                  class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur"
+                >
+                  <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
+                    <path
+                      d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z"
+                    />
+                  </svg>
+                </div>
+                <h3
+                  class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-[rgb(255,255,255)]"
+                >
+                  Built for Execution, Not Just Advice
+                </h3>
+                <p
+                  class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90"
+                >
+                  Real timelines. Real deliverables. Real outcomes.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- TOOLKIT-->
+      <section class="py-20 bg-[var(--gray-bg)]">
+        <div
+          class="max-w-[1200px] mx-auto px-5 lg:px-10 flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-20"
+        >
+          <!-- Coaching Grid -->
+          <div
+            class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[600px]"
+          >
+            <!-- First item centered -->
+            <div
+              class="col-span-full max-w-[320px] mx-auto flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition"
+            >
+              <img
+                src="images/startups_brands_discovery.png"
+                alt="Communication Coach"
+                class="w-[60px] h-[60px] object-cover"
+              />
+              <span class="text-sm font-bold text-black"
+                >Brand & product discovery sessions</span
+              >
+            </div>
+
+            <!-- Items 2–7 -->
+            <div
+              class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition"
+            >
+              <img
+                src="images/startups_range_planning.png"
+                alt="Personal Coach"
+                class="w-[60px] h-[60px] object-cover"
+              />
+              <span class="text-sm font-bold text-black"
+                >Range planning and pricing structure</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition"
+            >
+              <img
+                src="images/startups_tech_pack.png"
+                alt="Strategy Coach"
+                class="w-[60px] h-[60px] object-cover"
+              />
+              <span class="text-sm font-bold text-black"
+                >Tech pack development & sampling oversight</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition"
+            >
+              <img
+                src="images/startups_sustainable_material.png"
+                alt="Productivity Coach"
+                class="w-[60px] h-[60px] object-cover"
+              />
+              <span class="text-sm font-bold text-black"
+                >Sustainable material sourcing</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition"
+            >
+              <img
+                src="images/startups_starups_coordination.png"
+                alt="Health Coach"
+                class="w-[60px] h-[60px] object-cover"
+              />
+              <span class="text-sm font-bold text-black"
+                >Manufacturing coordination</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition"
+            >
+              <img
+                src="images/startups_brand_identity.png"
+                alt="Leadership Coach"
+                class="w-[60px] h-[60px] object-cover"
+              />
+              <span class="text-sm font-bold text-black"
+                >Brand identity & packaging</span
+              >
+            </div>
+            <div
+              class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition"
+            >
+              <img
+                src="images/startups_career_transition.png"
+                alt="Leadership Coach"
+                class="w-[60px] h-[60px] object-cover"
+              />
+              <span class="text-sm font-bold text-black"
+                >Carrer Transition Coaching</span
+              >
+            </div>
+
+            <!-- Last item centered -->
+            <div
+              class="col-span-full max-w-[320px] mx-auto flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition"
+            >
+              <img
+                src="images/startups_lauch_prep.png"
+                alt="Marketing Coach"
+                class="w-[60px] h-[60px] object-cover"
+              />
+              <span class="text-sm font-bold text-black"
+                >Launch prep and advisory</span
+              >
+            </div>
+          </div>
+
+          <!-- Content -->
+          <div class="flex-1 max-w-[800px]">
+            <h3
+              class="relative inline-block text-[24px] text-[#333333] mb-[20px] after:block after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)] content-['']"
+            >
+              Our Expertise
+            </h3>
+            <h2
+              class="relative text-left text-[42px] font-medium mb-[40px] text-[#222] capitalize"
+            >
+              Startup Launch Toolkit Includes
+            </h2>
+            <p
+              class="text-[16px] sm:text-[18px] text-gray-500 leading-relaxed mb-10"
+            >
+              Choosing us means partnering with experienced coaches who are
+              dedicated to unlocking your potential. We offer personalized
+              strategies, proven methods.
+            </p>
+            <!-- Uncomment if needed -->
+            <!-- <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-sm shadow-md hover:translate-y-[-2px] hover:shadow-lg transition">Contact Now ↗</a> -->
+          </div>
+        </div>
+      </section>
+
+      <!-- Startup Services Detail -->
+      <section class="py-20 bg-white">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
+            <!-- Text Content -->
+            <div>
+              <h2
+                class="relative text-left text-[42px] font-medium mb-[40px] text-[#222] capitalize after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:transform after:-translate-x-0 after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]"
+              >
+                Who Should Work With Us
+              </h2>
+              <p
+                class="text-gray-500 text-base leading-7 mb-10 text-center md:text-left"
+              >
+                Sportskin empowers emerging sportswear and athleisure brands to
+                launch with clarity, confidence, and competitive edge.
+              </p>
+
+              <!-- Process Cards -->
+              <div class="grid gap-4">
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
+                  <p class="text-black leading-relaxed text-base">
+                    First-time founders building a D2C or private label
+                    activewear brand
+                  </p>
+                </div>
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
+                  <p class="text-black leading-relaxed text-base">
+                    Small teams launching niche performance or lifestyle
+                    collections
+                  </p>
+                </div>
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
+                  <p class="text-black leading-relaxed text-base">
+                    Creators, athletes, and influencers turning ideas into
+                    product brands
+                  </p>
+                </div>
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
+                  <p class="text-black leading-relaxed text-base">
+                    Founders seeking MVP (minimum viable product) to test and
+                    iterate
+                  </p>
+                </div>
+                <div
+                  class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1"
+                >
+                  <p class="text-black leading-relaxed text-base">
+                    Early-stage startups seeking product-market fit and funding
+                    support
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Image -->
+            <div
+              class="flex justify-center items-center order-first md:order-last"
+            >
+              <img
+                src="images/startups_what_we_work.jpg"
+                alt="Startup team working on sportswear designs"
+                class="w-full max-w-[600px] h-[600px] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
+              />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Main Services Section -->
+      <section class="py-20 bg-[var(--gray-bg)]">
+        <div class="max-w-[1200px] mx-auto px-4">
+          <!-- Header -->
+          <div class="text-center mb-16">
+            <h2
+              class="relative text-center text-[42px] font-medium mb-[40px] text-[#222] capitalize after:content-[''] after:absolute after:bottom-[-5px] after:left-1/2 after:transform after:-translate-x-1/2 after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]"
+            >
+              Who We've Helped
+            </h2>
+            <p class="text-gray-500 text-base max-w-[600px] mx-auto">
+              From startups to established manufacturers, we provide end-to-end
+              guidance in the performance wear space
             </p>
           </div>
-        </div>
-  
-        <!-- Service Card 2 -->
-        <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
-          <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
-          <div class="relative z-10">
-            <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
-              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
-                <path d="M12 12C14.21 12 16 10.21 16 8C16 5.79 14.21 4 12 4C9.79 4 8 5.79 8 8C8 10.21 9.79 12 12 12ZM12 14C9.33 14 4 15.34 4 18V20H20V18C20 15.34 14.67 14 12 14Z" />
-              </svg>
-            </div>
-            <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-[rgb(255,255,255)];">
-              Founder-Centric Approach
-            </h3>
-            <p class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90">
-              We understand the resource, time, and decision pressures that startups face — and simplify them.
-            </p>
-          </div>
-        </div>
-  
-        <!-- Service Card 3 -->
-        <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
-          <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
-          <div class="relative z-10">
-            <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
-              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
-                <path d="M9 11H7V9H9V11ZM13 11H11V9H13V11ZM17 11H15V9H17V11ZM19 3H5C3.9 3 3 3.9 3 5V19C3 20.1 3.9 21 5 21H19C20.1 21 21 20.1 21 19V5C21 3.9 20.1 3 19 3ZM19 19H5V8H19V19Z" />
-              </svg>
-            </div>
-            <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3group-hover:text-[rgb(255,255,255)];">
-              One Partner, End-to-End Support
-            </h3>
-            <p class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90">
-              Strategy, design, sourcing, production, branding, launch — we cover the full journey.
-            </p>
-          </div>
-        </div>
-  
-        <!-- Service Card 4 -->
-        <div class="relative bg-white rounded-[16px] p-[26px] shadow-[0_4px_20px_rgba(0,0,0,0.08)] transition-all duration-400 cursor-pointer overflow-hidden group">
-          <div class="absolute inset-0 bg-gradient-to-br from-[#ffa021] to-[#222] opacity-0 group-hover:opacity-100 transition-opacity duration-400 z-0"></div>
-          <div class="relative z-10">
-            <div class="w-[48px] h-[48px] rounded-[12px] bg-gradient-to-br from-[#be8521] to-[#303030] flex items-center justify-center mb-5 group-hover:bg-white/20 group-hover:backdrop-blur">
-              <svg viewBox="0 0 24 24" class="w-6 h-6 fill-white">
-                <path d="M9 16.2L4.8 12L3.4 13.4L9 19L21 7L19.6 5.6L9 16.2Z" />
-              </svg>
-            </div>
-            <h3 class="text-[20px] font-bold text-[#1a1a1a] mb-3 group-hover:text-[rgb(255,255,255)];">
-              Built for Execution, Not Just Advice
-            </h3>
-            <p class="text-[15px] leading-[1.5] text-[#666] group-hover:text-white/90">
-              Real timelines. Real deliverables. Real outcomes.
-            </p>
-          </div>
-        </div>
-  
-      </div>
-    </div>
-  </section>
-  
 
-<!-- TOOLKIT-->
-<section class="py-20 bg-[var(--gray-bg)]">
-    <div class="max-w-[1200px] mx-auto px-5 lg:px-10 flex flex-col-reverse lg:flex-row items-center gap-10 lg:gap-20">
-      
-      <!-- Coaching Grid -->
-      <div class="flex-1 grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-[600px]">
-        <!-- First item centered -->
-        <div class="col-span-full max-w-[320px] mx-auto flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition">
-          <img src="images/startups_brands_discovery.png" alt="Communication Coach" class="w-[60px] h-[60px]  object-cover">
-          <span class="text-sm font-bold text-black">Brand & product discovery sessions</span>
-        </div>
-  
-        <!-- Items 2–7 -->
-        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition">
-          <img src="images/startups_range_planning.png" alt="Personal Coach" class="w-[60px] h-[60px]  object-cover">
-          <span class="text-sm font-bold text-black">Range planning and pricing structure</span>
-        </div>
-        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition">
-          <img src="images/startups_tech_pack.png" alt="Strategy Coach" class="w-[60px] h-[60px]  object-cover">
-          <span class="text-sm font-bold text-black">Tech pack development & sampling oversight</span>
-        </div>
-        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition">
-          <img src="images/startups_sustainable_material.png" alt="Productivity Coach" class="w-[60px] h-[60px]  object-cover">
-          <span class="text-sm font-bold text-black">Sustainable material sourcing</span>
-        </div>
-        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition">
-          <img src="images/startups_starups_coordination.png" alt="Health Coach" class="w-[60px] h-[60px]  object-cover">
-          <span class="text-sm font-bold text-black">Manufacturing coordination</span>
-        </div>
-        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition">
-          <img src="images/startups_brand_identity.png" alt="Leadership Coach" class="w-[60px] h-[60px]  object-cover">
-          <span class="text-sm font-bold text-black">Brand identity & packaging</span>
-        </div>
-        <div class="flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition">
-            <img src="images/startups_career_transition.png" alt="Leadership Coach" class="w-[60px] h-[60px]  object-cover">
-            <span class="text-sm font-bold text-black">Carrer Transition Coaching</span>
-          </div>
-        
-  
-        <!-- Last item centered -->
-        <div class="col-span-full max-w-[320px] mx-auto flex items-center gap-4 bg-white p-4 rounded-2xl shadow hover:translate-y-[-4px] hover:shadow-xl transition">
-          <img src="images/startups_lauch_prep.png" alt="Marketing Coach" class="w-[60px] h-[60px]  object-cover">
-          <span class="text-sm font-bold text-black">Launch prep and advisory</span>
-        </div>
-      </div>
-  
-      <!-- Content -->
-      <div class="flex-1 max-w-[800px]">
-        <h3 class="relative inline-block text-[24px] text-[#333333] mb-[20px] after:block after:absolute after:bottom-[-5px] after:left-0 after:w-[40px] after:h-[2px] after:bg-[var(--primary-color)] content-['']">Our Expertise</h3>
-        <h2 class="relative text-left text-[42px] font-medium mb-[40px] text-[#222]   capitalize">Startup Launch Toolkit Includes</h2>
-        <p class="text-[16px] sm:text-[18px] text-gray-500 leading-relaxed mb-10">
-          Choosing us means partnering with experienced coaches who are dedicated to unlocking your potential. We offer personalized strategies, proven methods.
-        </p>
-        <!-- Uncomment if needed -->
-        <!-- <a href="#contact" class="inline-flex items-center gap-2 bg-gradient-to-r from-emerald-500 to-emerald-600 text-white px-8 py-4 rounded-full font-semibold text-sm shadow-md hover:translate-y-[-2px] hover:shadow-lg transition">Contact Now ↗</a> -->
-      </div>
-    </div>
-  </section>
-  
+          <!-- Solutions Grid -->
+          <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Card 1 -->
+            <div
+              class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer hover:border-blue-600"
+            >
+              <div class="text-center mb-4">
+                <div
+                  class="w-12 h-12 mx-auto mb-4 flex items-center justify-center text-blue-600"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    class="w-8 h-8"
+                  >
+                    <circle cx="12" cy="12" r="10"></circle>
+                    <circle cx="12" cy="12" r="6"></circle>
+                    <circle cx="12" cy="12" r="2"></circle>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Athlete-Led Label</h3>
+              </div>
+              <p class="text-sm text-gray-500 text-center">
+                Transformed a former national athlete’s idea into a niche
+                high-performance training apparel line with export capability.
+              </p>
+            </div>
 
+            <!-- Card 2 -->
+            <div
+              class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer hover:border-green-600"
+            >
+              <div class="text-center mb-4">
+                <div
+                  class="w-12 h-12 mx-auto mb-4 flex items-center justify-center text-green-600"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    class="w-8 h-8"
+                  >
+                    <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
+                    <circle cx="9" cy="7" r="4"></circle>
+                    <path d="m22 21-3-3"></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">
+                  Sustainable D2C Brand
+                </h3>
+              </div>
+              <p class="text-sm text-gray-500 text-center">
+                Guided a founder from raw idea to Shopify launch using fully
+                recycled fabrics sourced from ethical mills.
+              </p>
+            </div>
 
- <!-- Startup Services Detail -->
- <section class="py-20 bg-white">
-    <div class="max-w-[1200px] mx-auto px-4">
-      <div class="grid grid-cols-1 md:grid-cols-2 gap-16 items-center">
-  
-        <!-- Text Content -->
-        <div>
-          <h2 class="relative text-left text-[42px] font-medium mb-[40px] text-[#222]   capitalize
-            after:content-[''] after:absolute after:bottom-[-5px] after:left-0 after:transform after:-translate-x-0 
-            after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]">
-            Who Should Work With Us
-          </h2>
-          <p class="text-gray-500 text-base leading-7 mb-10 text-center md:text-left">
-            Sportskin empowers emerging sportswear and athleisure brands to launch with clarity, confidence, and competitive edge.
-          </p>
-  
-          <!-- Process Cards -->
-          <div class="grid gap-4">
-            <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <p class="text-black leading-relaxed text-base">
-                First-time founders building a D2C or private label activewear brand
-              </p>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <p class="text-black leading-relaxed text-base">
-                Small teams launching niche performance or lifestyle collections
-              </p>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <p class="text-black leading-relaxed text-base">
-                Creators, athletes, and influencers turning ideas into product brands
-              </p>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <p class="text-black leading-relaxed text-base">
-                Founders seeking MVP (minimum viable product) to test and iterate
-              </p>
-            </div>
-            <div class="bg-white border border-gray-200 rounded-xl p-4 transition-all duration-300 hover:shadow-lg hover:-translate-y-1">
-              <p class="text-black leading-relaxed text-base">
-                Early-stage startups seeking product-market fit and funding support
+            <!-- Card 3 -->
+            <div
+              class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer hover:border-purple-600"
+            >
+              <div class="text-center mb-4">
+                <div
+                  class="w-12 h-12 mx-auto mb-4 flex items-center justify-center text-purple-600"
+                >
+                  <svg
+                    viewBox="0 0 24 24"
+                    fill="none"
+                    stroke="currentColor"
+                    stroke-width="2"
+                    class="w-8 h-8"
+                  >
+                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
+                    <path
+                      d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"
+                    ></path>
+                  </svg>
+                </div>
+                <h3 class="text-lg font-semibold mb-2">Manufacturing Pivot</h3>
+              </div>
+              <p class="text-sm text-gray-500 text-center">
+                Helped a legacy t-shirt exporter enter the sportswear market
+                with a private label strategy, new range, and retail-ready
+                identity.
               </p>
             </div>
           </div>
         </div>
-   
-        <!-- Image -->
-        <div class="flex justify-center items-center order-first md:order-last">
-          <img
-            src="images/startups_what_we_work.jpg"
-            alt="Startup team working on sportswear designs"
-            class="w-full max-w-[600px] h-[600px] rounded-xl shadow-[0_20px_40px_rgba(0,0,0,0.1)]"
-          />
-        </div>
-  
-      </div>
-    </div>
-  </section>
-  
-
- <!-- Main Services Section -->
- <section class="py-20 bg-[var(--gray-bg)]">
-    <div class="max-w-[1200px] mx-auto px-4">
-      
-      <!-- Header -->
-      <div class="text-center mb-16">
-        <h2 class="relative text-center text-[42px] font-medium mb-[40px] text-[#222]   capitalize
-        after:content-[''] after:absolute after:bottom-[-5px] after:left-1/2 after:transform after:-translate-x-1/2 
-        after:w-[40px] after:h-[1.5px] after:bg-[var(--primary-color)]">Who We've Helped</h2>
-        <p class="text-gray-500 text-base max-w-[600px] mx-auto">
-          From startups to established manufacturers, we provide end-to-end guidance in the performance wear space
-        </p>
-      </div>
-  
-      <!-- Solutions Grid -->
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
-        
-        <!-- Card 1 -->
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer hover:border-blue-600">
-          <div class="text-center mb-4">
-            <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center text-blue-600">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
-                <circle cx="12" cy="12" r="10"></circle>
-                <circle cx="12" cy="12" r="6"></circle>
-                <circle cx="12" cy="12" r="2"></circle>
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">Athlete-Led Label</h3>
-          </div>
-          <p class="text-sm text-gray-500 text-center">
-            Transformed a former national athlete’s idea into a niche high-performance training apparel line with export capability.
-          </p>
-        </div>
-  
-        <!-- Card 2 -->
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer hover:border-green-600">
-          <div class="text-center mb-4">
-            <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center text-green-600">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
-                <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"></path>
-                <circle cx="9" cy="7" r="4"></circle>
-                <path d="m22 21-3-3"></path>
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">Sustainable D2C Brand</h3>
-          </div>
-          <p class="text-sm text-gray-500 text-center">
-            Guided a founder from raw idea to Shopify launch using fully recycled fabrics sourced from ethical mills.
-          </p>
-        </div>
-  
-        <!-- Card 3 -->
-        <div class="bg-white border border-gray-200 rounded-xl p-6 shadow-sm hover:shadow-xl hover:-translate-y-1 transition-all duration-300 cursor-pointer hover:border-purple-600">
-          <div class="text-center mb-4">
-            <div class="w-12 h-12 mx-auto mb-4 flex items-center justify-center text-purple-600">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="w-8 h-8">
-                <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"></path>
-                <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"></path>
-              </svg>
-            </div>
-            <h3 class="text-lg font-semibold mb-2">Manufacturing Pivot</h3>
-          </div>
-          <p class="text-sm text-gray-500 text-center">
-            Helped a legacy t-shirt exporter enter the sportswear market with a private label strategy, new range, and retail-ready identity.
-          </p>
-        </div>
-  
-      </div>
-    </div>
-  </section>
+      </section>
     </main>
-  
+
     <!-- Footer -->
     <footer class="footer">
-        <div class="container-footer">
-            <div class="footer-grid">
-                <div class="footer-col">
-                    <h3>Sportskin</h3>
-                    <p>Shaping the future of sportswear through design, innovation, sustainability and performance.</p>
-                    <div class="footer-social">
-                        <a href="#" class="social-icon facebook"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#" class="social-icon linkedin"><i class="fab fa-linkedin-in"></i></a>
-                        <a href="#" class="social-icon instagram"><i class="fab fa-instagram"></i></a>
-                        <a href="#" class="social-icon twitter"><i class="fab fa-twitter"></i></a>
-                    </div>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Services</h3>
-                    <ul class="footer-links">
-                        <li><a href="design-and-sampling.html">Design & Sampling</a></li>
-                        <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
-                        <li><a href="manufacturing.html">Manufacturing</a></li>
-                        <li><a href="sportswear-consultancy.html">Sportswear Consultancy</a></li>
-                        <li><a href="branding-logos.html">Branding & Logos</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Quick Links</h3>
-                    <ul class="footer-links">
-                        <li><a href="index.html">Home</a></li>
-                        <li><a href="about.html">About</a></li>
-                        <li><a href="academy.html">Academy</a></li>
-                         <li><a href="resources.html">Resources</a></li>
-                        <li><a href="contact.html">Contact</a></li>
-                    </ul>
-                </div>
-
-                <div class="footer-col">
-                    <h3>Contact</h3>
-                    <ul class="footer-links">
-                        <li>Sportskin International Pvt Ltd. B2- 1404,
-                            The Plaza at 106 Spire Condominiums Dwarka Expressway, Sector 106 122006
-                        </li>
-                        <li>Gurgaon, Haryana</li>
-                        <li>+91 9818125176</li>
-                        <li>info@sportskin.com</li>
-                    </ul>
-                </div>
+      <div class="container-footer">
+        <div class="footer-grid">
+          <div class="footer-col">
+            <h3>Sportskin</h3>
+            <p>
+              Shaping the future of sportswear through design, innovation,
+              sustainability and performance.
+            </p>
+            <div class="footer-social">
+              <a href="#" class="social-icon facebook"
+                ><i class="fab fa-facebook-f"></i
+              ></a>
+              <a href="#" class="social-icon linkedin"
+                ><i class="fab fa-linkedin-in"></i
+              ></a>
+              <a href="#" class="social-icon instagram"
+                ><i class="fab fa-instagram"></i
+              ></a>
+              <a href="#" class="social-icon twitter"
+                ><i class="fab fa-twitter"></i
+              ></a>
             </div>
+          </div>
 
-            <div class="footer-bottom">
-                <p>&copy; 2025 Sportskin. All Rights Reserved.</p>
-            </div>
+          <div class="footer-col">
+            <h3>Services</h3>
+            <ul class="footer-links">
+              <li><a href="design-and-sampling.html">Design & Sampling</a></li>
+              <li><a href="buying-and-sourcing.html">Buying & Sourcing</a></li>
+              <li><a href="manufacturing.html">Manufacturing</a></li>
+              <li>
+                <a href="sportswear-consultancy.html">Sportswear Consultancy</a>
+              </li>
+              <li><a href="branding-logos.html">Branding & Logos</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Quick Links</h3>
+            <ul class="footer-links">
+              <li><a href="index.html">Home</a></li>
+              <li><a href="about.html">About</a></li>
+              <li><a href="academy.html">Academy</a></li>
+              <li><a href="resources.html">Resources</a></li>
+              <li><a href="contact.html">Contact</a></li>
+            </ul>
+          </div>
+
+          <div class="footer-col">
+            <h3>Contact</h3>
+            <ul class="footer-links">
+              <li>
+                Sportskin International Pvt Ltd. B2- 1404, The Plaza at 106
+                Spire Condominiums Dwarka Expressway, Sector 106 122006
+              </li>
+              <li>Gurgaon, Haryana</li>
+              <li>+91 9818125176</li>
+              <li>info@sportskin.com</li>
+            </ul>
+          </div>
         </div>
+
+        <div class="footer-bottom">
+          <p>&copy; 2025 Sportskin. All Rights Reserved.</p>
+        </div>
+      </div>
     </footer>
 
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/js/bootstrap.bundle.min.js"></script>
     <script>
-  const navbar = document.getElementById('navbar');
-        const submenuBar = document.getElementById('submenuBar');
-        const servicesBtn = document.getElementById('servicesBtn');
-        let submenuVisible = false;
-        let lastScrollTop = 0;
+      const navbar = document.getElementById("navbar");
+      const submenuBar = document.getElementById("submenuBar");
+      const servicesBtn = document.getElementById("servicesBtn");
+      let submenuVisible = false;
+      let lastScrollTop = 0;
 
-        // Ensure submenu starts hidden
-        submenuBar.classList.remove('visible');
-        servicesBtn.parentElement.classList.remove('active');
+      // Ensure submenu starts hidden
+      submenuBar.classList.remove("visible");
+      servicesBtn.parentElement.classList.remove("active");
 
-        // Make submenu always visible
-        submenuBar.classList.add('visible');
-        servicesBtn.parentElement.classList.add('active');
-        document.body.style.paddingTop = '0px';
-        submenuVisible = true;
+      // Make submenu always visible
+      submenuBar.classList.add("visible");
+      servicesBtn.parentElement.classList.add("active");
+      document.body.style.paddingTop = "0px";
+      submenuVisible = true;
 
-        // Scroll handler
-        window.addEventListener('scroll', function() {
-            const currentScroll = window.pageYOffset;
-            
-            if (currentScroll > 100) {
-                navbar.classList.add('scrolled');
-                submenuBar.classList.add('scrolled');
-                document.body.style.paddingTop = '60px';
-            } else {
-                navbar.classList.remove('scrolled');
-                submenuBar.classList.remove('scrolled');
-              document.body.style.paddingTop = '0px';
-            }
-            
-            lastScrollTop = currentScroll;
+      // Scroll handler
+      window.addEventListener("scroll", function () {
+        const currentScroll = window.pageYOffset;
+
+        if (currentScroll > 100) {
+          navbar.classList.add("scrolled");
+          submenuBar.classList.add("scrolled");
+          document.body.style.paddingTop = "60px";
+        } else {
+          navbar.classList.remove("scrolled");
+          submenuBar.classList.remove("scrolled");
+          document.body.style.paddingTop = "0px";
+        }
+
+        lastScrollTop = currentScroll;
+      });
+
+      // Mobile navbar functionality (unchanged)
+      const openMobileNavbar = document.getElementById("openMobileNavbar");
+      const closeMobileNavbar = document.getElementById("closeMobileNavbar");
+      const mobileNavbar = document.getElementById("mobileNavbar");
+      const mobileNavbarOverlay = document.getElementById(
+        "mobileNavbarOverlay"
+      );
+
+      openMobileNavbar.addEventListener("click", function () {
+        mobileNavbar.classList.add("open");
+        mobileNavbarOverlay.classList.add("open");
+      });
+
+      closeMobileNavbar.addEventListener("click", function () {
+        mobileNavbar.classList.remove("open");
+        mobileNavbarOverlay.classList.remove("open");
+      });
+
+      mobileNavbarOverlay.addEventListener("click", function () {
+        mobileNavbar.classList.remove("open");
+        mobileNavbarOverlay.classList.remove("open");
+      });
+
+      // Mobile dropdown toggles
+      const mobileDropdownToggles = document.querySelectorAll(
+        ".mobile-dropdown-toggle"
+      );
+      mobileDropdownToggles.forEach((toggle) => {
+        toggle.addEventListener("click", function (e) {
+          e.preventDefault();
+          const dropdown = this.nextElementSibling;
+          dropdown.classList.toggle("open");
+          this.classList.toggle("open");
         });
-
-
-       // Mobile navbar functionality (unchanged)
-       const openMobileNavbar = document.getElementById('openMobileNavbar');
-        const closeMobileNavbar = document.getElementById('closeMobileNavbar');
-        const mobileNavbar = document.getElementById('mobileNavbar');
-        const mobileNavbarOverlay = document.getElementById('mobileNavbarOverlay');
-
-        openMobileNavbar.addEventListener('click', function() {
-            mobileNavbar.classList.add('open');
-            mobileNavbarOverlay.classList.add('open');
-        });
-
-        closeMobileNavbar.addEventListener('click', function() {
-            mobileNavbar.classList.remove('open');
-            mobileNavbarOverlay.classList.remove('open');
-        });
-
-        mobileNavbarOverlay.addEventListener('click', function() {
-            mobileNavbar.classList.remove('open');
-            mobileNavbarOverlay.classList.remove('open');
-        });
-
-        // Mobile dropdown toggles
-        const mobileDropdownToggles = document.querySelectorAll('.mobile-dropdown-toggle');
-        mobileDropdownToggles.forEach(toggle => {
-            toggle.addEventListener('click', function(e) {
-                e.preventDefault();
-                const dropdown = this.nextElementSibling;
-                dropdown.classList.toggle('open');
-                this.classList.toggle('open');
-            });
-        });
-        </script>
-    <script>
-        let lastHoveredCard = null;
-        
-        document.querySelectorAll('.service-card').forEach(card => {
-            card.addEventListener('mouseenter', function() {
-                // Remove sticky green from all cards
-                document.querySelectorAll('.service-card').forEach(c => {
-                    c.classList.remove('sticky-green');
-                });
-                
-                // Add hover effect to current card
-                this.classList.add('hovering');
-            });
-            
-            card.addEventListener('mouseleave', function() {
-                // Remove hover effect
-                this.classList.remove('hovering');
-                
-                // Set this card as the last hovered (sticky green)
-                if (lastHoveredCard) {
-                    lastHoveredCard.classList.remove('sticky-green');
-                }
-                this.classList.add('sticky-green');
-                lastHoveredCard = this;
-            });
-        });
-        
-        // Set the first card as initially green
-        document.addEventListener('DOMContentLoaded', function() {
-            const firstCard = document.querySelector('.service-card');
-            firstCard.classList.add('sticky-green');
-            lastHoveredCard = firstCard;
-        });
+      });
     </script>
+    <script>
+      let lastHoveredCard = null;
 
-</body>
+      document.querySelectorAll(".service-card").forEach((card) => {
+        card.addEventListener("mouseenter", function () {
+          // Remove sticky green from all cards
+          document.querySelectorAll(".service-card").forEach((c) => {
+            c.classList.remove("sticky-green");
+          });
+
+          // Add hover effect to current card
+          this.classList.add("hovering");
+        });
+
+        card.addEventListener("mouseleave", function () {
+          // Remove hover effect
+          this.classList.remove("hovering");
+
+          // Set this card as the last hovered (sticky green)
+          if (lastHoveredCard) {
+            lastHoveredCard.classList.remove("sticky-green");
+          }
+          this.classList.add("sticky-green");
+          lastHoveredCard = this;
+        });
+      });
+
+      // Set the first card as initially green
+      document.addEventListener("DOMContentLoaded", function () {
+        const firstCard = document.querySelector(".service-card");
+        firstCard.classList.add("sticky-green");
+        lastHoveredCard = firstCard;
+      });
+    </script>
+  </body>
 </html>

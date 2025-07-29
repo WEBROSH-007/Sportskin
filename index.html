@@ -12,7 +12,23 @@
     
     <link rel="stylesheet" href="final.css">
     <style>
-  
+      .navbar {
+        background: transparent !important;
+        transition: background 0.3s, box-shadow 0.3s;
+      }
+      .navbar.scrolled {
+        background: #111 !important;
+        box-shadow: 0 4px 16px rgba(0,0,0,0.10);
+      }
+      .navbar .nav-links a {
+        color: #fff !important;
+        transition: color 0.3s;
+      }
+      .navbar.scrolled .nav-links a {
+        color: #fff !important;
+      }
+      
+    
     </style>
 </head>
 
@@ -20,7 +36,7 @@
     <!-- Navbar -->
     <nav class="navbar">
         <a href="index.html" class="logos">
-            <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
+            <img src="images/logo.png" alt="Sportskin Logo" style="height:30px;">
           </a>
         <ul class="nav-links">
             <li><a href="index.html">Home</a></li>
@@ -54,7 +70,7 @@
     </nav>
     <div class="mobile-header">
         <a href="index.html" class="logos">
-            <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
+             <img src="images/logo.png" alt="Sportskin Logo" style="height:30px;">
           </a>
       <div class="hamburger" id="openMobileNavbar">
           <div class="line1"></div>
@@ -68,7 +84,7 @@
     <nav class="mobile-navbar" id="mobileNavbar">
         <div class="mobile-navbar-header">
             <a href="index.html" class="logos">
-                <img src="images/Sportskin.png" alt="Sportskin Logo" style="height:30px;">
+                 <img src="images/logo.png" alt="Sportskin Logo" style="height:30px;">
               </a>
             <button class="close-mobile-navbar" id="closeMobileNavbar">&times;</button>
         </div>
@@ -103,7 +119,7 @@
     <section id="home" class=" home-hero">
         <!-- Video placeholder - add your video source here -->
         <video autoplay muted loop playsinline class=" home-hero-video">
-            <source src="sportsvideo.mp4" type="video/mp4">
+            <source src="images/sportskin-cover.mp4" type="video/mp4">
             Your browser does not support the video tag.
         </video>
 
