@@ -248,6 +248,37 @@
 
 
     <script>
+        // Function to truncate text to specified character limit
+        function truncateText(text, limit) {
+            if (text.length <= limit) {
+                return text;
+            }
+            return text.substring(0, limit) + '...';
+        }
+
+        // Function to apply character limits to all cards
+        function applyCharacterLimits() {
+            const cards = document.querySelectorAll('.bg-white.rounded-lg.shadow-lg');
+            
+            cards.forEach(card => {
+                const h3Element = card.querySelector('h3');
+                const pElement = card.querySelector('p');
+                
+                if (h3Element) {
+                    const originalText = h3Element.textContent;
+                    h3Element.textContent = truncateText(originalText, 47);
+                }
+                
+                if (pElement) {
+                    const originalText = pElement.textContent;
+                    pElement.textContent = truncateText(originalText, 140);
+                }
+            });
+        }
+
+        // Apply character limits when DOM is loaded
+        document.addEventListener('DOMContentLoaded', applyCharacterLimits);
+
         const modalData = {
             1: {
                 title: "Mind To Market",
